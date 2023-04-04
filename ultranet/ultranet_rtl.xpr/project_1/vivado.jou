@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue May 10 21:50:50 2022
+# Process ID: 327755
+# Current directory: /mnt/delta/Descartes/Git/DACSDC2021_my
+# Command line: vivado
+# Log file: /mnt/delta/Descartes/Git/DACSDC2021_my/vivado.log
+# Journal file: /mnt/delta/Descartes/Git/DACSDC2021_my/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source ultranet_bd.tcl
+update_compile_order -fileset sources_1
+archive_project /mnt/delta/Descartes/Git/DACSDC2021_my/ultranet_rtl.xpr.zip -force -include_local_ip_cache -include_config_settings

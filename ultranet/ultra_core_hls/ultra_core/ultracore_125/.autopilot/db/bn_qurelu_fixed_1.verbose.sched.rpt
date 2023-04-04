@@ -1,0 +1,138 @@
+
+
+================================================================
+== Vivado HLS Report for 'bn_qurelu_fixed_1'
+================================================================
+* Date:           Tue May 10 21:15:09 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 2.846 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        1|        1| 4.000 ns | 4.000 ns |    1|    1| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.84>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%bias_V_read = call i21 @_ssdm_op_Read.ap_auto.i21(i21 %bias_V)" [./src/function.h:187]   --->   Operation 3 'read' 'bias_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%inc_V_read = call i12 @_ssdm_op_Read.ap_auto.i12(i12 %inc_V)" [./src/function.h:187]   --->   Operation 4 'read' 'inc_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%in_V_read = call i17 @_ssdm_op_Read.ap_auto.i17(i17 %in_V)" [./src/function.h:187]   --->   Operation 5 'read' 'in_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%sext_ln215 = sext i17 %in_V_read to i29" [./src/function.h:187]   --->   Operation 6 'sext' 'sext_ln215' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%zext_ln215 = zext i12 %inc_V_read to i29" [./src/function.h:187]   --->   Operation 7 'zext' 'zext_ln215' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (2.84ns) (root node of the DSP)   --->   "%ret_V = mul i29 %zext_ln215, %sext_ln215" [./src/function.h:187]   --->   Operation 8 'mul' 'ret_V' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 9 [1/1] (1.07ns)   --->   "%add_ln1353 = add i21 16384, %bias_V_read" [./src/function.h:191]   --->   Operation 9 'add' 'add_ln1353' <Predicate = true> <Delay = 1.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 2.69>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%sext_ln1352 = sext i29 %ret_V to i30" [./src/function.h:187]   --->   Operation 10 'sext' 'sext_ln1352' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%sext_ln215_81 = sext i21 %bias_V_read to i30" [./src/function.h:187]   --->   Operation 11 'sext' 'sext_ln215_81' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (1.16ns)   --->   "%ret_V_131 = add i30 %sext_ln215_81, %sext_ln1352" [./src/function.h:187]   --->   Operation 12 'add' 'ret_V_131' <Predicate = true> <Delay = 1.16> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (1.08ns)   --->   "%icmp_ln895 = icmp sgt i30 %ret_V_131, 0" [./src/function.h:190]   --->   Operation 13 'icmp' 'icmp_ln895' <Predicate = true> <Delay = 1.08> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%sext_ln1353 = sext i21 %add_ln1353 to i29" [./src/function.h:191]   --->   Operation 14 'sext' 'sext_ln1353' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (1.16ns)   --->   "%ret_V_130 = add i29 %ret_V, %sext_ln1353" [./src/function.h:191]   --->   Operation 15 'add' 'ret_V_130' <Predicate = true> <Delay = 1.16> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%tmp = call i10 @_ssdm_op_PartSelect.i10.i29.i32.i32(i29 %ret_V_130, i32 19, i32 28)" [./src/function.h:192]   --->   Operation 16 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.85ns)   --->   "%icmp_ln895_71 = icmp ne i10 %tmp, 0" [./src/function.h:192]   --->   Operation 17 'icmp' 'icmp_ln895_71' <Predicate = true> <Delay = 0.85> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.00ns) (grouped into LUT with out node res_V)   --->   "%trunc_ln = call i4 @_ssdm_op_PartSelect.i4.i29.i32.i32(i29 %ret_V_130, i32 15, i32 18)" [./src/function.h:195]   --->   Operation 18 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node res_V)   --->   "%select_ln192 = select i1 %icmp_ln895_71, i4 -1, i4 %trunc_ln" [./src/function.h:192]   --->   Operation 19 'select' 'select_ln192' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.45ns) (out node of the LUT)   --->   "%res_V = select i1 %icmp_ln895, i4 %select_ln192, i4 0" [./src/function.h:190]   --->   Operation 20 'select' 'res_V' <Predicate = true> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "ret i4 %res_V" [./src/function.h:200]   --->   Operation 21 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 2.85ns
+The critical path consists of the following:
+	wire read on port 'inc_V' (./src/function.h:187) [5]  (0 ns)
+	'mul' operation of DSP[9] ('ret.V', ./src/function.h:187) [9]  (2.85 ns)
+
+ <State 2>: 2.7ns
+The critical path consists of the following:
+	'add' operation ('ret.V', ./src/function.h:187) [12]  (1.17 ns)
+	'icmp' operation ('icmp_ln895', ./src/function.h:190) [13]  (1.08 ns)
+	'select' operation ('res.V', ./src/function.h:190) [21]  (0.45 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

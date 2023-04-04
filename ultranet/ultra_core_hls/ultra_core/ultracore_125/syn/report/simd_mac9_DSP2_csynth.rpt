@@ -1,0 +1,247 @@
+
+
+================================================================
+== Vivado HLS Report for 'simd_mac9_DSP2'
+================================================================
+* Date:           Tue May 10 21:15:49 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.356 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        3|        3| 12.000 ns | 12.000 ns |    1|    1| function |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      9|       -|      -|    -|
+|Expression       |        -|      -|       0|    754|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     18|    -|
+|Register         |        -|      -|    1068|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      9|    1068|    772|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      2|   ~0   |      1|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    +---------------------------+----------------------+-----------+
+    |          Instance         |        Module        | Expression|
+    +---------------------------+----------------------+-----------+
+    |ultra_net_mul_multde_U104  |ultra_net_mul_multde  |  i0 * i1  |
+    |ultra_net_mul_multde_U105  |ultra_net_mul_multde  |  i0 * i1  |
+    |ultra_net_mul_multde_U106  |ultra_net_mul_multde  |  i0 * i1  |
+    |ultra_net_mul_multde_U107  |ultra_net_mul_multde  |  i0 * i1  |
+    |ultra_net_mul_multde_U108  |ultra_net_mul_multde  |  i0 * i1  |
+    |ultra_net_mul_multde_U109  |ultra_net_mul_multde  |  i0 * i1  |
+    |ultra_net_mul_multde_U110  |ultra_net_mul_multde  |  i0 * i1  |
+    |ultra_net_mul_multde_U111  |ultra_net_mul_multde  |  i0 * i1  |
+    |ultra_net_mul_multde_U112  |ultra_net_mul_multde  |  i0 * i1  |
+    +---------------------------+----------------------+-----------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |add_ln647_fu_575_p2     |     +    |      0|  0|  18|          20|          20|
+    |add_ln68_10_fu_372_p2   |     +    |      0|  0|  35|          28|          28|
+    |add_ln68_11_fu_439_p2   |     +    |      0|  0|  35|          28|          28|
+    |add_ln68_4_fu_264_p2    |     +    |      0|  0|  35|          28|          28|
+    |add_ln68_5_fu_282_p2    |     +    |      0|  0|  35|          28|          28|
+    |add_ln68_6_fu_300_p2    |     +    |      0|  0|  35|          28|          28|
+    |add_ln68_7_fu_318_p2    |     +    |      0|  0|  35|          28|          28|
+    |add_ln68_8_fu_336_p2    |     +    |      0|  0|  35|          28|          28|
+    |add_ln68_9_fu_354_p2    |     +    |      0|  0|  35|          28|          28|
+    |add_ln68_fu_246_p2      |     +    |      0|  0|  35|          28|          28|
+    |add_ln700_10_fu_554_p2  |     +    |      0|  0|  27|          20|          20|
+    |add_ln700_11_fu_558_p2  |     +    |      0|  0|  18|          20|          20|
+    |add_ln700_12_fu_477_p2  |     +    |      0|  0|  44|          37|          37|
+    |add_ln700_3_fu_467_p2   |     +    |      0|  0|  44|          37|          37|
+    |add_ln700_4_fu_483_p2   |     +    |      0|  0|  45|          38|          38|
+    |add_ln700_5_fu_509_p2   |     +    |      0|  0|  18|          39|          39|
+    |add_ln700_6_fu_515_p2   |     +    |      0|  0|  44|          37|          37|
+    |add_ln700_7_fu_525_p2   |     +    |      0|  0|  45|          38|          38|
+    |add_ln700_8_fu_539_p2   |     +    |      0|  0|  18|          39|          39|
+    |add_ln700_9_fu_569_p2   |     +    |      0|  0|  47|          40|          40|
+    |add_ln700_fu_451_p2     |     +    |      0|  0|  44|          37|          37|
+    |add_ln78_fu_606_p2      |     +    |      0|  0|  27|          20|          20|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |Total                   |          |      0|  0| 754|         674|         674|
+    +------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------+----+-----------+-----+-----------+
+    |     Name    | LUT| Input Size| Bits| Total Bits|
+    +-------------+----+-----------+-----+-----------+
+    |ap_return_0  |   9|          2|   20|         40|
+    |ap_return_1  |   9|          2|   20|         40|
+    +-------------+----+-----------+-----+-----------+
+    |Total        |  18|          4|   40|         80|
+    +-------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+----+----+-----+-----------+
+    |                  Name                  | FF | LUT| Bits| Const Bits|
+    +----------------------------------------+----+----+-----+-----------+
+    |add_ln68_10_reg_770                     |  28|   0|   28|          0|
+    |add_ln68_11_reg_820                     |  28|   0|   28|          0|
+    |add_ln68_4_reg_740                      |  28|   0|   28|          0|
+    |add_ln68_5_reg_745                      |  28|   0|   28|          0|
+    |add_ln68_6_reg_750                      |  28|   0|   28|          0|
+    |add_ln68_7_reg_755                      |  28|   0|   28|          0|
+    |add_ln68_8_reg_760                      |  28|   0|   28|          0|
+    |add_ln68_9_reg_765                      |  28|   0|   28|          0|
+    |add_ln68_reg_735                        |  28|   0|   28|          0|
+    |add_ln700_8_reg_835                     |  39|   0|   39|          0|
+    |ap_ce_reg                               |   1|   0|    1|          0|
+    |ap_return_0_int_reg                     |  20|   0|   20|          0|
+    |ap_return_1_int_reg                     |  20|   0|   20|          0|
+    |invec_0_V_read_2_reg_730                |   8|   0|    8|          0|
+    |invec_0_V_read_int_reg                  |   8|   0|    8|          0|
+    |invec_1_V_read_2_reg_725                |   8|   0|    8|          0|
+    |invec_1_V_read_int_reg                  |   8|   0|    8|          0|
+    |invec_2_V_read_2_reg_720                |   8|   0|    8|          0|
+    |invec_2_V_read_int_reg                  |   8|   0|    8|          0|
+    |invec_3_V_read_2_reg_715                |   8|   0|    8|          0|
+    |invec_3_V_read_int_reg                  |   8|   0|    8|          0|
+    |invec_4_V_read_1_reg_710                |   8|   0|    8|          0|
+    |invec_4_V_read_int_reg                  |   8|   0|    8|          0|
+    |invec_5_V_read_1_reg_705                |   8|   0|    8|          0|
+    |invec_5_V_read_int_reg                  |   8|   0|    8|          0|
+    |invec_6_V_read_1_reg_700                |   8|   0|    8|          0|
+    |invec_6_V_read_int_reg                  |   8|   0|    8|          0|
+    |invec_7_V_read_1_reg_695                |   8|   0|    8|          0|
+    |invec_7_V_read_int_reg                  |   8|   0|    8|          0|
+    |invec_8_V_read_1_reg_690                |   8|   0|    8|          0|
+    |invec_8_V_read_1_reg_690_pp0_iter1_reg  |   8|   0|    8|          0|
+    |invec_8_V_read_int_reg                  |   8|   0|    8|          0|
+    |mul_ln1352_10_reg_810                   |  36|   0|   36|          0|
+    |mul_ln1352_11_reg_840                   |  36|   0|   36|          0|
+    |mul_ln1352_4_reg_780                    |  36|   0|   36|          0|
+    |mul_ln1352_5_reg_785                    |  36|   0|   36|          0|
+    |mul_ln1352_6_reg_790                    |  36|   0|   36|          0|
+    |mul_ln1352_7_reg_795                    |  36|   0|   36|          0|
+    |mul_ln1352_8_reg_800                    |  36|   0|   36|          0|
+    |mul_ln1352_9_reg_805                    |  36|   0|   36|          0|
+    |mul_ln1352_reg_775                      |  36|   0|   36|          0|
+    |trunc_ln700_1_reg_815                   |  20|   0|   20|          0|
+    |trunc_ln700_1_reg_815_pp0_iter2_reg     |  20|   0|   20|          0|
+    |trunc_ln700_2_reg_830                   |  20|   0|   20|          0|
+    |trunc_ln700_3_reg_845                   |  20|   0|   20|          0|
+    |trunc_ln700_reg_825                     |  20|   0|   20|          0|
+    |w0vec_0_V_read_int_reg                  |   8|   0|    8|          0|
+    |w0vec_1_V_read_int_reg                  |   8|   0|    8|          0|
+    |w0vec_2_V_read_int_reg                  |   8|   0|    8|          0|
+    |w0vec_3_V_read_int_reg                  |   8|   0|    8|          0|
+    |w0vec_4_V_read_int_reg                  |   8|   0|    8|          0|
+    |w0vec_5_V_read_int_reg                  |   8|   0|    8|          0|
+    |w0vec_6_V_read_int_reg                  |   8|   0|    8|          0|
+    |w0vec_7_V_read_int_reg                  |   8|   0|    8|          0|
+    |w0vec_8_V_read_1_reg_685                |   8|   0|    8|          0|
+    |w0vec_8_V_read_int_reg                  |   8|   0|    8|          0|
+    |w1vec_0_V_read_int_reg                  |   8|   0|    8|          0|
+    |w1vec_1_V_read_int_reg                  |   8|   0|    8|          0|
+    |w1vec_2_V_read_int_reg                  |   8|   0|    8|          0|
+    |w1vec_3_V_read_int_reg                  |   8|   0|    8|          0|
+    |w1vec_4_V_read_int_reg                  |   8|   0|    8|          0|
+    |w1vec_5_V_read_int_reg                  |   8|   0|    8|          0|
+    |w1vec_6_V_read_int_reg                  |   8|   0|    8|          0|
+    |w1vec_7_V_read_int_reg                  |   8|   0|    8|          0|
+    |w1vec_8_V_read_1_reg_680                |   8|   0|    8|          0|
+    |w1vec_8_V_read_int_reg                  |   8|   0|    8|          0|
+    +----------------------------------------+----+----+-----+-----------+
+    |Total                                   |1068|   0| 1068|          0|
+    +----------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+----------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++----------------+-----+-----+------------+----------------+--------------+
+|ap_clk          |  in |    1| ap_ctrl_hs | simd_mac9_DSP2 | return value |
+|ap_rst          |  in |    1| ap_ctrl_hs | simd_mac9_DSP2 | return value |
+|ap_return_0     | out |   20| ap_ctrl_hs | simd_mac9_DSP2 | return value |
+|ap_return_1     | out |   20| ap_ctrl_hs | simd_mac9_DSP2 | return value |
+|ap_ce           |  in |    1| ap_ctrl_hs | simd_mac9_DSP2 | return value |
+|invec_0_V_read  |  in |    8|   ap_none  | invec_0_V_read |    scalar    |
+|invec_1_V_read  |  in |    8|   ap_none  | invec_1_V_read |    scalar    |
+|invec_2_V_read  |  in |    8|   ap_none  | invec_2_V_read |    scalar    |
+|invec_3_V_read  |  in |    8|   ap_none  | invec_3_V_read |    scalar    |
+|invec_4_V_read  |  in |    8|   ap_none  | invec_4_V_read |    scalar    |
+|invec_5_V_read  |  in |    8|   ap_none  | invec_5_V_read |    scalar    |
+|invec_6_V_read  |  in |    8|   ap_none  | invec_6_V_read |    scalar    |
+|invec_7_V_read  |  in |    8|   ap_none  | invec_7_V_read |    scalar    |
+|invec_8_V_read  |  in |    8|   ap_none  | invec_8_V_read |    scalar    |
+|w0vec_0_V_read  |  in |    8|   ap_none  | w0vec_0_V_read |    scalar    |
+|w0vec_1_V_read  |  in |    8|   ap_none  | w0vec_1_V_read |    scalar    |
+|w0vec_2_V_read  |  in |    8|   ap_none  | w0vec_2_V_read |    scalar    |
+|w0vec_3_V_read  |  in |    8|   ap_none  | w0vec_3_V_read |    scalar    |
+|w0vec_4_V_read  |  in |    8|   ap_none  | w0vec_4_V_read |    scalar    |
+|w0vec_5_V_read  |  in |    8|   ap_none  | w0vec_5_V_read |    scalar    |
+|w0vec_6_V_read  |  in |    8|   ap_none  | w0vec_6_V_read |    scalar    |
+|w0vec_7_V_read  |  in |    8|   ap_none  | w0vec_7_V_read |    scalar    |
+|w0vec_8_V_read  |  in |    8|   ap_none  | w0vec_8_V_read |    scalar    |
+|w1vec_0_V_read  |  in |    8|   ap_none  | w1vec_0_V_read |    scalar    |
+|w1vec_1_V_read  |  in |    8|   ap_none  | w1vec_1_V_read |    scalar    |
+|w1vec_2_V_read  |  in |    8|   ap_none  | w1vec_2_V_read |    scalar    |
+|w1vec_3_V_read  |  in |    8|   ap_none  | w1vec_3_V_read |    scalar    |
+|w1vec_4_V_read  |  in |    8|   ap_none  | w1vec_4_V_read |    scalar    |
+|w1vec_5_V_read  |  in |    8|   ap_none  | w1vec_5_V_read |    scalar    |
+|w1vec_6_V_read  |  in |    8|   ap_none  | w1vec_6_V_read |    scalar    |
+|w1vec_7_V_read  |  in |    8|   ap_none  | w1vec_7_V_read |    scalar    |
+|w1vec_8_V_read  |  in |    8|   ap_none  | w1vec_8_V_read |    scalar    |
++----------------+-----+-----+------------+----------------+--------------+
+

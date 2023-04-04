@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vivado HLS Report for 'conv3padding717'
+================================================================
+* Date:           Tue May 10 21:15:26 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.500 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+-----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration |  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency  |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+-----------+-----------+-----------+------+----------+
+        |- Loop 1  |        ?|        ?| 4 ~ 16903 |          -|          -|     ?|    no    |
+        +----------+---------+---------+-----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 3 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.50>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%row_buffer_0_V = alloca [704 x i16], align 2" [./src/conv2d_DSPopt.hpp:119->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 6 'alloca' 'row_buffer_0_V' <Predicate = true> <Delay = 0.00> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 704> <RAM>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%row_buffer_1_V = alloca [704 x i16], align 2" [./src/conv2d_DSPopt.hpp:119->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 7 'alloca' 'row_buffer_1_V' <Predicate = true> <Delay = 0.00> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 704> <RAM>
+ST_1 : Operation 8 [1/1] (1.75ns)   --->   "%reps_read = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %reps)" [./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 8 'read' 'reps_read' <Predicate = true> <Delay = 1.75> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 9 [1/1] (1.75ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %reps_out, i32 %reps_read)" [./src/ultranet.cpp:90->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 9 'write' <Predicate = true> <Delay = 1.75> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 10 [1/1] (1.75ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %reps_c_i, i32 %reps_read)" [./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 10 'write' <Predicate = true> <Delay = 1.75> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 2.40>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 11 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %padding_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 12 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %in_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 13 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c_i, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 14 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 15 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 16 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c_i, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 17 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([704 x i16]* %row_buffer_0_V, [704 x i16]* %row_buffer_1_V, [1 x i8]* @p_str49942, [13 x i8]* @p_str49978, [1 x i8]* @p_str49942, i32 -1, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942)" [./src/conv2d_DSPopt.hpp:122->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 18 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node add_ln130)   --->   "%shl_ln130 = shl i32 %reps_read, 3" [./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 19 'shl' 'shl_ln130' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns) (grouped into LUT with out node add_ln130)   --->   "%shl_ln130_1 = shl i32 %reps_read, 1" [./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 20 'shl' 'shl_ln130_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (1.20ns) (out node of the LUT)   --->   "%add_ln130 = add i32 %shl_ln130, %shl_ln130_1" [./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 21 'add' 'add_ln130' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [1/1] (1.20ns)   --->   "%add_ln130_1 = add i32 2, %add_ln130" [./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 22 'add' 'add_ln130_1' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (0.75ns)   --->   "br label %0" [./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 23 'br' <Predicate = true> <Delay = 0.75>
+
+State 3 <SV = 2> <Delay = 1.20>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%t_V_7 = phi i2 [ 0, %entry ], [ %storeBufferIdx_V, %hls_label_54 ]"   --->   Operation 24 'phi' 't_V_7' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%t_V = phi i2 [ 1, %entry ], [ %loadBufferIdx_V, %hls_label_54 ]"   --->   Operation 25 'phi' 't_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%t_V_8 = phi i10 [ -2, %entry ], [ %rowIdx_V_2, %hls_label_54 ]"   --->   Operation 26 'phi' 't_V_8' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%rep_0_i_i_i = phi i32 [ 0, %entry ], [ %rep, %hls_label_54 ]"   --->   Operation 27 'phi' 'rep_0_i_i_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (1.11ns)   --->   "%icmp_ln130 = icmp eq i32 %rep_0_i_i_i, %add_ln130_1" [./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 28 'icmp' 'icmp_ln130' <Predicate = true> <Delay = 1.11> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 29 [1/1] (0.62ns)   --->   "%storeBufferIdx_V = add i2 %t_V_7, 1" [./src/conv2d_DSPopt.hpp:137->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 29 'add' 'storeBufferIdx_V' <Predicate = true> <Delay = 0.62> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "br i1 %icmp_ln130, label %conv3padding717.exit, label %hls_label_54" [./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 30 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (1.11ns)   --->   "%icmp_ln132 = icmp ult i32 %rep_0_i_i_i, %add_ln130" [./src/conv2d_DSPopt.hpp:132->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 31 'icmp' 'icmp_ln132' <Predicate = (!icmp_ln130)> <Delay = 1.11> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%tmp = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %rep_0_i_i_i, i32 1, i32 31)" [./src/conv2d_DSPopt.hpp:134->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 32 'partselect' 'tmp' <Predicate = (!icmp_ln130)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (1.09ns)   --->   "%icmp_ln134 = icmp eq i31 %tmp, 0" [./src/conv2d_DSPopt.hpp:134->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 33 'icmp' 'icmp_ln134' <Predicate = (!icmp_ln130)> <Delay = 1.09> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (1.20ns)   --->   "%rep = add i32 %rep_0_i_i_i, 1" [./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 34 'add' 'rep' <Predicate = (!icmp_ln130)> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "ret void" [./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 35 'ret' <Predicate = (icmp_ln130)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 2.41>
+ST_4 : Operation 36 [1/1] (0.33ns)   --->   "%xor_ln132 = xor i1 %icmp_ln132, true" [./src/conv2d_DSPopt.hpp:132->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 36 'xor' 'xor_ln132' <Predicate = true> <Delay = 0.33> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 37 [2/2] (2.08ns)   --->   "call fastcc void @stream_in_row.3(i16* %in_V_V, [704 x i16]* %row_buffer_0_V, [704 x i16]* %row_buffer_1_V, i1 %xor_ln132, i2 %t_V_7)" [./src/conv2d_DSPopt.hpp:132->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 37 'call' <Predicate = true> <Delay = 2.08> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 38 [2/2] (0.93ns)   --->   "call fastcc void @stream_out_data.4(i32* %padding_out_V_V, [704 x i16]* %row_buffer_0_V, [704 x i16]* %row_buffer_1_V, i1 %icmp_ln134, i10 %t_V_8, i2 %t_V)" [./src/conv2d_DSPopt.hpp:134->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 38 'call' <Predicate = true> <Delay = 0.93> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 39 [1/1] (0.62ns)   --->   "%loadBufferIdx_V = add i2 %t_V, 1" [./src/conv2d_DSPopt.hpp:136->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 39 'add' 'loadBufferIdx_V' <Predicate = true> <Delay = 0.62> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 40 [1/1] (0.85ns)   --->   "%icmp_ln879 = icmp eq i10 %t_V_8, 9" [./src/conv2d_DSPopt.hpp:139->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 40 'icmp' 'icmp_ln879' <Predicate = true> <Delay = 0.85> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 41 [1/1] (0.93ns)   --->   "%rowIdx_V = add i10 %t_V_8, 1" [./src/conv2d_DSPopt.hpp:142->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 41 'add' 'rowIdx_V' <Predicate = true> <Delay = 0.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 42 [1/1] (0.47ns)   --->   "%rowIdx_V_2 = select i1 %icmp_ln879, i10 0, i10 %rowIdx_V" [./src/conv2d_DSPopt.hpp:139->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 42 'select' 'rowIdx_V_2' <Predicate = true> <Delay = 0.47> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_i_i_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str49987)" [./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 43 'specregionbegin' 'tmp_i_i_i' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 44 [1/2] (0.00ns)   --->   "call fastcc void @stream_in_row.3(i16* %in_V_V, [704 x i16]* %row_buffer_0_V, [704 x i16]* %row_buffer_1_V, i1 %xor_ln132, i2 %t_V_7)" [./src/conv2d_DSPopt.hpp:132->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 44 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 45 [1/2] (0.00ns)   --->   "call fastcc void @stream_out_data.4(i32* %padding_out_V_V, [704 x i16]* %row_buffer_0_V, [704 x i16]* %row_buffer_1_V, i1 %icmp_ln134, i10 %t_V_8, i2 %t_V)" [./src/conv2d_DSPopt.hpp:134->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 45 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str49987, i32 %tmp_i_i_i)" [./src/conv2d_DSPopt.hpp:144->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 46 'specregionend' 'empty' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "br label %0" [./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90]   --->   Operation 47 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 3.5ns
+The critical path consists of the following:
+	fifo read on port 'reps' (./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90) [9]  (1.75 ns)
+	fifo write on port 'reps_out' (./src/ultranet.cpp:90->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90) [15]  (1.75 ns)
+
+ <State 2>: 2.41ns
+The critical path consists of the following:
+	'shl' operation ('shl_ln130', ./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90) [19]  (0 ns)
+	'add' operation ('add_ln130', ./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90) [21]  (1.2 ns)
+	'add' operation ('add_ln130_1', ./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90) [22]  (1.2 ns)
+
+ <State 3>: 1.2ns
+The critical path consists of the following:
+	'phi' operation ('rep') with incoming values : ('rep', ./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90) [28]  (0 ns)
+	'add' operation ('rep', ./src/conv2d_DSPopt.hpp:130->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90) [45]  (1.2 ns)
+
+ <State 4>: 2.41ns
+The critical path consists of the following:
+	'xor' operation ('xor_ln132', ./src/conv2d_DSPopt.hpp:132->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90) [35]  (0.331 ns)
+	'call' operation ('call_ln132', ./src/conv2d_DSPopt.hpp:132->./src/conv2d_DSPopt.hpp:504->./src/conv2d_DSPopt.hpp:503->./src/ultranet.cpp:90) to 'stream_in_row.3' [36]  (2.08 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

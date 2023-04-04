@@ -1,0 +1,190 @@
+
+
+================================================================
+== Vivado HLS Report for 'StreamingDataWidthCo'
+================================================================
+* Date:           Tue May 10 21:14:52 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.500 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        ?|        ?|         2|          1|          1|     ?|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 6 5 
+5 --> 4 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.50>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i_1 = alloca i32"   --->   Operation 7 'alloca' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (1.75ns)   --->   "%numReps_read = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %numReps)" [./src/stream_tools.h:185]   --->   Operation 8 'read' 'numReps_read' <Predicate = true> <Delay = 1.75> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 9 [1/1] (1.75ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %numReps_out, i32 %numReps_read)" [./src/ultranet.cpp:90]   --->   Operation 9 'write' <Predicate = true> <Delay = 1.75> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 10 [1/1] (0.75ns)   --->   "store i32 0, i32* %i_1" [./src/stream_tools.h:225->./src/ultranet.cpp:90]   --->   Operation 10 'store' <Predicate = true> <Delay = 0.75>
+
+State 2 <SV = 1> <Delay = 2.96>
+ST_2 : Operation 11 [2/2] (2.96ns)   --->   "%totalIters = mul i32 %numReps_read, 86400" [./src/stream_tools.h:222->./src/ultranet.cpp:90]   --->   Operation 11 'mul' 'totalIters' <Predicate = true> <Delay = 2.96> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 1> <II = 1> <Delay = 2.96> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.96>
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i192* %out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 12 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %in_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 13 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %numReps, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 14 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %numReps_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 15 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 16 [1/2] (2.96ns)   --->   "%totalIters = mul i32 %numReps_read, 86400" [./src/stream_tools.h:222->./src/ultranet.cpp:90]   --->   Operation 16 'mul' 'totalIters' <Predicate = true> <Delay = 2.96> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 1> <II = 1> <Delay = 2.96> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 17 [1/1] (0.75ns)   --->   "br label %0" [./src/stream_tools.h:225->./src/ultranet.cpp:90]   --->   Operation 17 'br' <Predicate = true> <Delay = 0.75>
+
+State 4 <SV = 3> <Delay = 2.31>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%r_V = phi i128 [ 0, %entry ], [ %trunc_ln, %hls_label_15_end ]" [./src/stream_tools.h:225->./src/ultranet.cpp:90]   --->   Operation 18 'phi' 'r_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%t_0_i = phi i32 [ 0, %entry ], [ %t, %hls_label_15_end ]"   --->   Operation 19 'phi' 't_0_i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (1.11ns)   --->   "%icmp_ln225 = icmp eq i32 %t_0_i, %totalIters" [./src/stream_tools.h:225->./src/ultranet.cpp:90]   --->   Operation 20 'icmp' 'icmp_ln225' <Predicate = true> <Delay = 1.11> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 21 [1/1] (1.20ns)   --->   "%t = add i32 %t_0_i, 1" [./src/stream_tools.h:225->./src/ultranet.cpp:90]   --->   Operation 21 'add' 't' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "br i1 %icmp_ln225, label %.exit, label %hls_label_15_begin" [./src/stream_tools.h:225->./src/ultranet.cpp:90]   --->   Operation 22 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%i_1_load = load i32* %i_1" [./src/stream_tools.h:232->./src/ultranet.cpp:90]   --->   Operation 23 'load' 'i_1_load' <Predicate = (!icmp_ln225)> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (1.20ns)   --->   "%i = add i32 %i_1_load, 1" [./src/stream_tools.h:232->./src/ultranet.cpp:90]   --->   Operation 24 'add' 'i' <Predicate = (!icmp_ln225)> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 25 [1/1] (1.11ns)   --->   "%icmp_ln234 = icmp eq i32 %i, 3" [./src/stream_tools.h:234->./src/ultranet.cpp:90]   --->   Operation 25 'icmp' 'icmp_ln234' <Predicate = (!icmp_ln225)> <Delay = 1.11> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "br i1 %icmp_ln234, label %1, label %hls_label_15_begin.hls_label_15_end_crit_edge" [./src/stream_tools.h:234->./src/ultranet.cpp:90]   --->   Operation 26 'br' <Predicate = (!icmp_ln225)> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.75ns)   --->   "store i32 %i, i32* %i_1" [./src/stream_tools.h:234->./src/ultranet.cpp:90]   --->   Operation 27 'store' <Predicate = (!icmp_ln225 & !icmp_ln234)> <Delay = 0.75>
+ST_4 : Operation 28 [1/1] (0.75ns)   --->   "store i32 0, i32* %i_1" [./src/stream_tools.h:237->./src/ultranet.cpp:90]   --->   Operation 28 'store' <Predicate = (!icmp_ln225 & icmp_ln234)> <Delay = 0.75>
+
+State 5 <SV = 4> <Delay = 3.50>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str50028)" [./src/stream_tools.h:225->./src/ultranet.cpp:90]   --->   Operation 29 'specregionbegin' 'tmp_i' <Predicate = (!icmp_ln225)> <Delay = 0.00>
+ST_5 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str49942) nounwind" [./src/stream_tools.h:226->./src/ultranet.cpp:90]   --->   Operation 30 'specpipeline' <Predicate = (!icmp_ln225)> <Delay = 0.00>
+ST_5 : Operation 31 [1/1] (1.75ns)   --->   "%tmp_V = call i64 @_ssdm_op_Read.ap_fifo.volatile.i64P(i64* %in_V_V)" [./src/stream_tools.h:228->./src/ultranet.cpp:90]   --->   Operation 31 'read' 'tmp_V' <Predicate = (!icmp_ln225)> <Delay = 1.75> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_5 : Operation 32 [1/1] (0.00ns)   --->   "%p_Result_s = call i192 @_ssdm_op_BitConcatenate.i192.i64.i128(i64 %tmp_V, i128 %r_V)" [./src/stream_tools.h:230->./src/ultranet.cpp:90]   --->   Operation 32 'bitconcatenate' 'p_Result_s' <Predicate = (!icmp_ln225)> <Delay = 0.00>
+ST_5 : Operation 33 [1/1] (0.00ns)   --->   "br label %hls_label_15_end" [./src/stream_tools.h:234->./src/ultranet.cpp:90]   --->   Operation 33 'br' <Predicate = (!icmp_ln234)> <Delay = 0.00>
+ST_5 : Operation 34 [1/1] (1.75ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i192P(i192* %out_V_V, i192 %p_Result_s)" [./src/stream_tools.h:236->./src/ultranet.cpp:90]   --->   Operation 34 'write' <Predicate = (icmp_ln234)> <Delay = 1.75> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "br label %hls_label_15_end" [./src/stream_tools.h:237->./src/ultranet.cpp:90]   --->   Operation 35 'br' <Predicate = (icmp_ln234)> <Delay = 0.00>
+ST_5 : Operation 36 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str50028, i32 %tmp_i)" [./src/stream_tools.h:238->./src/ultranet.cpp:90]   --->   Operation 36 'specregionend' 'empty' <Predicate = (!icmp_ln225)> <Delay = 0.00>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%tmp = call i64 @_ssdm_op_PartSelect.i64.i128.i32.i32(i128 %r_V, i32 64, i32 127)" [./src/stream_tools.h:225->./src/ultranet.cpp:90]   --->   Operation 37 'partselect' 'tmp' <Predicate = (!icmp_ln225)> <Delay = 0.00>
+ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%trunc_ln = call i128 @_ssdm_op_BitConcatenate.i128.i64.i64(i64 %tmp_V, i64 %tmp)" [./src/stream_tools.h:225->./src/ultranet.cpp:90]   --->   Operation 38 'bitconcatenate' 'trunc_ln' <Predicate = (!icmp_ln225)> <Delay = 0.00>
+ST_5 : Operation 39 [1/1] (0.00ns)   --->   "br label %0" [./src/stream_tools.h:225->./src/ultranet.cpp:90]   --->   Operation 39 'br' <Predicate = (!icmp_ln225)> <Delay = 0.00>
+
+State 6 <SV = 4> <Delay = 0.00>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "ret void" [./src/ultranet.cpp:90]   --->   Operation 40 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 3.5ns
+The critical path consists of the following:
+	fifo read on port 'numReps' (./src/stream_tools.h:185) [9]  (1.75 ns)
+	fifo write on port 'numReps_out' (./src/ultranet.cpp:90) [11]  (1.75 ns)
+
+ <State 2>: 2.96ns
+The critical path consists of the following:
+	'mul' operation ('totalIters', ./src/stream_tools.h:222->./src/ultranet.cpp:90) [12]  (2.96 ns)
+
+ <State 3>: 2.96ns
+The critical path consists of the following:
+	'mul' operation ('totalIters', ./src/stream_tools.h:222->./src/ultranet.cpp:90) [12]  (2.96 ns)
+
+ <State 4>: 2.31ns
+The critical path consists of the following:
+	'load' operation ('i_1_load', ./src/stream_tools.h:232->./src/ultranet.cpp:90) on local variable 'i' [22]  (0 ns)
+	'add' operation ('i', ./src/stream_tools.h:232->./src/ultranet.cpp:90) [27]  (1.2 ns)
+	'icmp' operation ('icmp_ln234', ./src/stream_tools.h:234->./src/ultranet.cpp:90) [28]  (1.11 ns)
+
+ <State 5>: 3.5ns
+The critical path consists of the following:
+	fifo read on port 'in_V_V' (./src/stream_tools.h:228->./src/ultranet.cpp:90) [25]  (1.75 ns)
+	fifo write on port 'out_V_V' (./src/stream_tools.h:236->./src/ultranet.cpp:90) [34]  (1.75 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

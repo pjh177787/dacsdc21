@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="net_hls.h" path="C:\Users\Aperture\Git\SkyNet\SkyNet-master\SkyNet-master\FPGA_Final\HLS\net_hls.h"/>
+    <originFiles name="net_hls.cc" path="C:\Users\Aperture\Git\SkyNet\SkyNet-master\SkyNet-master\FPGA_Final\HLS\net_hls.cc"/>
+    <originFiles name="dwconv3x3.cc" path="C:\Users\Aperture\Git\SkyNet\SkyNet-master\SkyNet-master\FPGA_Final\HLS\dwconv3x3.cc"/>
+    <originFiles name="conv1x1.cc" path="C:\Users\Aperture\Git\SkyNet\SkyNet-master\SkyNet-master\FPGA_Final\HLS\conv1x1.cc"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

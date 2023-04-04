@@ -1,0 +1,209 @@
+
+
+================================================================
+== Vivado HLS Report for 'conv3padding711'
+================================================================
+* Date:           Tue May 10 21:15:54 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.500 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------+-----------------+---------+---------+----------+----------+-----+------+---------+
+        |                            |                 |  Latency (cycles) |  Latency (absolute) |  Interval  | Pipeline|
+        |          Instance          |      Module     |   min   |   max   |    min   |    max   | min |  max |   Type  |
+        +----------------------------+-----------------+---------+---------+----------+----------+-----+------+---------+
+        |grp_stream_out_data_fu_147  |stream_out_data  |        1|     1948| 4.000 ns | 7.792 us |    1|  1948|   none  |
+        |grp_stream_in_row_4_fu_159  |stream_in_row_4  |        1|       84| 4.000 ns | 0.336 us |    1|    84|   none  |
+        +----------------------------+-----------------+---------+---------+----------+----------+-----+------+---------+
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        ?|        ?| 4 ~ 1951 |          -|          -|     ?|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    233|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        0|      1|     620|    636|    -|
+|Memory           |        4|      -|       0|      0|    0|
+|Multiplexer      |        -|      -|       -|    153|    -|
+|Register         |        -|      -|     159|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        4|      1|     779|   1022|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |    ~0   |   ~0  |   ~0   |      1|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------+-----------------+---------+-------+-----+-----+-----+
+    |          Instance          |      Module     | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +----------------------------+-----------------+---------+-------+-----+-----+-----+
+    |grp_stream_in_row_4_fu_159  |stream_in_row_4  |        0|      0|  363|  199|    0|
+    |grp_stream_out_data_fu_147  |stream_out_data  |        0|      1|  257|  437|    0|
+    +----------------------------+-----------------+---------+-------+-----+-----+-----+
+    |Total                       |                 |        0|      1|  620|  636|    0|
+    +----------------------------+-----------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +------------------+----------------------+---------+---+----+-----+------+-----+------+-------------+
+    |      Memory      |        Module        | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +------------------+----------------------+---------+---+----+-----+------+-----+------+-------------+
+    |row_buffer_0_V_U  |conv3padding711_rbll  |        4|  0|   0|    0|   324|  128|     1|        41472|
+    +------------------+----------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total             |                      |        4|  0|   0|    0|   324|  128|     1|        41472|
+    +------------------+----------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln130_fu_181_p2              |     +    |      0|  0|  39|          32|          32|
+    |loadBufferIdx_V_fu_237_p2        |     +    |      0|  0|   9|           2|           1|
+    |rep_fu_225_p2                    |     +    |      0|  0|  39|          32|           1|
+    |rowIdx_V_fu_249_p2               |     +    |      0|  0|  17|          10|           1|
+    |storeBufferIdx_V_fu_198_p2       |     +    |      0|  0|   9|           2|           1|
+    |icmp_ln130_fu_193_p2             |   icmp   |      0|  0|  20|          32|          32|
+    |icmp_ln132_fu_204_p2             |   icmp   |      0|  0|  20|          32|          32|
+    |icmp_ln134_fu_219_p2             |   icmp   |      0|  0|  20|          31|           1|
+    |icmp_ln879_fu_243_p2             |   icmp   |      0|  0|  13|          10|           7|
+    |ap_block_state1                  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state4_on_subcall_done  |    or    |      0|  0|   2|           1|           1|
+    |or_ln130_fu_187_p2               |    or    |      0|  0|  32|           2|          32|
+    |rowIdx_V_6_fu_255_p3             |  select  |      0|  0|   9|           1|           1|
+    |xor_ln132_fu_231_p2              |    xor   |      0|  0|   2|           1|           2|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |Total                            |          |      0|  0| 233|         189|         145|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm              |  27|          5|    1|          5|
+    |ap_done                |   9|          2|    1|          2|
+    |in_V_V_read            |   9|          2|    1|          2|
+    |padding_out_V_V_write  |   9|          2|    1|          2|
+    |real_start             |   9|          2|    1|          2|
+    |rep_0_i_i_i_reg_136    |   9|          2|   32|         64|
+    |reps_blk_n             |   9|          2|    1|          2|
+    |reps_c_i_blk_n         |   9|          2|    1|          2|
+    |reps_out_blk_n         |   9|          2|    1|          2|
+    |row_buffer_0_V_ce0     |   9|          2|    1|          2|
+    |row_buffer_0_V_ce1     |   9|          2|    1|          2|
+    |row_buffer_0_V_we1     |   9|          2|    1|          2|
+    |t_V_15_reg_100         |   9|          2|    2|          4|
+    |t_V_16_reg_124         |   9|          2|   10|         20|
+    |t_V_reg_112            |   9|          2|    2|          4|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  | 153|         33|   57|        117|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------+----+----+-----+-----------+
+    |                   Name                  | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------+----+----+-----+-----------+
+    |add_ln130_reg_263                        |  28|   0|   32|          4|
+    |ap_CS_fsm                                |   4|   0|    4|          0|
+    |ap_done_reg                              |   1|   0|    1|          0|
+    |grp_stream_in_row_4_fu_159_ap_start_reg  |   1|   0|    1|          0|
+    |grp_stream_out_data_fu_147_ap_start_reg  |   1|   0|    1|          0|
+    |icmp_ln132_reg_281                       |   1|   0|    1|          0|
+    |icmp_ln134_reg_286                       |   1|   0|    1|          0|
+    |loadBufferIdx_V_reg_301                  |   2|   0|    2|          0|
+    |or_ln130_reg_268                         |  28|   0|   32|          4|
+    |rep_0_i_i_i_reg_136                      |  32|   0|   32|          0|
+    |rep_reg_291                              |  32|   0|   32|          0|
+    |rowIdx_V_6_reg_306                       |  10|   0|   10|          0|
+    |start_once_reg                           |   1|   0|    1|          0|
+    |storeBufferIdx_V_reg_276                 |   2|   0|    2|          0|
+    |t_V_15_reg_100                           |   2|   0|    2|          0|
+    |t_V_16_reg_124                           |  10|   0|   10|          0|
+    |t_V_reg_112                              |   2|   0|    2|          0|
+    |xor_ln132_reg_296                        |   1|   0|    1|          0|
+    +-----------------------------------------+----+----+-----+-----------+
+    |Total                                    | 159|   0|  167|          8|
+    +-----------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-----------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++------------------------+-----+-----+------------+-----------------+--------------+
+|ap_clk                  |  in |    1| ap_ctrl_hs | conv3padding711 | return value |
+|ap_rst                  |  in |    1| ap_ctrl_hs | conv3padding711 | return value |
+|ap_start                |  in |    1| ap_ctrl_hs | conv3padding711 | return value |
+|start_full_n            |  in |    1| ap_ctrl_hs | conv3padding711 | return value |
+|ap_done                 | out |    1| ap_ctrl_hs | conv3padding711 | return value |
+|ap_continue             |  in |    1| ap_ctrl_hs | conv3padding711 | return value |
+|ap_idle                 | out |    1| ap_ctrl_hs | conv3padding711 | return value |
+|ap_ready                | out |    1| ap_ctrl_hs | conv3padding711 | return value |
+|start_out               | out |    1| ap_ctrl_hs | conv3padding711 | return value |
+|start_write             | out |    1| ap_ctrl_hs | conv3padding711 | return value |
+|reps_dout               |  in |   32|   ap_fifo  |       reps      |    pointer   |
+|reps_empty_n            |  in |    1|   ap_fifo  |       reps      |    pointer   |
+|reps_read               | out |    1|   ap_fifo  |       reps      |    pointer   |
+|reps_out_din            | out |   32|   ap_fifo  |     reps_out    |    pointer   |
+|reps_out_full_n         |  in |    1|   ap_fifo  |     reps_out    |    pointer   |
+|reps_out_write          | out |    1|   ap_fifo  |     reps_out    |    pointer   |
+|in_V_V_dout             |  in |  128|   ap_fifo  |      in_V_V     |    pointer   |
+|in_V_V_empty_n          |  in |    1|   ap_fifo  |      in_V_V     |    pointer   |
+|in_V_V_read             | out |    1|   ap_fifo  |      in_V_V     |    pointer   |
+|padding_out_V_V_din     | out |  128|   ap_fifo  | padding_out_V_V |    pointer   |
+|padding_out_V_V_full_n  |  in |    1|   ap_fifo  | padding_out_V_V |    pointer   |
+|padding_out_V_V_write   | out |    1|   ap_fifo  | padding_out_V_V |    pointer   |
+|reps_c_i_din            | out |   32|   ap_fifo  |     reps_c_i    |    pointer   |
+|reps_c_i_full_n         |  in |    1|   ap_fifo  |     reps_c_i    |    pointer   |
+|reps_c_i_write          | out |    1|   ap_fifo  |     reps_c_i    |    pointer   |
++------------------------+-----+-----+------------+-----------------+--------------+
+

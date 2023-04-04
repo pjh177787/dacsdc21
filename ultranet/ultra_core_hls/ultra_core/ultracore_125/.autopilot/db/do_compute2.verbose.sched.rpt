@@ -1,0 +1,495 @@
+
+
+================================================================
+== Vivado HLS Report for 'do_compute2'
+================================================================
+* Date:           Tue May 10 21:15:31 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 4.178 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?| dataflow |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 36
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 36, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.96>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%reps_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %reps)" [./src/ultranet.cpp:90]   --->   Operation 37 'read' 'reps_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%reps_c16 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 38 'alloca' 'reps_c16' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%reps_c15 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 39 'alloca' 'reps_c15' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%reps_c14 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 40 'alloca' 'reps_c14' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%reps_c13 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 41 'alloca' 'reps_c13' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%reps_c12 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 42 'alloca' 'reps_c12' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%reps_c11 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 43 'alloca' 'reps_c11' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%reps_c10 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 44 'alloca' 'reps_c10' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%reps_c9 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 45 'alloca' 'reps_c9' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%reps_c8 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 46 'alloca' 'reps_c8' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%reps_c7 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 47 'alloca' 'reps_c7' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%reps_c6 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 48 'alloca' 'reps_c6' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%reps_c5 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 49 'alloca' 'reps_c5' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%reps_c4 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 50 'alloca' 'reps_c4' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%reps_c3 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 51 'alloca' 'reps_c3' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%reps_c2 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 52 'alloca' 'reps_c2' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%reps_c1 = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 53 'alloca' 'reps_c1' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%reps_c = alloca i32, align 4" [./src/ultranet.cpp:90]   --->   Operation 54 'alloca' 'reps_c' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%in_stream_extract_V_s = alloca i64, align 8" [./src/ultranet.cpp:95]   --->   Operation 55 'alloca' 'in_stream_extract_V_s' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%in_stream0_V_V = alloca i192, align 8" [./src/ultranet.cpp:99]   --->   Operation 56 'alloca' 'in_stream0_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%in_stream1_V_V = alloca i24, align 4" [./src/ultranet.cpp:104]   --->   Operation 57 'alloca' 'in_stream1_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%in_stream2_V_V = alloca i24, align 4" [./src/ultranet.cpp:115]   --->   Operation 58 'alloca' 'in_stream2_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%conv_0_out_V_V = alloca i128, align 8" [./src/ultranet.cpp:122]   --->   Operation 59 'alloca' 'conv_0_out_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%pool_0_out_V_V = alloca i128, align 8" [./src/ultranet.cpp:141]   --->   Operation 60 'alloca' 'pool_0_out_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%conv_1_out_V_V = alloca i32, align 4" [./src/ultranet.cpp:154]   --->   Operation 61 'alloca' 'conv_1_out_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%pool_1_out_V_V = alloca i32, align 4" [./src/ultranet.cpp:173]   --->   Operation 62 'alloca' 'pool_1_out_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%conv_2_out_V_V = alloca i64, align 8" [./src/ultranet.cpp:186]   --->   Operation 63 'alloca' 'conv_2_out_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%pool_2_out_V_V = alloca i64, align 8" [./src/ultranet.cpp:205]   --->   Operation 64 'alloca' 'pool_2_out_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%conv_3_out_V_V = alloca i32, align 4" [./src/ultranet.cpp:218]   --->   Operation 65 'alloca' 'conv_3_out_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%pool_3_out_V_V = alloca i32, align 4" [./src/ultranet.cpp:237]   --->   Operation 66 'alloca' 'pool_3_out_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%conv_4_out_V_V = alloca i16, align 2" [./src/ultranet.cpp:250]   --->   Operation 67 'alloca' 'conv_4_out_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%conv_5_out_V_V = alloca i16, align 2" [./src/ultranet.cpp:269]   --->   Operation 68 'alloca' 'conv_5_out_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%conv_6_out_V_V = alloca i16, align 2" [./src/ultranet.cpp:288]   --->   Operation 69 'alloca' 'conv_6_out_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%conv_7_out_V_V = alloca i16, align 2" [./src/ultranet.cpp:307]   --->   Operation 70 'alloca' 'conv_7_out_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%conv_8_out_V_V = alloca i64, align 8" [./src/ultranet.cpp:324]   --->   Operation 71 'alloca' 'conv_8_out_V_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 72 [2/2] (2.96ns)   --->   "call fastcc void @ExtractPixels(i64* %in_V_data_V, i1* %in_V_last_V, i8* %in_V_keep_V, i64* %in_stream_extract_V_s, i32 %reps_read, i32* %reps_c)" [./src/ultranet.cpp:97]   --->   Operation 72 'call' <Predicate = true> <Delay = 2.96> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 73 [1/2] (0.00ns)   --->   "call fastcc void @ExtractPixels(i64* %in_V_data_V, i1* %in_V_last_V, i8* %in_V_keep_V, i64* %in_stream_extract_V_s, i32 %reps_read, i32* %reps_c)" [./src/ultranet.cpp:97]   --->   Operation 73 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 74 [2/2] (0.00ns)   --->   "call fastcc void @StreamingDataWidthCo(i64* %in_stream_extract_V_s, i192* %in_stream0_V_V, i32* nocapture %reps_c, i32* %reps_c1)" [./src/ultranet.cpp:101]   --->   Operation 74 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 75 [1/2] (0.00ns)   --->   "call fastcc void @StreamingDataWidthCo(i64* %in_stream_extract_V_s, i192* %in_stream0_V_V, i32* nocapture %reps_c, i32* %reps_c1)" [./src/ultranet.cpp:101]   --->   Operation 75 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 76 [2/2] (0.00ns)   --->   "call fastcc void @StreamingDataWidthCo.1(i192* %in_stream0_V_V, i24* %in_stream1_V_V, i32* nocapture %reps_c1, i32* %reps_c2)" [./src/ultranet.cpp:107]   --->   Operation 76 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 77 [1/2] (0.00ns)   --->   "call fastcc void @StreamingDataWidthCo.1(i192* %in_stream0_V_V, i24* %in_stream1_V_V, i32* nocapture %reps_c1, i32* %reps_c2)" [./src/ultranet.cpp:107]   --->   Operation 77 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 78 [2/2] (0.00ns)   --->   "call fastcc void @resize_batch(i24* %in_stream1_V_V, i24* %in_stream2_V_V, i32* nocapture %reps_c2, i32* %reps_c3)" [./src/ultranet.cpp:117]   --->   Operation 78 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 79 [1/2] (0.00ns)   --->   "call fastcc void @resize_batch(i24* %in_stream1_V_V, i24* %in_stream2_V_V, i32* nocapture %reps_c2, i32* %reps_c3)" [./src/ultranet.cpp:117]   --->   Operation 79 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 80 [2/2] (0.00ns)   --->   "call fastcc void @conv3x3_l0_bn_act_DS(i24* %in_stream2_V_V, i128* %conv_0_out_V_V, i32* nocapture %reps_c3, i32* %reps_c4)" [./src/ultranet.cpp:125]   --->   Operation 80 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 81 [1/2] (0.00ns)   --->   "call fastcc void @conv3x3_l0_bn_act_DS(i24* %in_stream2_V_V, i128* %conv_0_out_V_V, i32* nocapture %reps_c3, i32* %reps_c4)" [./src/ultranet.cpp:125]   --->   Operation 81 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 82 [2/2] (0.00ns)   --->   "call fastcc void @max_pool2x2.3(i128* %conv_0_out_V_V, i128* %pool_0_out_V_V, i32* nocapture %reps_c4, i32* %reps_c5)" [./src/ultranet.cpp:144]   --->   Operation 82 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 83 [1/2] (0.00ns)   --->   "call fastcc void @max_pool2x2.3(i128* %conv_0_out_V_V, i128* %pool_0_out_V_V, i32* nocapture %reps_c4, i32* %reps_c5)" [./src/ultranet.cpp:144]   --->   Operation 83 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 84 [2/2] (0.00ns)   --->   "call fastcc void @conv3x3_bn_act_DSPop(i128* %pool_0_out_V_V, i32* %conv_1_out_V_V, i32* nocapture %reps_c5, i32* %reps_c6)" [./src/ultranet.cpp:157]   --->   Operation 84 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 85 [1/2] (0.00ns)   --->   "call fastcc void @conv3x3_bn_act_DSPop(i128* %pool_0_out_V_V, i32* %conv_1_out_V_V, i32* nocapture %reps_c5, i32* %reps_c6)" [./src/ultranet.cpp:157]   --->   Operation 85 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 0.00>
+ST_15 : Operation 86 [2/2] (0.00ns)   --->   "call fastcc void @max_pool2x2(i32* %conv_1_out_V_V, i32* %pool_1_out_V_V, i32* nocapture %reps_c6, i32* %reps_c7)" [./src/ultranet.cpp:176]   --->   Operation 86 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 0.00>
+ST_16 : Operation 87 [1/2] (0.00ns)   --->   "call fastcc void @max_pool2x2(i32* %conv_1_out_V_V, i32* %pool_1_out_V_V, i32* nocapture %reps_c6, i32* %reps_c7)" [./src/ultranet.cpp:176]   --->   Operation 87 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 0.00>
+ST_17 : Operation 88 [2/2] (0.00ns)   --->   "call fastcc void @conv3x3_bn_act_DSPop.1(i32* %pool_1_out_V_V, i64* %conv_2_out_V_V, i32* nocapture %reps_c7, i32* %reps_c8)" [./src/ultranet.cpp:189]   --->   Operation 88 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 0.00>
+ST_18 : Operation 89 [1/2] (0.00ns)   --->   "call fastcc void @conv3x3_bn_act_DSPop.1(i32* %pool_1_out_V_V, i64* %conv_2_out_V_V, i32* nocapture %reps_c7, i32* %reps_c8)" [./src/ultranet.cpp:189]   --->   Operation 89 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 0.00>
+ST_19 : Operation 90 [2/2] (0.00ns)   --->   "call fastcc void @max_pool2x2.1(i64* %conv_2_out_V_V, i64* %pool_2_out_V_V, i32* nocapture %reps_c8, i32* %reps_c9)" [./src/ultranet.cpp:208]   --->   Operation 90 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 0.00>
+ST_20 : Operation 91 [1/2] (0.00ns)   --->   "call fastcc void @max_pool2x2.1(i64* %conv_2_out_V_V, i64* %pool_2_out_V_V, i32* nocapture %reps_c8, i32* %reps_c9)" [./src/ultranet.cpp:208]   --->   Operation 91 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 21 <SV = 20> <Delay = 0.00>
+ST_21 : Operation 92 [2/2] (0.00ns)   --->   "call fastcc void @conv3x3_bn_act_DSPop.2(i64* %pool_2_out_V_V, i32* %conv_3_out_V_V, i32* nocapture %reps_c9, i32* %reps_c10)" [./src/ultranet.cpp:221]   --->   Operation 92 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 21> <Delay = 0.00>
+ST_22 : Operation 93 [1/2] (0.00ns)   --->   "call fastcc void @conv3x3_bn_act_DSPop.2(i64* %pool_2_out_V_V, i32* %conv_3_out_V_V, i32* nocapture %reps_c9, i32* %reps_c10)" [./src/ultranet.cpp:221]   --->   Operation 93 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 22> <Delay = 0.00>
+ST_23 : Operation 94 [2/2] (0.00ns)   --->   "call fastcc void @max_pool2x2.2(i32* %conv_3_out_V_V, i32* %pool_3_out_V_V, i32* nocapture %reps_c10, i32* %reps_c11)" [./src/ultranet.cpp:240]   --->   Operation 94 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 23> <Delay = 0.00>
+ST_24 : Operation 95 [1/2] (0.00ns)   --->   "call fastcc void @max_pool2x2.2(i32* %conv_3_out_V_V, i32* %pool_3_out_V_V, i32* nocapture %reps_c10, i32* %reps_c11)" [./src/ultranet.cpp:240]   --->   Operation 95 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 24> <Delay = 0.00>
+ST_25 : Operation 96 [2/2] (0.00ns)   --->   "call fastcc void @conv3x3_bn_act_DSPop.4(i32* %pool_3_out_V_V, i16* %conv_4_out_V_V, i32* nocapture %reps_c11, i32* %reps_c12)" [./src/ultranet.cpp:253]   --->   Operation 96 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 26 <SV = 25> <Delay = 0.00>
+ST_26 : Operation 97 [1/2] (0.00ns)   --->   "call fastcc void @conv3x3_bn_act_DSPop.4(i32* %pool_3_out_V_V, i16* %conv_4_out_V_V, i32* nocapture %reps_c11, i32* %reps_c12)" [./src/ultranet.cpp:253]   --->   Operation 97 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 27 <SV = 26> <Delay = 0.00>
+ST_27 : Operation 98 [2/2] (0.00ns)   --->   "call fastcc void @conv3x3_bn_act_DSPop.6(i16* %conv_4_out_V_V, i16* %conv_5_out_V_V, i32* nocapture %reps_c12, i32* %reps_c13)" [./src/ultranet.cpp:272]   --->   Operation 98 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 28 <SV = 27> <Delay = 0.00>
+ST_28 : Operation 99 [1/2] (0.00ns)   --->   "call fastcc void @conv3x3_bn_act_DSPop.6(i16* %conv_4_out_V_V, i16* %conv_5_out_V_V, i32* nocapture %reps_c12, i32* %reps_c13)" [./src/ultranet.cpp:272]   --->   Operation 99 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 29 <SV = 28> <Delay = 0.00>
+ST_29 : Operation 100 [2/2] (0.00ns)   --->   "call fastcc void @conv3x3_bn_act_DSPop.5(i16* %conv_5_out_V_V, i16* %conv_6_out_V_V, i32* nocapture %reps_c13, i32* %reps_c14)" [./src/ultranet.cpp:291]   --->   Operation 100 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 30 <SV = 29> <Delay = 0.00>
+ST_30 : Operation 101 [1/2] (0.00ns)   --->   "call fastcc void @conv3x3_bn_act_DSPop.5(i16* %conv_5_out_V_V, i16* %conv_6_out_V_V, i32* nocapture %reps_c13, i32* %reps_c14)" [./src/ultranet.cpp:291]   --->   Operation 101 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 31 <SV = 30> <Delay = 0.00>
+ST_31 : Operation 102 [2/2] (0.00ns)   --->   "call fastcc void @conv3x3_bn_act_DSPop.3(i16* %conv_6_out_V_V, i16* %conv_7_out_V_V, i32* nocapture %reps_c14, i32* %reps_c15)" [./src/ultranet.cpp:310]   --->   Operation 102 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 32 <SV = 31> <Delay = 0.00>
+ST_32 : Operation 103 [1/2] (0.00ns)   --->   "call fastcc void @conv3x3_bn_act_DSPop.3(i16* %conv_6_out_V_V, i16* %conv_7_out_V_V, i32* nocapture %reps_c14, i32* %reps_c15)" [./src/ultranet.cpp:310]   --->   Operation 103 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 33 <SV = 32> <Delay = 0.00>
+ST_33 : Operation 104 [2/2] (0.00ns)   --->   "call fastcc void @conv1x1_DSPopt(i16* %conv_7_out_V_V, i64* %conv_8_out_V_V, i32* nocapture %reps_c15, i32* %reps_c16)" [./src/ultranet.cpp:326]   --->   Operation 104 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 34 <SV = 33> <Delay = 0.00>
+ST_34 : Operation 105 [1/2] (0.00ns)   --->   "call fastcc void @conv1x1_DSPopt(i16* %conv_7_out_V_V, i64* %conv_8_out_V_V, i32* nocapture %reps_c15, i32* %reps_c16)" [./src/ultranet.cpp:326]   --->   Operation 105 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 35 <SV = 34> <Delay = 0.00>
+ST_35 : Operation 106 [2/2] (0.00ns)   --->   "call fastcc void @"AddLast<3600u>"(i64* %conv_8_out_V_V, i64* %out_V_data_V, i1* %out_V_last_V, i8* %out_V_keep_V, i32* nocapture %reps_c16)" [./src/ultranet.cpp:331]   --->   Operation 106 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 36 <SV = 35> <Delay = 1.75>
+ST_36 : Operation 107 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str49942) nounwind" [./src/ultranet.cpp:91]   --->   Operation 107 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 108 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %in_V_data_V, i1* %in_V_last_V, i8* %in_V_keep_V, [5 x i8]* @p_str49961, i32 0, i32 0, [5 x i8]* @p_str49962, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942) nounwind"   --->   Operation 108 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 109 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %out_V_data_V, i1* %out_V_last_V, i8* %out_V_keep_V, [5 x i8]* @p_str49961, i32 0, i32 0, [5 x i8]* @p_str49962, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942) nounwind"   --->   Operation 109 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 110 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecChannel([22 x i8]* @in_stream_extract_OC, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1024, i32 1024, i64* %in_stream_extract_V_s, i64* %in_stream_extract_V_s)"   --->   Operation 110 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 111 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %in_stream_extract_V_s, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 111 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 112 [1/1] (0.00ns)   --->   "%empty_100 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @in_stream0_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1024, i32 1024, i192* %in_stream0_V_V, i192* %in_stream0_V_V)"   --->   Operation 112 'specchannel' 'empty_100' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 113 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i192* %in_stream0_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 113 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 114 [1/1] (0.00ns)   --->   "%empty_101 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @in_stream1_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 16, i32 16, i24* %in_stream1_V_V, i24* %in_stream1_V_V)"   --->   Operation 114 'specchannel' 'empty_101' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 115 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %in_stream1_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 115 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 116 [1/1] (0.00ns)   --->   "%empty_102 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @in_stream2_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 16, i32 16, i24* %in_stream2_V_V, i24* %in_stream2_V_V)"   --->   Operation 116 'specchannel' 'empty_102' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 117 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %in_stream2_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 117 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 118 [1/1] (0.00ns)   --->   "%empty_103 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @conv_0_out_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 128, i32 128, i128* %conv_0_out_V_V, i128* %conv_0_out_V_V)"   --->   Operation 118 'specchannel' 'empty_103' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 119 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %conv_0_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 119 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 120 [1/1] (0.00ns)   --->   "%empty_104 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @pool_0_out_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 128, i32 128, i128* %pool_0_out_V_V, i128* %pool_0_out_V_V)"   --->   Operation 120 'specchannel' 'empty_104' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 121 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %pool_0_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 121 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 122 [1/1] (0.00ns)   --->   "%empty_105 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @conv_1_out_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 128, i32 128, i32* %conv_1_out_V_V, i32* %conv_1_out_V_V)"   --->   Operation 122 'specchannel' 'empty_105' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 123 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %conv_1_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 123 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 124 [1/1] (0.00ns)   --->   "%empty_106 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @pool_1_out_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 128, i32 128, i32* %pool_1_out_V_V, i32* %pool_1_out_V_V)"   --->   Operation 124 'specchannel' 'empty_106' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 125 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %pool_1_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 125 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 126 [1/1] (0.00ns)   --->   "%empty_107 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @conv_2_out_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 128, i32 128, i64* %conv_2_out_V_V, i64* %conv_2_out_V_V)"   --->   Operation 126 'specchannel' 'empty_107' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 127 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %conv_2_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 127 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 128 [1/1] (0.00ns)   --->   "%empty_108 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @pool_2_out_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 128, i32 128, i64* %pool_2_out_V_V, i64* %pool_2_out_V_V)"   --->   Operation 128 'specchannel' 'empty_108' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 129 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %pool_2_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 129 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 130 [1/1] (0.00ns)   --->   "%empty_109 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @conv_3_out_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 128, i32 128, i32* %conv_3_out_V_V, i32* %conv_3_out_V_V)"   --->   Operation 130 'specchannel' 'empty_109' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 131 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %conv_3_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 131 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 132 [1/1] (0.00ns)   --->   "%empty_110 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @pool_3_out_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 128, i32 128, i32* %pool_3_out_V_V, i32* %pool_3_out_V_V)"   --->   Operation 132 'specchannel' 'empty_110' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 133 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %pool_3_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 133 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 134 [1/1] (0.00ns)   --->   "%empty_111 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @conv_4_out_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 128, i32 128, i16* %conv_4_out_V_V, i16* %conv_4_out_V_V)"   --->   Operation 134 'specchannel' 'empty_111' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 135 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %conv_4_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 135 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 136 [1/1] (0.00ns)   --->   "%empty_112 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @conv_5_out_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 128, i32 128, i16* %conv_5_out_V_V, i16* %conv_5_out_V_V)"   --->   Operation 136 'specchannel' 'empty_112' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 137 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %conv_5_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 137 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 138 [1/1] (0.00ns)   --->   "%empty_113 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @conv_6_out_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 128, i32 128, i16* %conv_6_out_V_V, i16* %conv_6_out_V_V)"   --->   Operation 138 'specchannel' 'empty_113' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 139 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %conv_6_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 139 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 140 [1/1] (0.00ns)   --->   "%empty_114 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @conv_7_out_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 128, i32 128, i16* %conv_7_out_V_V, i16* %conv_7_out_V_V)"   --->   Operation 140 'specchannel' 'empty_114' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 141 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %conv_7_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 141 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 142 [1/1] (0.00ns)   --->   "%empty_115 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @conv_8_out_OC_V_OC_V, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 64, i32 64, i64* %conv_8_out_V_V, i64* %conv_8_out_V_V)"   --->   Operation 142 'specchannel' 'empty_115' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 143 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %conv_8_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 143 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 144 [1/1] (0.00ns)   --->   "%empty_116 = call i32 (...)* @_ssdm_op_SpecChannel([7 x i8]* @reps_c_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c, i32* %reps_c)" [./src/ultranet.cpp:90]   --->   Operation 144 'specchannel' 'empty_116' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 145 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 145 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 146 [1/1] (0.00ns)   --->   "%empty_117 = call i32 (...)* @_ssdm_op_SpecChannel([8 x i8]* @reps_c1_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c1, i32* %reps_c1)" [./src/ultranet.cpp:90]   --->   Operation 146 'specchannel' 'empty_117' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 147 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 147 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 148 [1/1] (0.00ns)   --->   "%empty_118 = call i32 (...)* @_ssdm_op_SpecChannel([8 x i8]* @reps_c2_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c2, i32* %reps_c2)" [./src/ultranet.cpp:90]   --->   Operation 148 'specchannel' 'empty_118' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 149 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 149 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 150 [1/1] (0.00ns)   --->   "%empty_119 = call i32 (...)* @_ssdm_op_SpecChannel([8 x i8]* @reps_c3_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c3, i32* %reps_c3)" [./src/ultranet.cpp:90]   --->   Operation 150 'specchannel' 'empty_119' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 151 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c3, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 151 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 152 [1/1] (0.00ns)   --->   "%empty_120 = call i32 (...)* @_ssdm_op_SpecChannel([8 x i8]* @reps_c4_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c4, i32* %reps_c4)" [./src/ultranet.cpp:90]   --->   Operation 152 'specchannel' 'empty_120' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 153 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c4, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 153 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 154 [1/1] (0.00ns)   --->   "%empty_121 = call i32 (...)* @_ssdm_op_SpecChannel([8 x i8]* @reps_c5_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c5, i32* %reps_c5)" [./src/ultranet.cpp:90]   --->   Operation 154 'specchannel' 'empty_121' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 155 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c5, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 155 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 156 [1/1] (0.00ns)   --->   "%empty_122 = call i32 (...)* @_ssdm_op_SpecChannel([8 x i8]* @reps_c6_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c6, i32* %reps_c6)" [./src/ultranet.cpp:90]   --->   Operation 156 'specchannel' 'empty_122' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 157 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c6, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 157 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 158 [1/1] (0.00ns)   --->   "%empty_123 = call i32 (...)* @_ssdm_op_SpecChannel([8 x i8]* @reps_c7_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c7, i32* %reps_c7)" [./src/ultranet.cpp:90]   --->   Operation 158 'specchannel' 'empty_123' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 159 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c7, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 159 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 160 [1/1] (0.00ns)   --->   "%empty_124 = call i32 (...)* @_ssdm_op_SpecChannel([8 x i8]* @reps_c8_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c8, i32* %reps_c8)" [./src/ultranet.cpp:90]   --->   Operation 160 'specchannel' 'empty_124' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 161 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c8, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 161 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 162 [1/1] (0.00ns)   --->   "%empty_125 = call i32 (...)* @_ssdm_op_SpecChannel([8 x i8]* @reps_c9_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c9, i32* %reps_c9)" [./src/ultranet.cpp:90]   --->   Operation 162 'specchannel' 'empty_125' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 163 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c9, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 163 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 164 [1/1] (0.00ns)   --->   "%empty_126 = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @reps_c10_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c10, i32* %reps_c10)" [./src/ultranet.cpp:90]   --->   Operation 164 'specchannel' 'empty_126' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 165 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c10, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 165 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 166 [1/1] (0.00ns)   --->   "%empty_127 = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @reps_c11_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c11, i32* %reps_c11)" [./src/ultranet.cpp:90]   --->   Operation 166 'specchannel' 'empty_127' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 167 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c11, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 167 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 168 [1/1] (0.00ns)   --->   "%empty_128 = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @reps_c12_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c12, i32* %reps_c12)" [./src/ultranet.cpp:90]   --->   Operation 168 'specchannel' 'empty_128' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 169 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c12, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 169 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 170 [1/1] (0.00ns)   --->   "%empty_129 = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @reps_c13_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c13, i32* %reps_c13)" [./src/ultranet.cpp:90]   --->   Operation 170 'specchannel' 'empty_129' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 171 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c13, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 171 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 172 [1/1] (0.00ns)   --->   "%empty_130 = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @reps_c14_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c14, i32* %reps_c14)" [./src/ultranet.cpp:90]   --->   Operation 172 'specchannel' 'empty_130' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 173 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c14, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 173 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 174 [1/1] (0.00ns)   --->   "%empty_131 = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @reps_c15_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c15, i32* %reps_c15)" [./src/ultranet.cpp:90]   --->   Operation 174 'specchannel' 'empty_131' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 175 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c15, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 175 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 176 [1/1] (0.00ns)   --->   "%empty_132 = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @reps_c16_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %reps_c16, i32* %reps_c16)" [./src/ultranet.cpp:90]   --->   Operation 176 'specchannel' 'empty_132' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 177 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_c16, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./src/ultranet.cpp:90]   --->   Operation 177 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 178 [1/2] (1.75ns)   --->   "call fastcc void @"AddLast<3600u>"(i64* %conv_8_out_V_V, i64* %out_V_data_V, i1* %out_V_last_V, i8* %out_V_keep_V, i32* nocapture %reps_c16)" [./src/ultranet.cpp:331]   --->   Operation 178 'call' <Predicate = true> <Delay = 1.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_36 : Operation 179 [1/1] (0.00ns)   --->   "ret void" [./src/ultranet.cpp:333]   --->   Operation 179 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 2.96ns
+The critical path consists of the following:
+	wire read on port 'reps' (./src/ultranet.cpp:90) [352]  (0 ns)
+	'call' operation ('call_ln97', ./src/ultranet.cpp:97) to 'ExtractPixels' [426]  (2.96 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+ <State 14>: 0ns
+The critical path consists of the following:
+
+ <State 15>: 0ns
+The critical path consists of the following:
+
+ <State 16>: 0ns
+The critical path consists of the following:
+
+ <State 17>: 0ns
+The critical path consists of the following:
+
+ <State 18>: 0ns
+The critical path consists of the following:
+
+ <State 19>: 0ns
+The critical path consists of the following:
+
+ <State 20>: 0ns
+The critical path consists of the following:
+
+ <State 21>: 0ns
+The critical path consists of the following:
+
+ <State 22>: 0ns
+The critical path consists of the following:
+
+ <State 23>: 0ns
+The critical path consists of the following:
+
+ <State 24>: 0ns
+The critical path consists of the following:
+
+ <State 25>: 0ns
+The critical path consists of the following:
+
+ <State 26>: 0ns
+The critical path consists of the following:
+
+ <State 27>: 0ns
+The critical path consists of the following:
+
+ <State 28>: 0ns
+The critical path consists of the following:
+
+ <State 29>: 0ns
+The critical path consists of the following:
+
+ <State 30>: 0ns
+The critical path consists of the following:
+
+ <State 31>: 0ns
+The critical path consists of the following:
+
+ <State 32>: 0ns
+The critical path consists of the following:
+
+ <State 33>: 0ns
+The critical path consists of the following:
+
+ <State 34>: 0ns
+The critical path consists of the following:
+
+ <State 35>: 0ns
+The critical path consists of the following:
+
+ <State 36>: 1.75ns
+The critical path consists of the following:
+	'call' operation ('call_ln331', ./src/ultranet.cpp:331) to 'AddLast<3600u>' [475]  (1.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

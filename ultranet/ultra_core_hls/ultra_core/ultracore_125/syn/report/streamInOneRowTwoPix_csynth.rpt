@@ -1,0 +1,202 @@
+
+
+================================================================
+== Vivado HLS Report for 'streamInOneRowTwoPix'
+================================================================
+* Date:           Tue May 10 21:16:33 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.180 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|      642| 4.000 ns | 2.568 us |    1|  642|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |      640|      640|         3|          2|          1|   320|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    210|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    195|    -|
+|Register         |        -|      -|      98|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|      98|    405|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln29_fu_259_p2                |     +    |      0|  0|  16|           9|           1|
+    |add_ln30_1_fu_361_p2              |     +    |      0|  0|  15|           6|           1|
+    |add_ln321_2_fu_407_p2             |     +    |      0|  0|  16|           9|           9|
+    |add_ln321_3_fu_418_p2             |     +    |      0|  0|  18|          11|          11|
+    |add_ln321_fu_247_p2               |     +    |      0|  0|  18|          11|          11|
+    |add_ln36_fu_393_p2                |     +    |      0|  0|  15|           8|           8|
+    |p_fu_321_p2                       |     +    |      0|  0|   9|           1|           2|
+    |s_fu_265_p2                       |     +    |      0|  0|  15|           1|           5|
+    |w_fu_423_p2                       |     +    |      0|  0|  12|           4|           1|
+    |and_ln29_1_fu_315_p2              |    and   |      0|  0|   2|           1|           1|
+    |and_ln29_fu_303_p2                |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage1_11001         |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage1_iter0  |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln29_fu_253_p2               |   icmp   |      0|  0|  13|           9|           9|
+    |icmp_ln30_fu_271_p2               |   icmp   |      0|  0|  11|           6|           5|
+    |icmp_ln31_fu_309_p2               |   icmp   |      0|  0|   9|           4|           4|
+    |or_ln321_fu_327_p2                |    or    |      0|  0|   2|           1|           1|
+    |select_ln29_1_fu_285_p3           |  select  |      0|  0|   5|           1|           5|
+    |select_ln29_fu_277_p3             |  select  |      0|  0|   2|           1|           1|
+    |select_ln30_1_fu_428_p3           |  select  |      0|  0|   6|           1|           1|
+    |select_ln30_fu_353_p3             |  select  |      0|  0|   2|           1|           2|
+    |select_ln321_1_fu_333_p3          |  select  |      0|  0|   4|           1|           1|
+    |select_ln321_2_fu_345_p3          |  select  |      0|  0|   2|           1|           1|
+    |select_ln321_fu_219_p3            |  select  |      0|  0|   8|           1|           8|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    |xor_ln29_fu_293_p2                |    xor   |      0|  0|   2|           1|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0| 210|          93|          95|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                   | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                  |  27|          5|    1|          5|
+    |ap_enable_reg_pp0_iter1                    |   9|          2|    1|          2|
+    |ap_phi_mux_indvar_flatten13_phi_fu_168_p4  |   9|          2|    9|         18|
+    |ap_phi_mux_indvar_flatten_phi_fu_190_p4    |   9|          2|    6|         12|
+    |ap_phi_mux_p_0_phi_fu_201_p4               |   9|          2|    2|          4|
+    |ap_phi_mux_s_0_phi_fu_179_p4               |   9|          2|    5|         10|
+    |ap_phi_mux_w_0_phi_fu_212_p4               |   9|          2|    4|          8|
+    |in_V_V_blk_n                               |   9|          2|    1|          2|
+    |indvar_flatten13_reg_164                   |   9|          2|    9|         18|
+    |indvar_flatten_reg_186                     |   9|          2|    6|         12|
+    |p_0_reg_197                                |   9|          2|    2|          4|
+    |row_buffer_0_V_address1                    |  15|          3|   10|         30|
+    |row_buffer_0_V_d1                          |  15|          3|    8|         24|
+    |row_buffer_1_V_address1                    |  15|          3|   10|         30|
+    |row_buffer_1_V_d1                          |  15|          3|    8|         24|
+    |s_0_reg_175                                |   9|          2|    5|         10|
+    |w_0_reg_208                                |   9|          2|    4|          8|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |Total                                      | 195|         41|   91|        221|
+    +-------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------+----+----+-----+-----------+
+    |           Name           | FF | LUT| Bits| Const Bits|
+    +--------------------------+----+----+-----+-----------+
+    |Part1_V_reg_493           |   8|   0|    8|          0|
+    |add_ln29_reg_457          |   9|   0|    9|          0|
+    |add_ln30_1_reg_488        |   6|   0|    6|          0|
+    |add_ln321_3_reg_499       |  11|   0|   11|          0|
+    |add_ln321_reg_448         |   6|   0|   11|          5|
+    |ap_CS_fsm                 |   4|   0|    4|          0|
+    |ap_enable_reg_pp0_iter0   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1   |   1|   0|    1|          0|
+    |icmp_ln29_reg_453         |   1|   0|    1|          0|
+    |icmp_ln30_reg_462         |   1|   0|    1|          0|
+    |indvar_flatten13_reg_164  |   9|   0|    9|          0|
+    |indvar_flatten_reg_186    |   6|   0|    6|          0|
+    |p_0_reg_197               |   2|   0|    2|          0|
+    |s_0_reg_175               |   5|   0|    5|          0|
+    |select_ln29_1_reg_467     |   5|   0|    5|          0|
+    |select_ln30_1_reg_509     |   6|   0|    6|          0|
+    |select_ln30_reg_483       |   2|   0|    2|          0|
+    |select_ln321_1_reg_473    |   4|   0|    4|          0|
+    |select_ln321_2_reg_479    |   1|   0|    1|          0|
+    |select_ln321_reg_443      |   2|   0|    9|          7|
+    |w_0_reg_208               |   4|   0|    4|          0|
+    |w_reg_504                 |   4|   0|    4|          0|
+    +--------------------------+----+----+-----+-----------+
+    |Total                     |  98|   0|  110|         12|
+    +--------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+----------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                   |  in |    1| ap_ctrl_hs | streamInOneRowTwoPix | return value |
+|ap_rst                   |  in |    1| ap_ctrl_hs | streamInOneRowTwoPix | return value |
+|ap_start                 |  in |    1| ap_ctrl_hs | streamInOneRowTwoPix | return value |
+|ap_done                  | out |    1| ap_ctrl_hs | streamInOneRowTwoPix | return value |
+|ap_idle                  | out |    1| ap_ctrl_hs | streamInOneRowTwoPix | return value |
+|ap_ready                 | out |    1| ap_ctrl_hs | streamInOneRowTwoPix | return value |
+|in_V_V_dout              |  in |   16|   ap_fifo  |        in_V_V        |    pointer   |
+|in_V_V_empty_n           |  in |    1|   ap_fifo  |        in_V_V        |    pointer   |
+|in_V_V_read              | out |    1|   ap_fifo  |        in_V_V        |    pointer   |
+|row_buffer_0_V_address1  | out |   10|  ap_memory |    row_buffer_0_V    |     array    |
+|row_buffer_0_V_ce1       | out |    1|  ap_memory |    row_buffer_0_V    |     array    |
+|row_buffer_0_V_we1       | out |    1|  ap_memory |    row_buffer_0_V    |     array    |
+|row_buffer_0_V_d1        | out |    8|  ap_memory |    row_buffer_0_V    |     array    |
+|row_buffer_1_V_address1  | out |   10|  ap_memory |    row_buffer_1_V    |     array    |
+|row_buffer_1_V_ce1       | out |    1|  ap_memory |    row_buffer_1_V    |     array    |
+|row_buffer_1_V_we1       | out |    1|  ap_memory |    row_buffer_1_V    |     array    |
+|row_buffer_1_V_d1        | out |    8|  ap_memory |    row_buffer_1_V    |     array    |
+|skip_flag                |  in |    1|   ap_none  |       skip_flag      |    scalar    |
+|rowBufferIdx_V           |  in |    1|   ap_none  |    rowBufferIdx_V    |    scalar    |
++-------------------------+-----+-----+------------+----------------------+--------------+
+

@@ -1,0 +1,142 @@
+
+
+================================================================
+== Vivado HLS Report for 'ultra_net'
+================================================================
+* Date:           Tue May 10 21:15:42 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 4.178 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 5 [1/1] (1.00ns)   --->   "%reps_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %reps)" [./src/ultranet.cpp:335]   --->   Operation 5 'read' 'reps_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+
+State 2 <SV = 1> <Delay = 2.96>
+ST_2 : Operation 6 [2/2] (2.96ns)   --->   "call fastcc void @do_compute2(i64* %in_V_data_V, i1* %in_V_last_V, i8* %in_V_keep_V, i64* %out_V_data_V, i1* %out_V_last_V, i8* %out_V_keep_V, i32 %reps_read)" [./src/ultranet.cpp:385]   --->   Operation 6 'call' <Predicate = true> <Delay = 2.96> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 7 [1/2] (0.00ns)   --->   "call fastcc void @do_compute2(i64* %in_V_data_V, i1* %in_V_last_V, i8* %in_V_keep_V, i64* %out_V_data_V, i1* %out_V_last_V, i8* %out_V_keep_V, i32 %reps_read)" [./src/ultranet.cpp:385]   --->   Operation 7 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %in_V_data_V), !map !868"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_V_last_V), !map !872"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_V_keep_V), !map !876"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %out_V_data_V), !map !880"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_V_last_V), !map !884"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_V_keep_V), !map !888"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %reps), !map !892"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @ultra_net_str) nounwind"   --->   Operation 15 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %out_V_data_V, i1* %out_V_last_V, i8* %out_V_keep_V, [5 x i8]* @p_str49961, i32 1, i32 1, [5 x i8]* @p_str49962, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942) nounwind" [./src/ultranet.cpp:338]   --->   Operation 16 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %in_V_data_V, i1* %in_V_last_V, i8* %in_V_keep_V, [5 x i8]* @p_str49961, i32 1, i32 1, [5 x i8]* @p_str49962, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942) nounwind" [./src/ultranet.cpp:339]   --->   Operation 17 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %reps, [10 x i8]* @p_str49963, i32 0, i32 0, [1 x i8]* @p_str49942, i32 0, i32 0, [8 x i8]* @p_str49964, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942) nounwind" [./src/ultranet.cpp:340]   --->   Operation 18 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str49963, i32 0, i32 0, [1 x i8]* @p_str49942, i32 0, i32 0, [8 x i8]* @p_str49964, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942) nounwind" [./src/ultranet.cpp:341]   --->   Operation 19 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "ret void" [./src/ultranet.cpp:386]   --->   Operation 20 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	s_axi read on port 'reps' (./src/ultranet.cpp:335) [360]  (1 ns)
+
+ <State 2>: 2.96ns
+The critical path consists of the following:
+	'call' operation ('call_ln385', ./src/ultranet.cpp:385) to 'do_compute2' [365]  (2.96 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

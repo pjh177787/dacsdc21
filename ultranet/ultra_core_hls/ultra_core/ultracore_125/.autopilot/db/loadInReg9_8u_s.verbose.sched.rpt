@@ -1,0 +1,128 @@
+
+
+================================================================
+== Vivado HLS Report for 'loadInReg9_8u_s'
+================================================================
+* Date:           Tue May 10 21:14:56 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns |   0 ns   |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        0|        0|   0 ns   |   0 ns   |    1|    1| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str49942) nounwind" [./src/conv2d_l0.hpp:146]   --->   Operation 2 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%inData_V_read = call i72 @_ssdm_op_Read.ap_auto.i72(i72 %inData_V)" [./src/conv2d_l0.hpp:151]   --->   Operation 3 'read' 'inData_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%trunc_ln647 = trunc i72 %inData_V_read to i8" [./src/conv2d_l0.hpp:151]   --->   Operation 4 'trunc' 'trunc_ln647' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%ivec_1_V_write_assi = call i8 @_ssdm_op_PartSelect.i8.i72.i32.i32(i72 %inData_V_read, i32 8, i32 15)" [./src/conv2d_l0.hpp:151]   --->   Operation 5 'partselect' 'ivec_1_V_write_assi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%ivec_2_V_write_assi = call i8 @_ssdm_op_PartSelect.i8.i72.i32.i32(i72 %inData_V_read, i32 16, i32 23)" [./src/conv2d_l0.hpp:151]   --->   Operation 6 'partselect' 'ivec_2_V_write_assi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%ivec_3_V_write_assi = call i8 @_ssdm_op_PartSelect.i8.i72.i32.i32(i72 %inData_V_read, i32 24, i32 31)" [./src/conv2d_l0.hpp:151]   --->   Operation 7 'partselect' 'ivec_3_V_write_assi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%ivec_4_V_write_assi = call i8 @_ssdm_op_PartSelect.i8.i72.i32.i32(i72 %inData_V_read, i32 32, i32 39)" [./src/conv2d_l0.hpp:151]   --->   Operation 8 'partselect' 'ivec_4_V_write_assi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%ivec_5_V_write_assi = call i8 @_ssdm_op_PartSelect.i8.i72.i32.i32(i72 %inData_V_read, i32 40, i32 47)" [./src/conv2d_l0.hpp:151]   --->   Operation 9 'partselect' 'ivec_5_V_write_assi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%ivec_6_V_write_assi = call i8 @_ssdm_op_PartSelect.i8.i72.i32.i32(i72 %inData_V_read, i32 48, i32 55)" [./src/conv2d_l0.hpp:151]   --->   Operation 10 'partselect' 'ivec_6_V_write_assi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%ivec_7_V_write_assi = call i8 @_ssdm_op_PartSelect.i8.i72.i32.i32(i72 %inData_V_read, i32 56, i32 63)" [./src/conv2d_l0.hpp:151]   --->   Operation 11 'partselect' 'ivec_7_V_write_assi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%ivec_8_V_write_assi = call i8 @_ssdm_op_PartSelect.i8.i72.i32.i32(i72 %inData_V_read, i32 64, i32 71)" [./src/conv2d_l0.hpp:151]   --->   Operation 12 'partselect' 'ivec_8_V_write_assi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } undef, i8 %trunc_ln647, 0" [./src/conv2d_l0.hpp:153]   --->   Operation 13 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv, i8 %ivec_1_V_write_assi, 1" [./src/conv2d_l0.hpp:153]   --->   Operation 14 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_1, i8 %ivec_2_V_write_assi, 2" [./src/conv2d_l0.hpp:153]   --->   Operation 15 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_2, i8 %ivec_3_V_write_assi, 3" [./src/conv2d_l0.hpp:153]   --->   Operation 16 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_3, i8 %ivec_4_V_write_assi, 4" [./src/conv2d_l0.hpp:153]   --->   Operation 17 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_4, i8 %ivec_5_V_write_assi, 5" [./src/conv2d_l0.hpp:153]   --->   Operation 18 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_5, i8 %ivec_6_V_write_assi, 6" [./src/conv2d_l0.hpp:153]   --->   Operation 19 'insertvalue' 'mrv_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_6, i8 %ivec_7_V_write_assi, 7" [./src/conv2d_l0.hpp:153]   --->   Operation 20 'insertvalue' 'mrv_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%mrv_8 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_7, i8 %ivec_8_V_write_assi, 8" [./src/conv2d_l0.hpp:153]   --->   Operation 21 'insertvalue' 'mrv_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "ret { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_8" [./src/conv2d_l0.hpp:153]   --->   Operation 22 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

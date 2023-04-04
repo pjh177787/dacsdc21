@@ -1,0 +1,259 @@
+
+
+================================================================
+== Vivado HLS Report for 'simd_mac9_DSP2'
+================================================================
+* Date:           Tue May 10 21:14:56 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.356 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        3|        3| 12.000 ns | 12.000 ns |    1|    1| function |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.15>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%w1vec_8_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w1vec_8_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 5 'read' 'w1vec_8_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%w1vec_7_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w1vec_7_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 6 'read' 'w1vec_7_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%w1vec_6_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w1vec_6_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 7 'read' 'w1vec_6_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%w1vec_5_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w1vec_5_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 8 'read' 'w1vec_5_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%w1vec_4_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w1vec_4_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 9 'read' 'w1vec_4_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%w1vec_3_V_read_2 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w1vec_3_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 10 'read' 'w1vec_3_V_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%w1vec_2_V_read21 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w1vec_2_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 11 'read' 'w1vec_2_V_read21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%w1vec_1_V_read_2 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w1vec_1_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 12 'read' 'w1vec_1_V_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%w1vec_0_V_read_2 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w1vec_0_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 13 'read' 'w1vec_0_V_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%w0vec_8_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w0vec_8_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 14 'read' 'w0vec_8_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%w0vec_7_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w0vec_7_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 15 'read' 'w0vec_7_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%w0vec_6_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w0vec_6_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 16 'read' 'w0vec_6_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%w0vec_5_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w0vec_5_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 17 'read' 'w0vec_5_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%w0vec_4_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w0vec_4_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 18 'read' 'w0vec_4_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%w0vec_3_V_read_2 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w0vec_3_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 19 'read' 'w0vec_3_V_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%w0vec_2_V_read_2 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w0vec_2_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 20 'read' 'w0vec_2_V_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%w0vec_1_V_read11 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w0vec_1_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 21 'read' 'w0vec_1_V_read11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%w0vec_0_V_read_2 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w0vec_0_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 22 'read' 'w0vec_0_V_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%invec_8_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %invec_8_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 23 'read' 'invec_8_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%invec_7_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %invec_7_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 24 'read' 'invec_7_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%invec_6_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %invec_6_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 25 'read' 'invec_6_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%invec_5_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %invec_5_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 26 'read' 'invec_5_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%invec_4_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %invec_4_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 27 'read' 'invec_4_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%invec_3_V_read_2 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %invec_3_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 28 'read' 'invec_3_V_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%invec_2_V_read_2 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %invec_2_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 29 'read' 'invec_2_V_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%invec_1_V_read_2 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %invec_1_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 30 'read' 'invec_1_V_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%invec_0_V_read_2 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %invec_0_V_read)" [./src/conv2d_l0.hpp:102]   --->   Operation 31 'read' 'invec_0_V_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%shl_ln = call i28 @_ssdm_op_BitConcatenate.i28.i8.i20(i8 %w1vec_0_V_read_2, i20 0)" [./src/conv2d_l0.hpp:131]   --->   Operation 32 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%sext_ln68 = sext i8 %w0vec_0_V_read_2 to i28" [./src/conv2d_l0.hpp:131]   --->   Operation 33 'sext' 'sext_ln68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (1.15ns)   --->   "%add_ln68 = add i28 %shl_ln, %sext_ln68" [./src/conv2d_l0.hpp:131]   --->   Operation 34 'add' 'add_ln68' <Predicate = true> <Delay = 1.15> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%shl_ln68_4 = call i28 @_ssdm_op_BitConcatenate.i28.i8.i20(i8 %w1vec_1_V_read_2, i20 0)" [./src/conv2d_l0.hpp:131]   --->   Operation 35 'bitconcatenate' 'shl_ln68_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%sext_ln68_1 = sext i8 %w0vec_1_V_read11 to i28" [./src/conv2d_l0.hpp:131]   --->   Operation 36 'sext' 'sext_ln68_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (1.15ns)   --->   "%add_ln68_4 = add i28 %shl_ln68_4, %sext_ln68_1" [./src/conv2d_l0.hpp:131]   --->   Operation 37 'add' 'add_ln68_4' <Predicate = true> <Delay = 1.15> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%shl_ln68_5 = call i28 @_ssdm_op_BitConcatenate.i28.i8.i20(i8 %w1vec_2_V_read21, i20 0)" [./src/conv2d_l0.hpp:131]   --->   Operation 38 'bitconcatenate' 'shl_ln68_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%sext_ln68_2 = sext i8 %w0vec_2_V_read_2 to i28" [./src/conv2d_l0.hpp:131]   --->   Operation 39 'sext' 'sext_ln68_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (1.15ns)   --->   "%add_ln68_5 = add i28 %shl_ln68_5, %sext_ln68_2" [./src/conv2d_l0.hpp:131]   --->   Operation 40 'add' 'add_ln68_5' <Predicate = true> <Delay = 1.15> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%shl_ln68_6 = call i28 @_ssdm_op_BitConcatenate.i28.i8.i20(i8 %w1vec_3_V_read_2, i20 0)" [./src/conv2d_l0.hpp:131]   --->   Operation 41 'bitconcatenate' 'shl_ln68_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%sext_ln68_3 = sext i8 %w0vec_3_V_read_2 to i28" [./src/conv2d_l0.hpp:131]   --->   Operation 42 'sext' 'sext_ln68_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (1.15ns)   --->   "%add_ln68_6 = add i28 %shl_ln68_6, %sext_ln68_3" [./src/conv2d_l0.hpp:131]   --->   Operation 43 'add' 'add_ln68_6' <Predicate = true> <Delay = 1.15> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%shl_ln68_7 = call i28 @_ssdm_op_BitConcatenate.i28.i8.i20(i8 %w1vec_4_V_read_1, i20 0)" [./src/conv2d_l0.hpp:131]   --->   Operation 44 'bitconcatenate' 'shl_ln68_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%sext_ln68_4 = sext i8 %w0vec_4_V_read_1 to i28" [./src/conv2d_l0.hpp:131]   --->   Operation 45 'sext' 'sext_ln68_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (1.15ns)   --->   "%add_ln68_7 = add i28 %shl_ln68_7, %sext_ln68_4" [./src/conv2d_l0.hpp:131]   --->   Operation 46 'add' 'add_ln68_7' <Predicate = true> <Delay = 1.15> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%shl_ln68_8 = call i28 @_ssdm_op_BitConcatenate.i28.i8.i20(i8 %w1vec_5_V_read_1, i20 0)" [./src/conv2d_l0.hpp:131]   --->   Operation 47 'bitconcatenate' 'shl_ln68_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%sext_ln68_5 = sext i8 %w0vec_5_V_read_1 to i28" [./src/conv2d_l0.hpp:131]   --->   Operation 48 'sext' 'sext_ln68_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (1.15ns)   --->   "%add_ln68_8 = add i28 %shl_ln68_8, %sext_ln68_5" [./src/conv2d_l0.hpp:131]   --->   Operation 49 'add' 'add_ln68_8' <Predicate = true> <Delay = 1.15> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%shl_ln68_9 = call i28 @_ssdm_op_BitConcatenate.i28.i8.i20(i8 %w1vec_6_V_read_1, i20 0)" [./src/conv2d_l0.hpp:131]   --->   Operation 50 'bitconcatenate' 'shl_ln68_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%sext_ln68_6 = sext i8 %w0vec_6_V_read_1 to i28" [./src/conv2d_l0.hpp:131]   --->   Operation 51 'sext' 'sext_ln68_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (1.15ns)   --->   "%add_ln68_9 = add i28 %shl_ln68_9, %sext_ln68_6" [./src/conv2d_l0.hpp:131]   --->   Operation 52 'add' 'add_ln68_9' <Predicate = true> <Delay = 1.15> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%shl_ln68_s = call i28 @_ssdm_op_BitConcatenate.i28.i8.i20(i8 %w1vec_7_V_read_1, i20 0)" [./src/conv2d_l0.hpp:131]   --->   Operation 53 'bitconcatenate' 'shl_ln68_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%sext_ln68_7 = sext i8 %w0vec_7_V_read_1 to i28" [./src/conv2d_l0.hpp:131]   --->   Operation 54 'sext' 'sext_ln68_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (1.15ns)   --->   "%add_ln68_10 = add i28 %shl_ln68_s, %sext_ln68_7" [./src/conv2d_l0.hpp:131]   --->   Operation 55 'add' 'add_ln68_10' <Predicate = true> <Delay = 1.15> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 2.84>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%zext_ln215 = zext i8 %invec_0_V_read_2 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 56 'zext' 'zext_ln215' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%sext_ln215 = sext i28 %add_ln68 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 57 'sext' 'sext_ln215' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352 = mul nsw i36 %sext_ln215, %zext_ln215" [./src/conv2d_l0.hpp:132]   --->   Operation 58 'mul' 'mul_ln1352' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%zext_ln215_4 = zext i8 %invec_1_V_read_2 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 59 'zext' 'zext_ln215_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%sext_ln215_5 = sext i28 %add_ln68_4 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 60 'sext' 'sext_ln215_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_4 = mul nsw i36 %sext_ln215_5, %zext_ln215_4" [./src/conv2d_l0.hpp:132]   --->   Operation 61 'mul' 'mul_ln1352_4' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%zext_ln215_5 = zext i8 %invec_2_V_read_2 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 62 'zext' 'zext_ln215_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%sext_ln215_6 = sext i28 %add_ln68_5 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 63 'sext' 'sext_ln215_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_5 = mul nsw i36 %sext_ln215_6, %zext_ln215_5" [./src/conv2d_l0.hpp:132]   --->   Operation 64 'mul' 'mul_ln1352_5' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%zext_ln215_6 = zext i8 %invec_3_V_read_2 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 65 'zext' 'zext_ln215_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%sext_ln215_7 = sext i28 %add_ln68_6 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 66 'sext' 'sext_ln215_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_6 = mul nsw i36 %sext_ln215_7, %zext_ln215_6" [./src/conv2d_l0.hpp:132]   --->   Operation 67 'mul' 'mul_ln1352_6' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%zext_ln215_7 = zext i8 %invec_4_V_read_1 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 68 'zext' 'zext_ln215_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%sext_ln215_8 = sext i28 %add_ln68_7 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 69 'sext' 'sext_ln215_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_7 = mul nsw i36 %sext_ln215_8, %zext_ln215_7" [./src/conv2d_l0.hpp:132]   --->   Operation 70 'mul' 'mul_ln1352_7' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%zext_ln215_8 = zext i8 %invec_5_V_read_1 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 71 'zext' 'zext_ln215_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%sext_ln215_9 = sext i28 %add_ln68_8 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 72 'sext' 'sext_ln215_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_8 = mul nsw i36 %sext_ln215_9, %zext_ln215_8" [./src/conv2d_l0.hpp:132]   --->   Operation 73 'mul' 'mul_ln1352_8' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%zext_ln215_9 = zext i8 %invec_6_V_read_1 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 74 'zext' 'zext_ln215_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%sext_ln215_10 = sext i28 %add_ln68_9 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 75 'sext' 'sext_ln215_10' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_9 = mul nsw i36 %sext_ln215_10, %zext_ln215_9" [./src/conv2d_l0.hpp:132]   --->   Operation 76 'mul' 'mul_ln1352_9' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%zext_ln215_10 = zext i8 %invec_7_V_read_1 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 77 'zext' 'zext_ln215_10' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%sext_ln215_11 = sext i28 %add_ln68_10 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 78 'sext' 'sext_ln215_11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_10 = mul nsw i36 %sext_ln215_11, %zext_ln215_10" [./src/conv2d_l0.hpp:132]   --->   Operation 79 'mul' 'mul_ln1352_10' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%trunc_ln700_1 = trunc i36 %mul_ln1352_8 to i20" [./src/conv2d_l0.hpp:134]   --->   Operation 80 'trunc' 'trunc_ln700_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%shl_ln68_1 = call i28 @_ssdm_op_BitConcatenate.i28.i8.i20(i8 %w1vec_8_V_read_1, i20 0)" [./src/conv2d_l0.hpp:131]   --->   Operation 81 'bitconcatenate' 'shl_ln68_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%sext_ln68_8 = sext i8 %w0vec_8_V_read_1 to i28" [./src/conv2d_l0.hpp:131]   --->   Operation 82 'sext' 'sext_ln68_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (1.15ns)   --->   "%add_ln68_11 = add i28 %shl_ln68_1, %sext_ln68_8" [./src/conv2d_l0.hpp:131]   --->   Operation 83 'add' 'add_ln68_11' <Predicate = true> <Delay = 1.15> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 3.35>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%sext_ln215_4 = sext i36 %mul_ln1352 to i37" [./src/conv2d_l0.hpp:131]   --->   Operation 84 'sext' 'sext_ln215_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%sext_ln700 = sext i36 %mul_ln1352_4 to i37" [./src/conv2d_l0.hpp:134]   --->   Operation 85 'sext' 'sext_ln700' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (1.21ns)   --->   "%add_ln700 = add i37 %sext_ln215_4, %sext_ln700" [./src/conv2d_l0.hpp:134]   --->   Operation 86 'add' 'add_ln700' <Predicate = true> <Delay = 1.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%sext_ln700_1 = sext i37 %add_ln700 to i38" [./src/conv2d_l0.hpp:134]   --->   Operation 87 'sext' 'sext_ln700_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%sext_ln68_11 = sext i36 %mul_ln1352_5 to i37" [./src/conv2d_l0.hpp:131]   --->   Operation 88 'sext' 'sext_ln68_11' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%sext_ln700_2 = sext i36 %mul_ln1352_6 to i37" [./src/conv2d_l0.hpp:134]   --->   Operation 89 'sext' 'sext_ln700_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] (1.21ns)   --->   "%add_ln700_3 = add i37 %sext_ln68_11, %sext_ln700_2" [./src/conv2d_l0.hpp:134]   --->   Operation 90 'add' 'add_ln700_3' <Predicate = true> <Delay = 1.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "%sext_ln700_3 = sext i37 %add_ln700_3 to i38" [./src/conv2d_l0.hpp:134]   --->   Operation 91 'sext' 'sext_ln700_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 92 [1/1] (1.22ns)   --->   "%add_ln700_12 = add i37 %add_ln700, %add_ln700_3" [./src/conv2d_l0.hpp:134]   --->   Operation 92 'add' 'add_ln700_12' <Predicate = true> <Delay = 1.22> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 93 [1/1] (1.22ns)   --->   "%add_ln700_4 = add i38 %sext_ln700_3, %sext_ln700_1" [./src/conv2d_l0.hpp:134]   --->   Operation 93 'add' 'add_ln700_4' <Predicate = true> <Delay = 1.22> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%sext_ln700_4 = sext i38 %add_ln700_4 to i39" [./src/conv2d_l0.hpp:134]   --->   Operation 94 'sext' 'sext_ln700_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "%sext_ln68_12 = sext i36 %mul_ln1352_7 to i37" [./src/conv2d_l0.hpp:131]   --->   Operation 95 'sext' 'sext_ln68_12' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%sext_ln700_5 = sext i36 %mul_ln1352_8 to i39" [./src/conv2d_l0.hpp:134]   --->   Operation 96 'sext' 'sext_ln700_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%sext_ln68_13 = sext i36 %mul_ln1352_9 to i38" [./src/conv2d_l0.hpp:131]   --->   Operation 97 'sext' 'sext_ln68_13' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%sext_ln700_6 = sext i36 %mul_ln1352_10 to i37" [./src/conv2d_l0.hpp:134]   --->   Operation 98 'sext' 'sext_ln700_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%trunc_ln700 = trunc i37 %add_ln700_12 to i20" [./src/conv2d_l0.hpp:134]   --->   Operation 99 'trunc' 'trunc_ln700' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 100 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln700_5 = add i39 %sext_ln700_4, %sext_ln700_5" [./src/conv2d_l0.hpp:134]   --->   Operation 100 'add' 'add_ln700_5' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.42> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 101 [1/1] (1.21ns)   --->   "%add_ln700_6 = add i37 %sext_ln68_12, %sext_ln700_6" [./src/conv2d_l0.hpp:134]   --->   Operation 101 'add' 'add_ln700_6' <Predicate = true> <Delay = 1.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%sext_ln700_7 = sext i37 %add_ln700_6 to i38" [./src/conv2d_l0.hpp:134]   --->   Operation 102 'sext' 'sext_ln700_7' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 103 [1/1] (1.22ns)   --->   "%add_ln700_7 = add i38 %sext_ln700_7, %sext_ln68_13" [./src/conv2d_l0.hpp:134]   --->   Operation 103 'add' 'add_ln700_7' <Predicate = true> <Delay = 1.22> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "%sext_ln700_8 = sext i38 %add_ln700_7 to i39" [./src/conv2d_l0.hpp:134]   --->   Operation 104 'sext' 'sext_ln700_8' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 105 [1/1] (0.00ns)   --->   "%trunc_ln700_2 = trunc i38 %add_ln700_7 to i20" [./src/conv2d_l0.hpp:134]   --->   Operation 105 'trunc' 'trunc_ln700_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 106 [1/1] (0.91ns) (root node of TernaryAdder)   --->   "%add_ln700_8 = add i39 %sext_ln700_8, %add_ln700_5" [./src/conv2d_l0.hpp:134]   --->   Operation 106 'add' 'add_ln700_8' <Predicate = true> <Delay = 0.91> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.42> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 107 [1/1] (0.00ns)   --->   "%zext_ln215_11 = zext i8 %invec_8_V_read_1 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 107 'zext' 'zext_ln215_11' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 108 [1/1] (0.00ns)   --->   "%sext_ln215_12 = sext i28 %add_ln68_11 to i36" [./src/conv2d_l0.hpp:132]   --->   Operation 108 'sext' 'sext_ln215_12' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 109 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_11 = mul nsw i36 %sext_ln215_12, %zext_ln215_11" [./src/conv2d_l0.hpp:132]   --->   Operation 109 'mul' 'mul_ln1352_11' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 110 [1/1] (0.00ns)   --->   "%trunc_ln700_3 = trunc i36 %mul_ln1352_11 to i20" [./src/conv2d_l0.hpp:134]   --->   Operation 110 'trunc' 'trunc_ln700_3' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 2.96>
+ST_4 : Operation 111 [1/1] (1.06ns)   --->   "%add_ln700_10 = add i20 %trunc_ln700_1, %trunc_ln700" [./src/conv2d_l0.hpp:134]   --->   Operation 111 'add' 'add_ln700_10' <Predicate = true> <Delay = 1.06> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 112 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln700_11 = add i20 %add_ln700_10, %trunc_ln700_2" [./src/conv2d_l0.hpp:134]   --->   Operation 112 'add' 'add_ln700_11' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.42> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 113 [1/1] (0.00ns)   --->   "%sext_ln700_9 = sext i39 %add_ln700_8 to i40" [./src/conv2d_l0.hpp:134]   --->   Operation 113 'sext' 'sext_ln700_9' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 114 [1/1] (0.00ns)   --->   "%sext_ln68_10 = sext i36 %mul_ln1352_11 to i40" [./src/conv2d_l0.hpp:132]   --->   Operation 114 'sext' 'sext_ln68_10' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 115 [1/1] (1.23ns)   --->   "%add_ln700_9 = add nsw i40 %sext_ln700_9, %sext_ln68_10" [./src/conv2d_l0.hpp:134]   --->   Operation 115 'add' 'add_ln700_9' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 116 [1/1] (0.84ns) (root node of TernaryAdder)   --->   "%add_ln647 = add i20 %add_ln700_11, %trunc_ln700_3" [./src/conv2d_l0.hpp:140]   --->   Operation 116 'add' 'add_ln647' <Predicate = true> <Delay = 0.84> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.42> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 117 [1/1] (0.00ns)   --->   "%trunc_ln647 = trunc i40 %add_ln700_9 to i20" [./src/conv2d_l0.hpp:140]   --->   Operation 117 'trunc' 'trunc_ln647' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 118 [1/1] (0.00ns)   --->   "%p_Result_s = call i20 @_ssdm_op_PartSelect.i20.i40.i32.i32(i40 %add_ln700_9, i32 20, i32 39)" [./src/conv2d_l0.hpp:141]   --->   Operation 118 'partselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 119 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %add_ln647, i32 19)" [./src/conv2d_l0.hpp:141]   --->   Operation 119 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 120 [1/1] (0.00ns)   --->   "%zext_ln78 = zext i1 %tmp to i20" [./src/conv2d_l0.hpp:141]   --->   Operation 120 'zext' 'zext_ln78' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 121 [1/1] (1.06ns)   --->   "%add_ln78 = add i20 %p_Result_s, %zext_ln78" [./src/conv2d_l0.hpp:141]   --->   Operation 121 'add' 'add_ln78' <Predicate = true> <Delay = 1.06> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 122 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i20, i20 } undef, i20 %trunc_ln647, 0" [./src/conv2d_l0.hpp:142]   --->   Operation 122 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 123 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i20, i20 } %mrv, i20 %add_ln78, 1" [./src/conv2d_l0.hpp:142]   --->   Operation 123 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 124 [1/1] (0.00ns)   --->   "ret { i20, i20 } %mrv_1" [./src/conv2d_l0.hpp:142]   --->   Operation 124 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 1.16ns
+The critical path consists of the following:
+	wire read on port 'w1vec_7_V_read' (./src/conv2d_l0.hpp:102) [29]  (0 ns)
+	'add' operation ('add_ln68_10', ./src/conv2d_l0.hpp:131) [113]  (1.16 ns)
+
+ <State 2>: 2.85ns
+The critical path consists of the following:
+	'mul' operation of DSP[60] ('mul_ln1352', ./src/conv2d_l0.hpp:132) [60]  (2.85 ns)
+
+ <State 3>: 3.36ns
+The critical path consists of the following:
+	'add' operation ('add_ln700', ./src/conv2d_l0.hpp:134) [69]  (1.22 ns)
+	'add' operation ('add_ln700_4', ./src/conv2d_l0.hpp:134) [88]  (1.22 ns)
+	'add' operation ('add_ln700_5', ./src/conv2d_l0.hpp:134) [120]  (0 ns)
+	'add' operation ('add_ln700_8', ./src/conv2d_l0.hpp:134) [127]  (0.915 ns)
+
+ <State 4>: 2.97ns
+The critical path consists of the following:
+	'add' operation ('add_ln700_10', ./src/conv2d_l0.hpp:134) [125]  (1.06 ns)
+	'add' operation ('add_ln700_11', ./src/conv2d_l0.hpp:134) [128]  (0 ns)
+	'add' operation ('add_ln647', ./src/conv2d_l0.hpp:140) [139]  (0.844 ns)
+	'add' operation ('out1.V', ./src/conv2d_l0.hpp:141) [144]  (1.06 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

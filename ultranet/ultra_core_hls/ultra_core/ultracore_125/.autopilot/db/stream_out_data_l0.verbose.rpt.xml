@@ -1,0 +1,173 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'stream_out_data_l0'" level="0">
+<item name = "Date">Tue May 10 21:15:48 2022
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">ultra_core</item>
+<item name = "Solution">ultracore_125</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu3eg-sbva484-1-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">4.00 ns, 2.444 ns, 0.50 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">1, 964, 4.000 ns, 3.856 us, 1, 964, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">962, 962, 4, 1, 1, 960, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 195, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 0, 63, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 84, -</column>
+<column name="Register">0, -, 182, 32, -</column>
+<specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="ultra_net_mux_42_ocq_U85">ultra_net_mux_42_ocq, 0, 0, 0, 21, 0</column>
+<column name="ultra_net_mux_42_ocq_U86">ultra_net_mux_42_ocq, 0, 0, 0, 21, 0</column>
+<column name="ultra_net_mux_42_ocq_U87">ultra_net_mux_42_ocq, 0, 0, 0, 21, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln45_fu_242_p2">+, 0, 0, 17, 10, 1</column>
+<column name="add_ln51_fu_285_p2">+, 0, 0, 16, 9, 9</column>
+<column name="c_fu_248_p2">+, 0, 0, 16, 9, 1</column>
+<column name="kc_fu_276_p2">+, 0, 0, 9, 2, 1</column>
+<column name="ret_V_fu_216_p2">+, 0, 0, 18, 11, 2</column>
+<column name="row_sel0_V_fu_200_p2">+, 0, 0, 9, 2, 2</column>
+<column name="row_sel2_V_fu_206_p2">+, 0, 0, 9, 2, 1</column>
+<column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state5_pp0_stage0_iter3">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln45_fu_236_p2">icmp, 0, 0, 13, 10, 8</column>
+<column name="icmp_ln46_fu_254_p2">icmp, 0, 0, 8, 2, 2</column>
+<column name="icmp_ln879_fu_230_p2">icmp, 0, 0, 13, 10, 8</column>
+<column name="select_ln45_fu_268_p3">select, 0, 0, 9, 1, 9</column>
+<column name="select_ln46_fu_260_p3">select, 0, 0, 2, 1, 1</column>
+<column name="v1_V_fu_344_p3">select, 0, 0, 24, 1, 1</column>
+<column name="v2_V_fu_311_p3">select, 0, 0, 24, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">21, 4, 1, 4</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter3">9, 2, 1, 2</column>
+<column name="ap_phi_mux_c_0_phi_fu_182_p4">9, 2, 9, 18</column>
+<column name="c_0_reg_178">9, 2, 9, 18</column>
+<column name="indvar_flatten_reg_167">9, 2, 10, 20</column>
+<column name="kc_0_reg_189">9, 2, 2, 4</column>
+<column name="out_V_V_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">3, 0, 3, 0</column>
+<column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
+<column name="c_0_reg_178">9, 0, 9, 0</column>
+<column name="data1_V_reg_438">24, 0, 24, 0</column>
+<column name="icmp_ln45_reg_388">1, 0, 1, 0</column>
+<column name="icmp_ln879_reg_383">1, 0, 1, 0</column>
+<column name="indvar_flatten_reg_167">10, 0, 10, 0</column>
+<column name="kc_0_reg_189">2, 0, 2, 0</column>
+<column name="row_sel0_V_reg_368">2, 0, 2, 0</column>
+<column name="row_sel2_V_reg_373">2, 0, 2, 0</column>
+<column name="select_ln45_reg_402">9, 0, 9, 0</column>
+<column name="select_ln46_reg_397">2, 0, 2, 0</column>
+<column name="tmp_5_reg_378">1, 0, 1, 0</column>
+<column name="v1_V_reg_443">24, 0, 24, 0</column>
+<column name="v2_V_reg_433">24, 0, 24, 0</column>
+<column name="icmp_ln45_reg_388">64, 32, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, stream_out_data_l0, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, stream_out_data_l0, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, stream_out_data_l0, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, stream_out_data_l0, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, stream_out_data_l0, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, stream_out_data_l0, return value</column>
+<column name="out_V_V_din">out, 72, ap_fifo, out_V_V, pointer</column>
+<column name="out_V_V_full_n">in, 1, ap_fifo, out_V_V, pointer</column>
+<column name="out_V_V_write">out, 1, ap_fifo, out_V_V, pointer</column>
+<column name="row_buffer_0_V_address0">out, 9, ap_memory, row_buffer_0_V, array</column>
+<column name="row_buffer_0_V_ce0">out, 1, ap_memory, row_buffer_0_V, array</column>
+<column name="row_buffer_0_V_q0">in, 24, ap_memory, row_buffer_0_V, array</column>
+<column name="row_buffer_1_V_address0">out, 9, ap_memory, row_buffer_1_V, array</column>
+<column name="row_buffer_1_V_ce0">out, 1, ap_memory, row_buffer_1_V, array</column>
+<column name="row_buffer_1_V_q0">in, 24, ap_memory, row_buffer_1_V, array</column>
+<column name="row_buffer_2_V_address0">out, 9, ap_memory, row_buffer_2_V, array</column>
+<column name="row_buffer_2_V_ce0">out, 1, ap_memory, row_buffer_2_V, array</column>
+<column name="row_buffer_2_V_q0">in, 24, ap_memory, row_buffer_2_V, array</column>
+<column name="row_buffer_3_V_address0">out, 9, ap_memory, row_buffer_3_V, array</column>
+<column name="row_buffer_3_V_ce0">out, 1, ap_memory, row_buffer_3_V, array</column>
+<column name="row_buffer_3_V_q0">in, 24, ap_memory, row_buffer_3_V, array</column>
+<column name="skip_flag">in, 1, ap_none, skip_flag, scalar</column>
+<column name="outRowIdx_V">in, 10, ap_none, outRowIdx_V, scalar</column>
+<column name="centerRowBufferIdx_V">in, 2, ap_none, centerRowBufferIdx_V, scalar</column>
+</table>
+</item>
+</section>
+</profile>

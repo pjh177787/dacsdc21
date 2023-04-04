@@ -1,0 +1,155 @@
+
+
+================================================================
+== Vivado HLS Report for 'pack_weight_data_2'
+================================================================
+* Date:           Tue May 10 21:15:54 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 2.135 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        0|        0|   0 ns   |   0 ns   |    1|    1| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    896|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|      -|    -|
+|Register         |        -|      -|       -|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|       0|    896|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|       0|      1|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |add_ln68_10_fu_834_p2   |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_11_fu_904_p2   |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_12_fu_974_p2   |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_13_fu_1044_p2  |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_14_fu_1114_p2  |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_15_fu_1184_p2  |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_16_fu_144_p2   |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_17_fu_214_p2   |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_18_fu_284_p2   |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_19_fu_344_p2   |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_1_fu_204_p2    |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_20_fu_354_p2   |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_21_fu_424_p2   |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_22_fu_494_p2   |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_23_fu_564_p2   |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_24_fu_634_p2   |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_25_fu_704_p2   |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_26_fu_774_p2   |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_27_fu_844_p2   |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_28_fu_914_p2   |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_29_fu_984_p2   |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_2_fu_274_p2    |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_30_fu_1054_p2  |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_31_fu_1124_p2  |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_32_fu_1194_p2  |     +    |      0|  0|  33|          26|          26|
+    |add_ln68_4_fu_414_p2    |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_5_fu_484_p2    |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_6_fu_554_p2    |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_7_fu_624_p2    |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_8_fu_694_p2    |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_9_fu_764_p2    |     +    |      0|  0|  23|          16|          16|
+    |add_ln68_fu_134_p2      |     +    |      0|  0|  23|          16|          16|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |Total                   |          |      0|  0| 896|         672|         672|
+    +------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+------------+--------------------+--------------+
+|   RTL Ports  | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
++--------------+-----+-----+------------+--------------------+--------------+
+|ap_ready      | out |    1| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_0   | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_1   | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_2   | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_3   | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_4   | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_5   | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_6   | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_7   | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_8   | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_9   | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_10  | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_11  | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_12  | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_13  | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_14  | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|ap_return_15  | out |   26| ap_ctrl_hs | pack_weight_data.2 | return value |
+|w2_V          |  in |   64|   ap_none  |        w2_V        |    scalar    |
+|w1_V          |  in |   64|   ap_none  |        w1_V        |    scalar    |
+|w0_V          |  in |   64|   ap_none  |        w0_V        |    scalar    |
++--------------+-----+-----+------------+--------------------+--------------+
+

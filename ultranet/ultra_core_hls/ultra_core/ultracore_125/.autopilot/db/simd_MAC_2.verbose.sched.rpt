@@ -1,0 +1,426 @@
+
+
+================================================================
+== Vivado HLS Report for 'simd_MAC_2'
+================================================================
+* Date:           Tue May 10 21:15:02 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.429 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        2|        2| 8.000 ns | 8.000 ns |    1|    1| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.84>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%ipack_15_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_15_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 4 'read' 'ipack_15_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%ipack_14_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_14_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 5 'read' 'ipack_14_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%ipack_13_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_13_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 6 'read' 'ipack_13_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%ipack_12_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_12_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 7 'read' 'ipack_12_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%ipack_11_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_11_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 8 'read' 'ipack_11_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%ipack_10_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_10_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 9 'read' 'ipack_10_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%ipack_9_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_9_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 10 'read' 'ipack_9_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%ipack_8_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_8_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 11 'read' 'ipack_8_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%ipack_7_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_7_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 12 'read' 'ipack_7_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%ipack_6_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_6_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 13 'read' 'ipack_6_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%ipack_5_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_5_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 14 'read' 'ipack_5_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%ipack_4_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_4_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 15 'read' 'ipack_4_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%ipack_3_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_3_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 16 'read' 'ipack_3_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%ipack_2_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_2_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 17 'read' 'ipack_2_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%ipack_1_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_1_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 18 'read' 'ipack_1_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%ipack_0_V_read_1 = call i15 @_ssdm_op_Read.ap_auto.i15(i15 %ipack_0_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 19 'read' 'ipack_0_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%wpack_15_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_15_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 20 'read' 'wpack_15_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%wpack_14_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_14_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 21 'read' 'wpack_14_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%wpack_13_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_13_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 22 'read' 'wpack_13_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%wpack_12_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_12_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 23 'read' 'wpack_12_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%wpack_11_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_11_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 24 'read' 'wpack_11_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%wpack_10_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_10_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 25 'read' 'wpack_10_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%wpack_9_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_9_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 26 'read' 'wpack_9_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%wpack_8_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_8_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 27 'read' 'wpack_8_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%wpack_7_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_7_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 28 'read' 'wpack_7_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%wpack_6_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_6_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 29 'read' 'wpack_6_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%wpack_5_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_5_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 30 'read' 'wpack_5_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%wpack_4_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_4_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 31 'read' 'wpack_4_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%wpack_3_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_3_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 32 'read' 'wpack_3_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%wpack_2_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_2_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 33 'read' 'wpack_2_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%wpack_1_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_1_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 34 'read' 'wpack_1_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%wpack_0_V_read_1 = call i26 @_ssdm_op_Read.ap_auto.i26(i26 %wpack_0_V_read)" [./src/conv2d_DSPopt.hpp:247]   --->   Operation 35 'read' 'wpack_0_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%sext_ln215 = sext i26 %wpack_0_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 36 'sext' 'sext_ln215' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln215 = zext i15 %ipack_0_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 37 'zext' 'zext_ln215' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352 = mul nsw i41 %sext_ln215, %zext_ln215" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 38 'mul' 'mul_ln1352' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%sext_ln215_14 = sext i26 %wpack_1_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 39 'sext' 'sext_ln215_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%zext_ln215_12 = zext i15 %ipack_1_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 40 'zext' 'zext_ln215_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_12 = mul nsw i41 %sext_ln215_14, %zext_ln215_12" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 41 'mul' 'mul_ln1352_12' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%trunc_ln700 = trunc i41 %mul_ln1352_12 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 42 'trunc' 'trunc_ln700' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%trunc_ln700_4 = trunc i41 %mul_ln1352 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 43 'trunc' 'trunc_ln700_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%trunc_ln700_5 = trunc i41 %mul_ln1352_12 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 44 'trunc' 'trunc_ln700_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%trunc_ln700_6 = trunc i41 %mul_ln1352 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 45 'trunc' 'trunc_ln700_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%sext_ln215_15 = sext i26 %wpack_2_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 46 'sext' 'sext_ln215_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln215_13 = zext i15 %ipack_2_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 47 'zext' 'zext_ln215_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_13 = mul nsw i41 %sext_ln215_15, %zext_ln215_13" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 48 'mul' 'mul_ln1352_13' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%trunc_ln700_7 = trunc i41 %mul_ln1352_13 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 49 'trunc' 'trunc_ln700_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%trunc_ln700_8 = trunc i41 %mul_ln1352_13 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 50 'trunc' 'trunc_ln700_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%sext_ln215_16 = sext i26 %wpack_3_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 51 'sext' 'sext_ln215_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%zext_ln215_14 = zext i15 %ipack_3_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 52 'zext' 'zext_ln215_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_14 = mul nsw i41 %sext_ln215_16, %zext_ln215_14" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 53 'mul' 'mul_ln1352_14' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%trunc_ln700_9 = trunc i41 %mul_ln1352_14 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 54 'trunc' 'trunc_ln700_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%trunc_ln700_10 = trunc i41 %mul_ln1352_14 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 55 'trunc' 'trunc_ln700_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%sext_ln215_18 = sext i26 %wpack_4_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 56 'sext' 'sext_ln215_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%zext_ln215_15 = zext i15 %ipack_4_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 57 'zext' 'zext_ln215_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_15 = mul nsw i41 %sext_ln215_18, %zext_ln215_15" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 58 'mul' 'mul_ln1352_15' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%sext_ln215_20 = sext i26 %wpack_5_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 59 'sext' 'sext_ln215_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%zext_ln215_16 = zext i15 %ipack_5_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 60 'zext' 'zext_ln215_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_16 = mul nsw i41 %sext_ln215_20, %zext_ln215_16" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 61 'mul' 'mul_ln1352_16' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%trunc_ln700_13 = trunc i41 %mul_ln1352_16 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 62 'trunc' 'trunc_ln700_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%trunc_ln700_14 = trunc i41 %mul_ln1352_15 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 63 'trunc' 'trunc_ln700_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%trunc_ln700_15 = trunc i41 %mul_ln1352_16 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 64 'trunc' 'trunc_ln700_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%trunc_ln700_16 = trunc i41 %mul_ln1352_15 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 65 'trunc' 'trunc_ln700_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%sext_ln215_21 = sext i26 %wpack_6_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 66 'sext' 'sext_ln215_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%zext_ln215_17 = zext i15 %ipack_6_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 67 'zext' 'zext_ln215_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_17 = mul nsw i41 %sext_ln215_21, %zext_ln215_17" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 68 'mul' 'mul_ln1352_17' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%trunc_ln700_17 = trunc i41 %mul_ln1352_17 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 69 'trunc' 'trunc_ln700_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%trunc_ln700_18 = trunc i41 %mul_ln1352_17 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 70 'trunc' 'trunc_ln700_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%sext_ln215_22 = sext i26 %wpack_7_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 71 'sext' 'sext_ln215_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%zext_ln215_18 = zext i15 %ipack_7_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 72 'zext' 'zext_ln215_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_18 = mul nsw i41 %sext_ln215_22, %zext_ln215_18" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 73 'mul' 'mul_ln1352_18' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%trunc_ln700_19 = trunc i41 %mul_ln1352_18 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 74 'trunc' 'trunc_ln700_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%trunc_ln700_20 = trunc i41 %mul_ln1352_18 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 75 'trunc' 'trunc_ln700_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%sext_ln215_23 = sext i26 %wpack_8_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 76 'sext' 'sext_ln215_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%zext_ln215_19 = zext i15 %ipack_8_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 77 'zext' 'zext_ln215_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_19 = mul nsw i41 %sext_ln215_23, %zext_ln215_19" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 78 'mul' 'mul_ln1352_19' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%sext_ln215_25 = sext i26 %wpack_9_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 79 'sext' 'sext_ln215_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%zext_ln215_20 = zext i15 %ipack_9_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 80 'zext' 'zext_ln215_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_20 = mul nsw i41 %sext_ln215_25, %zext_ln215_20" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 81 'mul' 'mul_ln1352_20' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%trunc_ln700_23 = trunc i41 %mul_ln1352_20 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 82 'trunc' 'trunc_ln700_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%trunc_ln700_24 = trunc i41 %mul_ln1352_19 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 83 'trunc' 'trunc_ln700_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%trunc_ln700_25 = trunc i41 %mul_ln1352_20 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 84 'trunc' 'trunc_ln700_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%trunc_ln700_26 = trunc i41 %mul_ln1352_19 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 85 'trunc' 'trunc_ln700_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%sext_ln215_26 = sext i26 %wpack_10_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 86 'sext' 'sext_ln215_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%zext_ln215_21 = zext i15 %ipack_10_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 87 'zext' 'zext_ln215_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_21 = mul nsw i41 %sext_ln215_26, %zext_ln215_21" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 88 'mul' 'mul_ln1352_21' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%trunc_ln700_27 = trunc i41 %mul_ln1352_21 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 89 'trunc' 'trunc_ln700_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%trunc_ln700_28 = trunc i41 %mul_ln1352_21 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 90 'trunc' 'trunc_ln700_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%sext_ln215_27 = sext i26 %wpack_11_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 91 'sext' 'sext_ln215_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%zext_ln215_22 = zext i15 %ipack_11_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 92 'zext' 'zext_ln215_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_22 = mul nsw i41 %sext_ln215_27, %zext_ln215_22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 93 'mul' 'mul_ln1352_22' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%trunc_ln700_29 = trunc i41 %mul_ln1352_22 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 94 'trunc' 'trunc_ln700_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%trunc_ln700_30 = trunc i41 %mul_ln1352_22 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 95 'trunc' 'trunc_ln700_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%sext_ln215_29 = sext i26 %wpack_12_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 96 'sext' 'sext_ln215_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%zext_ln215_23 = zext i15 %ipack_12_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 97 'zext' 'zext_ln215_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_23 = mul nsw i41 %sext_ln215_29, %zext_ln215_23" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 98 'mul' 'mul_ln1352_23' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%sext_ln215_31 = sext i26 %wpack_13_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 99 'sext' 'sext_ln215_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%zext_ln215_24 = zext i15 %ipack_13_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 100 'zext' 'zext_ln215_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_24 = mul nsw i41 %sext_ln215_31, %zext_ln215_24" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 101 'mul' 'mul_ln1352_24' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%trunc_ln700_33 = trunc i41 %mul_ln1352_24 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 102 'trunc' 'trunc_ln700_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%trunc_ln700_34 = trunc i41 %mul_ln1352_23 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 103 'trunc' 'trunc_ln700_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%trunc_ln700_35 = trunc i41 %mul_ln1352_24 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 104 'trunc' 'trunc_ln700_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%trunc_ln700_36 = trunc i41 %mul_ln1352_23 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 105 'trunc' 'trunc_ln700_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%sext_ln215_32 = sext i26 %wpack_14_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 106 'sext' 'sext_ln215_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%zext_ln215_25 = zext i15 %ipack_14_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 107 'zext' 'zext_ln215_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_25 = mul nsw i41 %sext_ln215_32, %zext_ln215_25" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 108 'mul' 'mul_ln1352_25' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%trunc_ln700_37 = trunc i41 %mul_ln1352_25 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 109 'trunc' 'trunc_ln700_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%trunc_ln700_38 = trunc i41 %mul_ln1352_25 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 110 'trunc' 'trunc_ln700_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%sext_ln215_33 = sext i26 %wpack_15_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 111 'sext' 'sext_ln215_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%zext_ln215_26 = zext i15 %ipack_15_V_read_1 to i41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 112 'zext' 'zext_ln215_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (2.84ns) (root node of the DSP)   --->   "%mul_ln1352_26 = mul nsw i41 %sext_ln215_33, %zext_ln215_26" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 113 'mul' 'mul_ln1352_26' <Predicate = true> <Delay = 2.84> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%trunc_ln700_39 = trunc i41 %mul_ln1352_26 to i11" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 114 'trunc' 'trunc_ln700_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%trunc_ln700_40 = trunc i41 %mul_ln1352_26 to i22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 115 'trunc' 'trunc_ln700_40' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.42>
+ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%sext_ln215_13 = sext i41 %mul_ln1352 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 116 'sext' 'sext_ln215_13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 117 [1/1] (0.00ns)   --->   "%sext_ln700 = sext i41 %mul_ln1352_12 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 117 'sext' 'sext_ln700' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 118 [1/1] (1.23ns)   --->   "%add_ln700_13 = add i41 %mul_ln1352_12, %mul_ln1352" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 118 'add' 'add_ln700_13' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 119 [1/1] (1.23ns)   --->   "%add_ln700 = add i42 %sext_ln215_13, %sext_ln700" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 119 'add' 'add_ln700' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 120 [1/1] (0.00ns)   --->   "%sext_ln700_10 = sext i42 %add_ln700 to i43" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 120 'sext' 'sext_ln700_10' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 121 [1/1] (0.00ns)   --->   "%sext_ln700_11 = sext i41 %mul_ln1352_13 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 121 'sext' 'sext_ln700_11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 122 [1/1] (1.08ns)   --->   "%add_ln700_14 = add i22 %trunc_ln700_5, %trunc_ln700_6" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 122 'add' 'add_ln700_14' <Predicate = true> <Delay = 1.08> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 123 [1/1] (0.94ns)   --->   "%add_ln215 = add i11 %trunc_ln700, %trunc_ln700_4" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 123 'add' 'add_ln215' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 124 [1/1] (0.00ns)   --->   "%sext_ln700_12 = sext i41 %mul_ln1352_14 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 124 'sext' 'sext_ln700_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 125 [1/1] (1.23ns)   --->   "%add_ln700_15 = add i41 %mul_ln1352_14, %mul_ln1352_13" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 125 'add' 'add_ln700_15' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 126 [1/1] (1.23ns)   --->   "%add_ln700_16 = add i42 %sext_ln700_11, %sext_ln700_12" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 126 'add' 'add_ln700_16' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 127 [1/1] (0.00ns)   --->   "%sext_ln700_13 = sext i42 %add_ln700_16 to i43" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 127 'sext' 'sext_ln700_13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 128 [1/1] (1.24ns)   --->   "%add_ln700_17 = add i42 %add_ln700, %add_ln700_16" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 128 'add' 'add_ln700_17' <Predicate = true> <Delay = 1.24> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 129 [1/1] (0.00ns)   --->   "%trunc_ln700_11 = trunc i41 %add_ln700_13 to i33" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 129 'trunc' 'trunc_ln700_11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 130 [1/1] (0.00ns)   --->   "%trunc_ln700_12 = trunc i41 %add_ln700_15 to i33" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 130 'trunc' 'trunc_ln700_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 131 [1/1] (1.24ns)   --->   "%add_ln700_18 = add i43 %sext_ln700_13, %sext_ln700_10" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 131 'add' 'add_ln700_18' <Predicate = true> <Delay = 1.24> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 132 [1/1] (1.20ns)   --->   "%add_ln700_19 = add i33 %trunc_ln700_11, %trunc_ln700_12" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 132 'add' 'add_ln700_19' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 133 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln700_20 = add i22 %add_ln700_14, %trunc_ln700_10" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 133 'add' 'add_ln700_20' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 134 [1/1] (0.85ns) (root node of TernaryAdder)   --->   "%add_ln700_21 = add i22 %add_ln700_20, %trunc_ln700_7" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 134 'add' 'add_ln700_21' <Predicate = true> <Delay = 0.85> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 135 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln700_22 = add i11 %add_ln215, %trunc_ln700_9" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 135 'add' 'add_ln700_22' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 136 [1/1] (1.07ns) (root node of TernaryAdder)   --->   "%add_ln700_23 = add i11 %add_ln700_22, %trunc_ln700_8" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 136 'add' 'add_ln700_23' <Predicate = true> <Delay = 1.07> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 137 [1/1] (0.00ns)   --->   "%trunc_ln647 = trunc i42 %add_ln700_17 to i11" [./src/conv2d_DSPopt.hpp:266]   --->   Operation 137 'trunc' 'trunc_ln647' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 138 [1/1] (0.00ns)   --->   "%p_Result_s = call i11 @_ssdm_op_PartSelect.i11.i42.i32.i32(i42 %add_ln700_17, i32 11, i32 21)" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 138 'partselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 139 [1/1] (0.00ns)   --->   "%tmp_11 = call i1 @_ssdm_op_BitSelect.i1.i11.i32(i11 %add_ln700_23, i32 10)" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 139 'bitselect' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 140 [1/1] (0.00ns)   --->   "%zext_ln78 = zext i1 %tmp_11 to i11" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 140 'zext' 'zext_ln78' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 141 [1/1] (0.94ns)   --->   "%add_ln78 = add i11 %p_Result_s, %zext_ln78" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 141 'add' 'add_ln78' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 142 [1/1] (0.00ns)   --->   "%p_Result_8 = call i11 @_ssdm_op_PartSelect.i11.i42.i32.i32(i42 %add_ln700_17, i32 22, i32 32)" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 142 'partselect' 'p_Result_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 143 [1/1] (0.00ns)   --->   "%tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i22.i32(i22 %add_ln700_21, i32 21)" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 143 'bitselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 144 [1/1] (0.00ns)   --->   "%zext_ln78_1 = zext i1 %tmp_12 to i11" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 144 'zext' 'zext_ln78_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 145 [1/1] (0.94ns)   --->   "%add_ln78_1 = add i11 %p_Result_8, %zext_ln78_1" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 145 'add' 'add_ln78_1' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 146 [1/1] (0.00ns)   --->   "%tmp = call i10 @_ssdm_op_PartSelect.i10.i43.i32.i32(i43 %add_ln700_18, i32 33, i32 42)" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 146 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 147 [1/1] (0.00ns)   --->   "%tmp_13 = call i1 @_ssdm_op_BitSelect.i1.i33.i32(i33 %add_ln700_19, i32 32)" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 147 'bitselect' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 148 [1/1] (0.00ns)   --->   "%sext_ln700_14 = sext i11 %trunc_ln647 to i12" [./src/conv2d_DSPopt.hpp:274]   --->   Operation 148 'sext' 'sext_ln700_14' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 149 [1/1] (0.00ns)   --->   "%sext_ln215_19 = sext i41 %mul_ln1352_15 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 149 'sext' 'sext_ln215_19' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 150 [1/1] (0.00ns)   --->   "%sext_ln700_17 = sext i41 %mul_ln1352_16 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 150 'sext' 'sext_ln700_17' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 151 [1/1] (1.23ns)   --->   "%add_ln700_24 = add i41 %mul_ln1352_16, %mul_ln1352_15" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 151 'add' 'add_ln700_24' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 152 [1/1] (1.23ns)   --->   "%add_ln700_25 = add i42 %sext_ln215_19, %sext_ln700_17" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 152 'add' 'add_ln700_25' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 153 [1/1] (0.00ns)   --->   "%sext_ln700_18 = sext i42 %add_ln700_25 to i43" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 153 'sext' 'sext_ln700_18' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 154 [1/1] (0.00ns)   --->   "%sext_ln700_19 = sext i41 %mul_ln1352_17 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 154 'sext' 'sext_ln700_19' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 155 [1/1] (1.08ns)   --->   "%add_ln700_26 = add i22 %trunc_ln700_15, %trunc_ln700_16" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 155 'add' 'add_ln700_26' <Predicate = true> <Delay = 1.08> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 156 [1/1] (0.94ns)   --->   "%add_ln215_1 = add i11 %trunc_ln700_13, %trunc_ln700_14" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 156 'add' 'add_ln215_1' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 157 [1/1] (0.00ns)   --->   "%sext_ln700_20 = sext i41 %mul_ln1352_18 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 157 'sext' 'sext_ln700_20' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 158 [1/1] (1.23ns)   --->   "%add_ln700_27 = add i41 %mul_ln1352_18, %mul_ln1352_17" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 158 'add' 'add_ln700_27' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 159 [1/1] (1.23ns)   --->   "%add_ln700_28 = add i42 %sext_ln700_19, %sext_ln700_20" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 159 'add' 'add_ln700_28' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 160 [1/1] (0.00ns)   --->   "%sext_ln700_21 = sext i42 %add_ln700_28 to i43" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 160 'sext' 'sext_ln700_21' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 161 [1/1] (1.24ns)   --->   "%add_ln700_29 = add i42 %add_ln700_25, %add_ln700_28" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 161 'add' 'add_ln700_29' <Predicate = true> <Delay = 1.24> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 162 [1/1] (0.00ns)   --->   "%trunc_ln700_21 = trunc i41 %add_ln700_24 to i33" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 162 'trunc' 'trunc_ln700_21' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 163 [1/1] (0.00ns)   --->   "%trunc_ln700_22 = trunc i41 %add_ln700_27 to i33" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 163 'trunc' 'trunc_ln700_22' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 164 [1/1] (1.24ns)   --->   "%add_ln700_30 = add i43 %sext_ln700_21, %sext_ln700_18" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 164 'add' 'add_ln700_30' <Predicate = true> <Delay = 1.24> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 165 [1/1] (1.20ns)   --->   "%add_ln700_31 = add i33 %trunc_ln700_21, %trunc_ln700_22" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 165 'add' 'add_ln700_31' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 166 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln700_32 = add i22 %add_ln700_26, %trunc_ln700_20" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 166 'add' 'add_ln700_32' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 167 [1/1] (0.85ns) (root node of TernaryAdder)   --->   "%add_ln700_38 = add i22 %add_ln700_32, %trunc_ln700_17" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 167 'add' 'add_ln700_38' <Predicate = true> <Delay = 0.85> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 168 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln700_40 = add i11 %add_ln215_1, %trunc_ln700_19" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 168 'add' 'add_ln700_40' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 169 [1/1] (1.07ns) (root node of TernaryAdder)   --->   "%add_ln700_41 = add i11 %add_ln700_40, %trunc_ln700_18" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 169 'add' 'add_ln700_41' <Predicate = true> <Delay = 1.07> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 170 [1/1] (0.00ns)   --->   "%trunc_ln647_4 = trunc i42 %add_ln700_29 to i11" [./src/conv2d_DSPopt.hpp:266]   --->   Operation 170 'trunc' 'trunc_ln647_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 171 [1/1] (0.00ns)   --->   "%p_Result_65_1 = call i11 @_ssdm_op_PartSelect.i11.i42.i32.i32(i42 %add_ln700_29, i32 11, i32 21)" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 171 'partselect' 'p_Result_65_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 172 [1/1] (0.00ns)   --->   "%tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i11.i32(i11 %add_ln700_41, i32 10)" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 172 'bitselect' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 173 [1/1] (0.00ns)   --->   "%zext_ln78_3 = zext i1 %tmp_14 to i11" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 173 'zext' 'zext_ln78_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 174 [1/1] (0.94ns)   --->   "%add_ln78_3 = add i11 %p_Result_65_1, %zext_ln78_3" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 174 'add' 'add_ln78_3' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 175 [1/1] (0.00ns)   --->   "%p_Result_66_1 = call i11 @_ssdm_op_PartSelect.i11.i42.i32.i32(i42 %add_ln700_29, i32 22, i32 32)" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 175 'partselect' 'p_Result_66_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 176 [1/1] (0.00ns)   --->   "%tmp_15 = call i1 @_ssdm_op_BitSelect.i1.i22.i32(i22 %add_ln700_38, i32 21)" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 176 'bitselect' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 177 [1/1] (0.00ns)   --->   "%zext_ln78_4 = zext i1 %tmp_15 to i11" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 177 'zext' 'zext_ln78_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 178 [1/1] (0.94ns)   --->   "%add_ln78_4 = add i11 %p_Result_66_1, %zext_ln78_4" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 178 'add' 'add_ln78_4' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 179 [1/1] (0.00ns)   --->   "%tmp_s = call i10 @_ssdm_op_PartSelect.i10.i43.i32.i32(i43 %add_ln700_30, i32 33, i32 42)" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 179 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 180 [1/1] (0.00ns)   --->   "%tmp_16 = call i1 @_ssdm_op_BitSelect.i1.i33.i32(i33 %add_ln700_31, i32 32)" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 180 'bitselect' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 181 [1/1] (0.00ns)   --->   "%sext_ln700_22 = sext i11 %trunc_ln647_4 to i12" [./src/conv2d_DSPopt.hpp:273]   --->   Operation 181 'sext' 'sext_ln700_22' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 182 [1/1] (0.94ns)   --->   "%add_ln700_33 = add i12 %sext_ln700_22, %sext_ln700_14" [./src/conv2d_DSPopt.hpp:273]   --->   Operation 182 'add' 'add_ln700_33' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 183 [1/1] (0.00ns)   --->   "%sext_ln215_24 = sext i41 %mul_ln1352_19 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 183 'sext' 'sext_ln215_24' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 184 [1/1] (0.00ns)   --->   "%sext_ln700_30 = sext i41 %mul_ln1352_20 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 184 'sext' 'sext_ln700_30' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 185 [1/1] (1.23ns)   --->   "%add_ln700_42 = add i41 %mul_ln1352_20, %mul_ln1352_19" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 185 'add' 'add_ln700_42' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 186 [1/1] (1.23ns)   --->   "%add_ln700_37 = add i42 %sext_ln215_24, %sext_ln700_30" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 186 'add' 'add_ln700_37' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 187 [1/1] (0.00ns)   --->   "%sext_ln700_31 = sext i42 %add_ln700_37 to i43" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 187 'sext' 'sext_ln700_31' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 188 [1/1] (0.00ns)   --->   "%sext_ln700_32 = sext i41 %mul_ln1352_21 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 188 'sext' 'sext_ln700_32' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 189 [1/1] (1.08ns)   --->   "%add_ln700_43 = add i22 %trunc_ln700_25, %trunc_ln700_26" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 189 'add' 'add_ln700_43' <Predicate = true> <Delay = 1.08> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 190 [1/1] (0.94ns)   --->   "%add_ln215_2 = add i11 %trunc_ln700_23, %trunc_ln700_24" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 190 'add' 'add_ln215_2' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 191 [1/1] (0.00ns)   --->   "%sext_ln700_33 = sext i41 %mul_ln1352_22 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 191 'sext' 'sext_ln700_33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 192 [1/1] (1.23ns)   --->   "%add_ln700_45 = add i41 %mul_ln1352_22, %mul_ln1352_21" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 192 'add' 'add_ln700_45' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 193 [1/1] (1.23ns)   --->   "%add_ln700_51 = add i42 %sext_ln700_32, %sext_ln700_33" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 193 'add' 'add_ln700_51' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 194 [1/1] (0.00ns)   --->   "%sext_ln700_34 = sext i42 %add_ln700_51 to i43" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 194 'sext' 'sext_ln700_34' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 195 [1/1] (1.24ns)   --->   "%add_ln700_52 = add i42 %add_ln700_37, %add_ln700_51" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 195 'add' 'add_ln700_52' <Predicate = true> <Delay = 1.24> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 196 [1/1] (0.00ns)   --->   "%trunc_ln700_31 = trunc i41 %add_ln700_42 to i33" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 196 'trunc' 'trunc_ln700_31' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 197 [1/1] (0.00ns)   --->   "%trunc_ln700_32 = trunc i41 %add_ln700_45 to i33" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 197 'trunc' 'trunc_ln700_32' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 198 [1/1] (1.24ns)   --->   "%add_ln700_39 = add i43 %sext_ln700_34, %sext_ln700_31" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 198 'add' 'add_ln700_39' <Predicate = true> <Delay = 1.24> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 199 [1/1] (1.20ns)   --->   "%add_ln700_53 = add i33 %trunc_ln700_31, %trunc_ln700_32" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 199 'add' 'add_ln700_53' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 200 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln700_54 = add i22 %add_ln700_43, %trunc_ln700_30" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 200 'add' 'add_ln700_54' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 201 [1/1] (0.85ns) (root node of TernaryAdder)   --->   "%add_ln700_55 = add i22 %add_ln700_54, %trunc_ln700_27" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 201 'add' 'add_ln700_55' <Predicate = true> <Delay = 0.85> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 202 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln700_56 = add i11 %add_ln215_2, %trunc_ln700_29" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 202 'add' 'add_ln700_56' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 203 [1/1] (1.07ns) (root node of TernaryAdder)   --->   "%add_ln700_57 = add i11 %add_ln700_56, %trunc_ln700_28" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 203 'add' 'add_ln700_57' <Predicate = true> <Delay = 1.07> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 204 [1/1] (0.00ns)   --->   "%trunc_ln647_5 = trunc i42 %add_ln700_52 to i11" [./src/conv2d_DSPopt.hpp:266]   --->   Operation 204 'trunc' 'trunc_ln647_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 205 [1/1] (0.00ns)   --->   "%p_Result_65_2 = call i11 @_ssdm_op_PartSelect.i11.i42.i32.i32(i42 %add_ln700_52, i32 11, i32 21)" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 205 'partselect' 'p_Result_65_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 206 [1/1] (0.00ns)   --->   "%tmp_17 = call i1 @_ssdm_op_BitSelect.i1.i11.i32(i11 %add_ln700_57, i32 10)" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 206 'bitselect' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 207 [1/1] (0.00ns)   --->   "%zext_ln78_6 = zext i1 %tmp_17 to i11" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 207 'zext' 'zext_ln78_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 208 [1/1] (0.94ns)   --->   "%add_ln78_6 = add i11 %p_Result_65_2, %zext_ln78_6" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 208 'add' 'add_ln78_6' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 209 [1/1] (0.00ns)   --->   "%p_Result_66_2 = call i11 @_ssdm_op_PartSelect.i11.i42.i32.i32(i42 %add_ln700_52, i32 22, i32 32)" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 209 'partselect' 'p_Result_66_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 210 [1/1] (0.00ns)   --->   "%tmp_18 = call i1 @_ssdm_op_BitSelect.i1.i22.i32(i22 %add_ln700_55, i32 21)" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 210 'bitselect' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 211 [1/1] (0.00ns)   --->   "%zext_ln78_7 = zext i1 %tmp_18 to i11" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 211 'zext' 'zext_ln78_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 212 [1/1] (0.94ns)   --->   "%add_ln78_7 = add i11 %p_Result_66_2, %zext_ln78_7" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 212 'add' 'add_ln78_7' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 213 [1/1] (0.00ns)   --->   "%tmp_1 = call i10 @_ssdm_op_PartSelect.i10.i43.i32.i32(i43 %add_ln700_39, i32 33, i32 42)" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 213 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 214 [1/1] (0.00ns)   --->   "%tmp_19 = call i1 @_ssdm_op_BitSelect.i1.i33.i32(i33 %add_ln700_53, i32 32)" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 214 'bitselect' 'tmp_19' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 215 [1/1] (0.00ns)   --->   "%sext_ln700_35 = sext i11 %trunc_ln647_5 to i12" [./src/conv2d_DSPopt.hpp:274]   --->   Operation 215 'sext' 'sext_ln700_35' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 216 [1/1] (0.00ns)   --->   "%sext_ln215_30 = sext i41 %mul_ln1352_23 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 216 'sext' 'sext_ln215_30' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 217 [1/1] (0.00ns)   --->   "%sext_ln700_38 = sext i41 %mul_ln1352_24 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 217 'sext' 'sext_ln700_38' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 218 [1/1] (1.23ns)   --->   "%add_ln700_58 = add i41 %mul_ln1352_24, %mul_ln1352_23" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 218 'add' 'add_ln700_58' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 219 [1/1] (1.23ns)   --->   "%add_ln700_44 = add i42 %sext_ln215_30, %sext_ln700_38" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 219 'add' 'add_ln700_44' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 220 [1/1] (0.00ns)   --->   "%sext_ln700_39 = sext i42 %add_ln700_44 to i43" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 220 'sext' 'sext_ln700_39' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 221 [1/1] (0.00ns)   --->   "%sext_ln700_40 = sext i41 %mul_ln1352_25 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 221 'sext' 'sext_ln700_40' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 222 [1/1] (1.08ns)   --->   "%add_ln700_59 = add i22 %trunc_ln700_35, %trunc_ln700_36" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 222 'add' 'add_ln700_59' <Predicate = true> <Delay = 1.08> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 223 [1/1] (0.94ns)   --->   "%add_ln215_3 = add i11 %trunc_ln700_33, %trunc_ln700_34" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 223 'add' 'add_ln215_3' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 224 [1/1] (0.00ns)   --->   "%sext_ln700_41 = sext i41 %mul_ln1352_26 to i42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 224 'sext' 'sext_ln700_41' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 225 [1/1] (1.23ns)   --->   "%add_ln700_60 = add i41 %mul_ln1352_26, %mul_ln1352_25" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 225 'add' 'add_ln700_60' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 226 [1/1] (1.23ns)   --->   "%add_ln700_61 = add i42 %sext_ln700_40, %sext_ln700_41" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 226 'add' 'add_ln700_61' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 227 [1/1] (0.00ns)   --->   "%sext_ln700_42 = sext i42 %add_ln700_61 to i43" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 227 'sext' 'sext_ln700_42' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 228 [1/1] (1.24ns)   --->   "%add_ln700_62 = add i42 %add_ln700_44, %add_ln700_61" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 228 'add' 'add_ln700_62' <Predicate = true> <Delay = 1.24> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 229 [1/1] (0.00ns)   --->   "%trunc_ln700_41 = trunc i41 %add_ln700_58 to i33" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 229 'trunc' 'trunc_ln700_41' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 230 [1/1] (0.00ns)   --->   "%trunc_ln700_42 = trunc i41 %add_ln700_60 to i33" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 230 'trunc' 'trunc_ln700_42' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 231 [1/1] (1.24ns)   --->   "%add_ln700_46 = add i43 %sext_ln700_42, %sext_ln700_39" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 231 'add' 'add_ln700_46' <Predicate = true> <Delay = 1.24> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 232 [1/1] (1.20ns)   --->   "%add_ln700_63 = add i33 %trunc_ln700_41, %trunc_ln700_42" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 232 'add' 'add_ln700_63' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 233 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln700_64 = add i22 %add_ln700_59, %trunc_ln700_40" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 233 'add' 'add_ln700_64' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 234 [1/1] (0.85ns) (root node of TernaryAdder)   --->   "%add_ln700_65 = add i22 %add_ln700_64, %trunc_ln700_37" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 234 'add' 'add_ln700_65' <Predicate = true> <Delay = 0.85> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 235 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln700_66 = add i11 %add_ln215_3, %trunc_ln700_39" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 235 'add' 'add_ln700_66' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 236 [1/1] (1.07ns) (root node of TernaryAdder)   --->   "%add_ln700_67 = add i11 %add_ln700_66, %trunc_ln700_38" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 236 'add' 'add_ln700_67' <Predicate = true> <Delay = 1.07> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 237 [1/1] (0.00ns)   --->   "%trunc_ln647_6 = trunc i42 %add_ln700_62 to i11" [./src/conv2d_DSPopt.hpp:266]   --->   Operation 237 'trunc' 'trunc_ln647_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 238 [1/1] (0.00ns)   --->   "%p_Result_65_3 = call i11 @_ssdm_op_PartSelect.i11.i42.i32.i32(i42 %add_ln700_62, i32 11, i32 21)" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 238 'partselect' 'p_Result_65_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 239 [1/1] (0.00ns)   --->   "%tmp_20 = call i1 @_ssdm_op_BitSelect.i1.i11.i32(i11 %add_ln700_67, i32 10)" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 239 'bitselect' 'tmp_20' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 240 [1/1] (0.00ns)   --->   "%zext_ln78_9 = zext i1 %tmp_20 to i11" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 240 'zext' 'zext_ln78_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 241 [1/1] (0.94ns)   --->   "%add_ln78_9 = add i11 %p_Result_65_3, %zext_ln78_9" [./src/conv2d_DSPopt.hpp:267]   --->   Operation 241 'add' 'add_ln78_9' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 242 [1/1] (0.00ns)   --->   "%p_Result_66_3 = call i11 @_ssdm_op_PartSelect.i11.i42.i32.i32(i42 %add_ln700_62, i32 22, i32 32)" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 242 'partselect' 'p_Result_66_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 243 [1/1] (0.00ns)   --->   "%tmp_21 = call i1 @_ssdm_op_BitSelect.i1.i22.i32(i22 %add_ln700_65, i32 21)" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 243 'bitselect' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 244 [1/1] (0.00ns)   --->   "%zext_ln78_10 = zext i1 %tmp_21 to i11" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 244 'zext' 'zext_ln78_10' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 245 [1/1] (0.94ns)   --->   "%add_ln78_10 = add i11 %p_Result_66_3, %zext_ln78_10" [./src/conv2d_DSPopt.hpp:269]   --->   Operation 245 'add' 'add_ln78_10' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 246 [1/1] (0.00ns)   --->   "%tmp_2 = call i10 @_ssdm_op_PartSelect.i10.i43.i32.i32(i43 %add_ln700_46, i32 33, i32 42)" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 246 'partselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 247 [1/1] (0.00ns)   --->   "%tmp_22 = call i1 @_ssdm_op_BitSelect.i1.i33.i32(i33 %add_ln700_63, i32 32)" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 247 'bitselect' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 248 [1/1] (0.00ns)   --->   "%sext_ln700_43 = sext i11 %trunc_ln647_6 to i12" [./src/conv2d_DSPopt.hpp:273]   --->   Operation 248 'sext' 'sext_ln700_43' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 249 [1/1] (0.94ns)   --->   "%add_ln700_68 = add i12 %sext_ln700_35, %sext_ln700_43" [./src/conv2d_DSPopt.hpp:273]   --->   Operation 249 'add' 'add_ln700_68' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.84>
+ST_3 : Operation 250 [1/1] (0.00ns)   --->   "%sext_ln647 = sext i10 %tmp to i11" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 250 'sext' 'sext_ln647' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 251 [1/1] (0.00ns)   --->   "%zext_ln78_2 = zext i1 %tmp_13 to i11" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 251 'zext' 'zext_ln78_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 252 [1/1] (0.93ns)   --->   "%add_ln78_2 = add i11 %sext_ln647, %zext_ln78_2" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 252 'add' 'add_ln78_2' <Predicate = true> <Delay = 0.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 253 [1/1] (0.00ns)   --->   "%sext_ln700_15 = sext i11 %add_ln78 to i12" [./src/conv2d_DSPopt.hpp:275]   --->   Operation 253 'sext' 'sext_ln700_15' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 254 [1/1] (0.00ns)   --->   "%sext_ln700_16 = sext i11 %add_ln78_1 to i12" [./src/conv2d_DSPopt.hpp:276]   --->   Operation 254 'sext' 'sext_ln700_16' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 255 [1/1] (0.00ns)   --->   "%sext_ln215_17 = sext i11 %add_ln78_2 to i12" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 255 'sext' 'sext_ln215_17' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 256 [1/1] (0.00ns)   --->   "%sext_ln647_1 = sext i10 %tmp_s to i11" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 256 'sext' 'sext_ln647_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 257 [1/1] (0.00ns)   --->   "%zext_ln78_5 = zext i1 %tmp_16 to i11" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 257 'zext' 'zext_ln78_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 258 [1/1] (0.93ns)   --->   "%add_ln78_5 = add i11 %sext_ln647_1, %zext_ln78_5" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 258 'add' 'add_ln78_5' <Predicate = true> <Delay = 0.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 259 [1/1] (0.00ns)   --->   "%sext_ln700_23 = sext i12 %add_ln700_33 to i13" [./src/conv2d_DSPopt.hpp:273]   --->   Operation 259 'sext' 'sext_ln700_23' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 260 [1/1] (0.00ns)   --->   "%sext_ln700_24 = sext i11 %add_ln78_3 to i12" [./src/conv2d_DSPopt.hpp:274]   --->   Operation 260 'sext' 'sext_ln700_24' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 261 [1/1] (0.94ns)   --->   "%add_ln700_34 = add i12 %sext_ln700_24, %sext_ln700_15" [./src/conv2d_DSPopt.hpp:274]   --->   Operation 261 'add' 'add_ln700_34' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 262 [1/1] (0.00ns)   --->   "%sext_ln700_25 = sext i12 %add_ln700_34 to i13" [./src/conv2d_DSPopt.hpp:274]   --->   Operation 262 'sext' 'sext_ln700_25' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 263 [1/1] (0.00ns)   --->   "%sext_ln700_26 = sext i11 %add_ln78_4 to i12" [./src/conv2d_DSPopt.hpp:275]   --->   Operation 263 'sext' 'sext_ln700_26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 264 [1/1] (0.94ns)   --->   "%add_ln700_35 = add i12 %sext_ln700_26, %sext_ln700_16" [./src/conv2d_DSPopt.hpp:275]   --->   Operation 264 'add' 'add_ln700_35' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 265 [1/1] (0.00ns)   --->   "%sext_ln700_27 = sext i12 %add_ln700_35 to i13" [./src/conv2d_DSPopt.hpp:275]   --->   Operation 265 'sext' 'sext_ln700_27' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 266 [1/1] (0.00ns)   --->   "%sext_ln700_28 = sext i11 %add_ln78_5 to i12" [./src/conv2d_DSPopt.hpp:276]   --->   Operation 266 'sext' 'sext_ln700_28' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 267 [1/1] (0.94ns)   --->   "%add_ln700_36 = add i12 %sext_ln700_28, %sext_ln215_17" [./src/conv2d_DSPopt.hpp:276]   --->   Operation 267 'add' 'add_ln700_36' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 268 [1/1] (0.00ns)   --->   "%sext_ln700_29 = sext i12 %add_ln700_36 to i13" [./src/conv2d_DSPopt.hpp:276]   --->   Operation 268 'sext' 'sext_ln700_29' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 269 [1/1] (0.00ns)   --->   "%sext_ln647_2 = sext i10 %tmp_1 to i11" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 269 'sext' 'sext_ln647_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 270 [1/1] (0.00ns)   --->   "%zext_ln78_8 = zext i1 %tmp_19 to i11" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 270 'zext' 'zext_ln78_8' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 271 [1/1] (0.93ns)   --->   "%add_ln78_8 = add i11 %sext_ln647_2, %zext_ln78_8" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 271 'add' 'add_ln78_8' <Predicate = true> <Delay = 0.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 272 [1/1] (0.00ns)   --->   "%sext_ln700_36 = sext i11 %add_ln78_6 to i12" [./src/conv2d_DSPopt.hpp:275]   --->   Operation 272 'sext' 'sext_ln700_36' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 273 [1/1] (0.00ns)   --->   "%sext_ln700_37 = sext i11 %add_ln78_7 to i12" [./src/conv2d_DSPopt.hpp:276]   --->   Operation 273 'sext' 'sext_ln700_37' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 274 [1/1] (0.00ns)   --->   "%sext_ln215_28 = sext i11 %add_ln78_8 to i12" [./src/conv2d_DSPopt.hpp:263]   --->   Operation 274 'sext' 'sext_ln215_28' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 275 [1/1] (0.00ns)   --->   "%sext_ln647_3 = sext i10 %tmp_2 to i11" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 275 'sext' 'sext_ln647_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 276 [1/1] (0.00ns)   --->   "%zext_ln78_11 = zext i1 %tmp_22 to i11" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 276 'zext' 'zext_ln78_11' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 277 [1/1] (0.93ns)   --->   "%add_ln78_11 = add i11 %sext_ln647_3, %zext_ln78_11" [./src/conv2d_DSPopt.hpp:271]   --->   Operation 277 'add' 'add_ln78_11' <Predicate = true> <Delay = 0.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 278 [1/1] (0.00ns)   --->   "%sext_ln700_44 = sext i12 %add_ln700_68 to i13" [./src/conv2d_DSPopt.hpp:273]   --->   Operation 278 'sext' 'sext_ln700_44' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 279 [1/1] (0.96ns)   --->   "%add_ln700_47 = add i13 %sext_ln700_44, %sext_ln700_23" [./src/conv2d_DSPopt.hpp:273]   --->   Operation 279 'add' 'add_ln700_47' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 280 [1/1] (0.00ns)   --->   "%sext_ln700_45 = sext i13 %add_ln700_47 to i16" [./src/conv2d_DSPopt.hpp:273]   --->   Operation 280 'sext' 'sext_ln700_45' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 281 [1/1] (0.00ns)   --->   "%sext_ln700_46 = sext i11 %add_ln78_9 to i12" [./src/conv2d_DSPopt.hpp:274]   --->   Operation 281 'sext' 'sext_ln700_46' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 282 [1/1] (0.94ns)   --->   "%add_ln700_69 = add i12 %sext_ln700_36, %sext_ln700_46" [./src/conv2d_DSPopt.hpp:274]   --->   Operation 282 'add' 'add_ln700_69' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 283 [1/1] (0.00ns)   --->   "%sext_ln700_47 = sext i12 %add_ln700_69 to i13" [./src/conv2d_DSPopt.hpp:274]   --->   Operation 283 'sext' 'sext_ln700_47' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 284 [1/1] (0.96ns)   --->   "%add_ln700_48 = add i13 %sext_ln700_47, %sext_ln700_25" [./src/conv2d_DSPopt.hpp:274]   --->   Operation 284 'add' 'add_ln700_48' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 285 [1/1] (0.00ns)   --->   "%sext_ln700_48 = sext i13 %add_ln700_48 to i16" [./src/conv2d_DSPopt.hpp:274]   --->   Operation 285 'sext' 'sext_ln700_48' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 286 [1/1] (0.00ns)   --->   "%sext_ln700_49 = sext i11 %add_ln78_10 to i12" [./src/conv2d_DSPopt.hpp:275]   --->   Operation 286 'sext' 'sext_ln700_49' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 287 [1/1] (0.94ns)   --->   "%add_ln700_70 = add i12 %sext_ln700_37, %sext_ln700_49" [./src/conv2d_DSPopt.hpp:275]   --->   Operation 287 'add' 'add_ln700_70' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 288 [1/1] (0.00ns)   --->   "%sext_ln700_50 = sext i12 %add_ln700_70 to i13" [./src/conv2d_DSPopt.hpp:275]   --->   Operation 288 'sext' 'sext_ln700_50' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 289 [1/1] (0.96ns)   --->   "%add_ln700_49 = add i13 %sext_ln700_50, %sext_ln700_27" [./src/conv2d_DSPopt.hpp:275]   --->   Operation 289 'add' 'add_ln700_49' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 290 [1/1] (0.00ns)   --->   "%sext_ln700_51 = sext i13 %add_ln700_49 to i16" [./src/conv2d_DSPopt.hpp:275]   --->   Operation 290 'sext' 'sext_ln700_51' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 291 [1/1] (0.00ns)   --->   "%sext_ln700_52 = sext i11 %add_ln78_11 to i12" [./src/conv2d_DSPopt.hpp:276]   --->   Operation 291 'sext' 'sext_ln700_52' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 292 [1/1] (0.94ns)   --->   "%add_ln700_71 = add i12 %sext_ln215_28, %sext_ln700_52" [./src/conv2d_DSPopt.hpp:276]   --->   Operation 292 'add' 'add_ln700_71' <Predicate = true> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 293 [1/1] (0.00ns)   --->   "%sext_ln700_53 = sext i12 %add_ln700_71 to i13" [./src/conv2d_DSPopt.hpp:276]   --->   Operation 293 'sext' 'sext_ln700_53' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 294 [1/1] (0.96ns)   --->   "%add_ln700_50 = add i13 %sext_ln700_53, %sext_ln700_29" [./src/conv2d_DSPopt.hpp:276]   --->   Operation 294 'add' 'add_ln700_50' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 295 [1/1] (0.00ns)   --->   "%sext_ln700_54 = sext i13 %add_ln700_50 to i16" [./src/conv2d_DSPopt.hpp:276]   --->   Operation 295 'sext' 'sext_ln700_54' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 296 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i16, i16, i16, i16 } undef, i16 %sext_ln700_45, 0" [./src/conv2d_DSPopt.hpp:282]   --->   Operation 296 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 297 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i16, i16, i16, i16 } %mrv, i16 %sext_ln700_48, 1" [./src/conv2d_DSPopt.hpp:282]   --->   Operation 297 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 298 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue { i16, i16, i16, i16 } %mrv_1, i16 %sext_ln700_51, 2" [./src/conv2d_DSPopt.hpp:282]   --->   Operation 298 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 299 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue { i16, i16, i16, i16 } %mrv_2, i16 %sext_ln700_54, 3" [./src/conv2d_DSPopt.hpp:282]   --->   Operation 299 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 300 [1/1] (0.00ns)   --->   "ret { i16, i16, i16, i16 } %mrv_3" [./src/conv2d_DSPopt.hpp:282]   --->   Operation 300 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 2.85ns
+The critical path consists of the following:
+	wire read on port 'ipack_15_V_read' (./src/conv2d_DSPopt.hpp:247) [33]  (0 ns)
+	'mul' operation of DSP[275] ('mul_ln1352_26', ./src/conv2d_DSPopt.hpp:263) [275]  (2.85 ns)
+
+ <State 2>: 3.43ns
+The critical path consists of the following:
+	'add' operation ('add_ln700', ./src/conv2d_DSPopt.hpp:263) [78]  (1.24 ns)
+	'add' operation ('add_ln700_17', ./src/conv2d_DSPopt.hpp:263) [97]  (1.24 ns)
+	'add' operation ('add_ln78', ./src/conv2d_DSPopt.hpp:267) [110]  (0.948 ns)
+
+ <State 3>: 2.84ns
+The critical path consists of the following:
+	'add' operation ('add_ln78_2', ./src/conv2d_DSPopt.hpp:271) [119]  (0.934 ns)
+	'add' operation ('add_ln700_36', ./src/conv2d_DSPopt.hpp:276) [189]  (0.948 ns)
+	'add' operation ('add_ln700_50', ./src/conv2d_DSPopt.hpp:276) [323]  (0.962 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

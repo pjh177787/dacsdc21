@@ -1,0 +1,190 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'do_compute2'" level="0">
+<item name = "Date">Tue May 10 21:16:38 2022
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">ultra_core</item>
+<item name = "Solution">ultracore_125</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu3eg-sbva484-1-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">4.00 ns, 4.178 ns, 0.50 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="conv3x3_bn_act_DSPop_1_U0">conv3x3_bn_act_DSPop_1, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="conv3x3_bn_act_DSPop_U0">conv3x3_bn_act_DSPop, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="conv3x3_l0_bn_act_DS_U0">conv3x3_l0_bn_act_DS, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="conv3x3_bn_act_DSPop_2_U0">conv3x3_bn_act_DSPop_2, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="resize_batch_U0">resize_batch, ?, ?, ?, ?, ?, ?, none</column>
+<column name="conv3x3_bn_act_DSPop_3_U0">conv3x3_bn_act_DSPop_3, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="conv3x3_bn_act_DSPop_4_U0">conv3x3_bn_act_DSPop_4, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="conv3x3_bn_act_DSPop_5_U0">conv3x3_bn_act_DSPop_5, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="conv3x3_bn_act_DSPop_6_U0">conv3x3_bn_act_DSPop_6, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="conv1x1_DSPopt_U0">conv1x1_DSPopt, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="StreamingDataWidthCo_1_U0">StreamingDataWidthCo_1, ?, ?, ?, ?, ?, ?, none</column>
+<column name="max_pool2x2_3_U0">max_pool2x2_3, ?, ?, ?, ?, ?, ?, none</column>
+<column name="max_pool2x2_1_U0">max_pool2x2_1, ?, ?, ?, ?, ?, ?, none</column>
+<column name="max_pool2x2_U0">max_pool2x2, ?, ?, ?, ?, ?, ?, none</column>
+<column name="max_pool2x2_2_U0">max_pool2x2_2, ?, ?, ?, ?, ?, ?, none</column>
+<column name="StreamingDataWidthCo_U0">StreamingDataWidthCo, ?, ?, ?, ?, ?, ?, none</column>
+<column name="ExtractPixels_U0">ExtractPixels, ?, ?, ?, ?, ?, ?, none</column>
+<column name="AddLast_3600u_U0">AddLast_3600u_s, ?, ?, ?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
+<column name="FIFO">55, -, 1336, 2194, -</column>
+<column name="Instance">177, 380, 71237, 85328, 0</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
+<specialColumn name="Utilization (%)">53, 105, 51, 124, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="AddLast_3600u_U0">AddLast_3600u_s, 0, 2, 299, 248, 0</column>
+<column name="ExtractPixels_U0">ExtractPixels, 0, 2, 302, 216, 0</column>
+<column name="StreamingDataWidthCo_U0">StreamingDataWidthCo, 0, 2, 432, 306, 0</column>
+<column name="StreamingDataWidthCo_1_U0">StreamingDataWidthCo_1, 0, 2, 859, 385, 0</column>
+<column name="conv1x1_DSPopt_U0">conv1x1_DSPopt, 4, 3, 1622, 2360, 0</column>
+<column name="conv3x3_bn_act_DSPop_U0">conv3x3_bn_act_DSPop, 28, 75, 13769, 17278, 0</column>
+<column name="conv3x3_bn_act_DSPop_1_U0">conv3x3_bn_act_DSPop_1, 28, 83, 15423, 19304, 0</column>
+<column name="conv3x3_bn_act_DSPop_2_U0">conv3x3_bn_act_DSPop_2, 16, 41, 8211, 10823, 0</column>
+<column name="conv3x3_bn_act_DSPop_3_U0">conv3x3_bn_act_DSPop_3, 14, 13, 2984, 4417, 0</column>
+<column name="conv3x3_bn_act_DSPop_4_U0">conv3x3_bn_act_DSPop_4, 14, 13, 2990, 4354, 0</column>
+<column name="conv3x3_bn_act_DSPop_5_U0">conv3x3_bn_act_DSPop_5, 14, 13, 2954, 4385, 0</column>
+<column name="conv3x3_bn_act_DSPop_6_U0">conv3x3_bn_act_DSPop_6, 14, 13, 2948, 4374, 0</column>
+<column name="conv3x3_l0_bn_act_DS_U0">conv3x3_l0_bn_act_DS, 28, 80, 12680, 10768, 0</column>
+<column name="max_pool2x2_U0">max_pool2x2, 1, 0, 401, 694, 0</column>
+<column name="max_pool2x2_1_U0">max_pool2x2_1, 1, 0, 382, 759, 0</column>
+<column name="max_pool2x2_2_U0">max_pool2x2_2, 1, 0, 398, 691, 0</column>
+<column name="max_pool2x2_3_U0">max_pool2x2_3, 2, 0, 651, 920, 0</column>
+<column name="resize_batch_U0">resize_batch, 12, 38, 3932, 3046, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="conv_0_out_V_V_U">8, 150, 0, -, 128, 128, 16384</column>
+<column name="conv_1_out_V_V_U">2, 53, 0, -, 128, 32, 4096</column>
+<column name="conv_2_out_V_V_U">4, 85, 0, -, 128, 64, 8192</column>
+<column name="conv_3_out_V_V_U">2, 53, 0, -, 128, 32, 4096</column>
+<column name="conv_4_out_V_V_U">1, 37, 0, -, 128, 16, 2048</column>
+<column name="conv_5_out_V_V_U">1, 37, 0, -, 128, 16, 2048</column>
+<column name="conv_6_out_V_V_U">1, 37, 0, -, 128, 16, 2048</column>
+<column name="conv_7_out_V_V_U">1, 37, 0, -, 128, 16, 2048</column>
+<column name="conv_8_out_V_V_U">4, 83, 0, -, 64, 64, 4096</column>
+<column name="in_stream0_V_V_U">11, 226, 0, -, 1024, 192, 196608</column>
+<column name="in_stream1_V_V_U">0, 7, 0, -, 16, 24, 384</column>
+<column name="in_stream2_V_V_U">0, 7, 0, -, 16, 24, 384</column>
+<column name="in_stream_extract_V_s_U">4, 98, 0, -, 1024, 64, 65536</column>
+<column name="pool_0_out_V_V_U">8, 150, 0, -, 128, 128, 16384</column>
+<column name="pool_1_out_V_V_U">2, 53, 0, -, 128, 32, 4096</column>
+<column name="pool_2_out_V_V_U">4, 85, 0, -, 128, 64, 8192</column>
+<column name="pool_3_out_V_V_U">2, 53, 0, -, 128, 32, 4096</column>
+<column name="reps_c10_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c11_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c12_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c13_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c14_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c15_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c16_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c1_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c2_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c3_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c4_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c5_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c6_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c7_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c8_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c9_U">0, 5, 0, -, 2, 32, 64</column>
+<column name="reps_c_U">0, 5, 0, -, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="in_r_TDATA">in, 64, axis, in_V_data_V, pointer</column>
+<column name="in_r_TLAST">in, 1, axis, in_V_last_V, pointer</column>
+<column name="in_r_TKEEP">in, 8, axis, in_V_keep_V, pointer</column>
+<column name="in_r_TVALID">in, 1, axis, in_V_keep_V, pointer</column>
+<column name="in_r_TREADY">out, 1, axis, in_V_keep_V, pointer</column>
+<column name="out_r_TDATA">out, 64, axis, out_V_data_V, pointer</column>
+<column name="out_r_TLAST">out, 1, axis, out_V_last_V, pointer</column>
+<column name="out_r_TKEEP">out, 8, axis, out_V_keep_V, pointer</column>
+<column name="out_r_TVALID">out, 1, axis, out_V_keep_V, pointer</column>
+<column name="out_r_TREADY">in, 1, axis, out_V_keep_V, pointer</column>
+<column name="reps">in, 32, ap_none, reps, scalar</column>
+<column name="reps_ap_vld">in, 1, ap_none, reps, scalar</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, do_compute2, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, do_compute2, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, do_compute2, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, do_compute2, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, do_compute2, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, do_compute2, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, do_compute2, return value</column>
+</table>
+</item>
+</section>
+</profile>

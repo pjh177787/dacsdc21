@@ -1,0 +1,260 @@
+
+
+================================================================
+== Vivado HLS Report for 'streamBnRelu_l0'
+================================================================
+* Date:           Tue May 10 21:15:52 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 2.846 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------+-----------------+---------+---------+----------+----------+-----+-----+----------+
+        |                            |                 |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+        |          Instance          |      Module     |   min   |   max   |    min   |    max   | min | max |   Type   |
+        +----------------------------+-----------------+---------+---------+----------+----------+-----+-----+----------+
+        |grp_bn_qurelu_fixed_fu_216  |bn_qurelu_fixed  |        1|        1| 4.000 ns | 4.000 ns |    1|    1| function |
+        |grp_bn_qurelu_fixed_fu_225  |bn_qurelu_fixed  |        1|        1| 4.000 ns | 4.000 ns |    1|    1| function |
+        |grp_bn_qurelu_fixed_fu_234  |bn_qurelu_fixed  |        1|        1| 4.000 ns | 4.000 ns |    1|    1| function |
+        |grp_bn_qurelu_fixed_fu_243  |bn_qurelu_fixed  |        1|        1| 4.000 ns | 4.000 ns |    1|    1| function |
+        |grp_bn_qurelu_fixed_fu_252  |bn_qurelu_fixed  |        1|        1| 4.000 ns | 4.000 ns |    1|    1| function |
+        |grp_bn_qurelu_fixed_fu_261  |bn_qurelu_fixed  |        1|        1| 4.000 ns | 4.000 ns |    1|    1| function |
+        |grp_bn_qurelu_fixed_fu_270  |bn_qurelu_fixed  |        1|        1| 4.000 ns | 4.000 ns |    1|    1| function |
+        |grp_bn_qurelu_fixed_fu_279  |bn_qurelu_fixed  |        1|        1| 4.000 ns | 4.000 ns |    1|    1| function |
+        +----------------------------+-----------------+---------+---------+----------+----------+-----+-----+----------+
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        ?|        ?|         8|          4|          4|     ?|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    166|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      8|     360|    784|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    470|    -|
+|Register         |        -|      -|     724|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      8|    1084|   1420|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      432|    360|  141120|  70560|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      2|   ~0   |      2|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------+-----------------+---------+-------+----+----+-----+
+    |          Instance          |      Module     | BRAM_18K| DSP48E| FF | LUT| URAM|
+    +----------------------------+-----------------+---------+-------+----+----+-----+
+    |grp_bn_qurelu_fixed_fu_216  |bn_qurelu_fixed  |        0|      1|  45|  98|    0|
+    |grp_bn_qurelu_fixed_fu_225  |bn_qurelu_fixed  |        0|      1|  45|  98|    0|
+    |grp_bn_qurelu_fixed_fu_234  |bn_qurelu_fixed  |        0|      1|  45|  98|    0|
+    |grp_bn_qurelu_fixed_fu_243  |bn_qurelu_fixed  |        0|      1|  45|  98|    0|
+    |grp_bn_qurelu_fixed_fu_252  |bn_qurelu_fixed  |        0|      1|  45|  98|    0|
+    |grp_bn_qurelu_fixed_fu_261  |bn_qurelu_fixed  |        0|      1|  45|  98|    0|
+    |grp_bn_qurelu_fixed_fu_270  |bn_qurelu_fixed  |        0|      1|  45|  98|    0|
+    |grp_bn_qurelu_fixed_fu_279  |bn_qurelu_fixed  |        0|      1|  45|  98|    0|
+    +----------------------------+-----------------+---------+-------+----+----+-----+
+    |Total                       |                 |        0|      8| 360| 784|    0|
+    +----------------------------+-----------------+---------+-------+----+----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln244_1_fu_580_p2              |     +    |      0|  0|  47|          40|           1|
+    |add_ln244_fu_539_p2                |     +    |      0|  0|  39|          32|          32|
+    |bound_fu_569_p2                    |     +    |      0|  0|  47|          40|          40|
+    |ap_block_pp0_stage1_11001          |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state10_pp0_stage3_iter1  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state4_pp0_stage1_iter0   |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln244_fu_575_p2               |   icmp   |      0|  0|  21|          40|          40|
+    |ap_block_pp0_stage3_01001          |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state1                    |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                      |    xor   |      0|  0|   2|           1|           2|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                              |          |      0|  0| 166|         158|         120|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |                   Name                  | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                |  41|          8|    1|          8|
+    |ap_done                                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                  |   9|          2|    1|          2|
+    |ap_phi_mux_indvar_flatten_phi_fu_209_p4  |   9|          2|   40|         80|
+    |grp_bn_qurelu_fixed_fu_216_bias_V        |  15|          3|   32|         96|
+    |grp_bn_qurelu_fixed_fu_216_in_V          |  21|          4|   26|        104|
+    |grp_bn_qurelu_fixed_fu_216_inc_V         |  15|          3|   15|         45|
+    |grp_bn_qurelu_fixed_fu_225_bias_V        |  15|          3|   32|         96|
+    |grp_bn_qurelu_fixed_fu_225_in_V          |  15|          3|   26|         78|
+    |grp_bn_qurelu_fixed_fu_225_inc_V         |  15|          3|   15|         45|
+    |grp_bn_qurelu_fixed_fu_234_bias_V        |  15|          3|   32|         96|
+    |grp_bn_qurelu_fixed_fu_234_in_V          |  15|          3|   26|         78|
+    |grp_bn_qurelu_fixed_fu_234_inc_V         |  15|          3|   15|         45|
+    |grp_bn_qurelu_fixed_fu_243_bias_V        |  15|          3|   32|         96|
+    |grp_bn_qurelu_fixed_fu_243_in_V          |  15|          3|   26|         78|
+    |grp_bn_qurelu_fixed_fu_243_inc_V         |  15|          3|   15|         45|
+    |grp_bn_qurelu_fixed_fu_252_bias_V        |  15|          3|   32|         96|
+    |grp_bn_qurelu_fixed_fu_252_in_V          |  15|          3|   26|         78|
+    |grp_bn_qurelu_fixed_fu_252_inc_V         |  15|          3|   15|         45|
+    |grp_bn_qurelu_fixed_fu_261_bias_V        |  15|          3|   32|         96|
+    |grp_bn_qurelu_fixed_fu_261_in_V          |  15|          3|   26|         78|
+    |grp_bn_qurelu_fixed_fu_261_inc_V         |  15|          3|   15|         45|
+    |grp_bn_qurelu_fixed_fu_270_bias_V        |  15|          3|   32|         96|
+    |grp_bn_qurelu_fixed_fu_270_in_V          |  15|          3|   26|         78|
+    |grp_bn_qurelu_fixed_fu_270_inc_V         |  15|          3|   15|         45|
+    |grp_bn_qurelu_fixed_fu_279_bias_V        |  15|          3|   32|         96|
+    |grp_bn_qurelu_fixed_fu_279_in_V          |  15|          3|   26|         78|
+    |grp_bn_qurelu_fixed_fu_279_inc_V         |  15|          3|   15|         45|
+    |in_V_V_blk_n                             |   9|          2|    1|          2|
+    |indvar_flatten_reg_205                   |   9|          2|   40|         80|
+    |out_V_V_blk_n                            |   9|          2|    1|          2|
+    |rep_blk_n                                |   9|          2|    1|          2|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |Total                                    | 470|         95|  670|       1956|
+    +-----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |add_ln244_1_reg_646               |  40|   0|   40|          0|
+    |ap_CS_fsm                         |   7|   0|    7|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |bound_reg_637                     |  30|   0|   40|         10|
+    |icmp_ln244_reg_642                |   1|   0|    1|          0|
+    |icmp_ln244_reg_642_pp0_iter1_reg  |   1|   0|    1|          0|
+    |indvar_flatten_reg_205            |  40|   0|   40|          0|
+    |p_013_0_10_i_reg_796              |   4|   0|    4|          0|
+    |p_013_0_11_i_reg_801              |   4|   0|    4|          0|
+    |p_013_0_12_i_reg_806              |   4|   0|    4|          0|
+    |p_013_0_13_i_reg_811              |   4|   0|    4|          0|
+    |p_013_0_14_i_reg_816              |   4|   0|    4|          0|
+    |p_013_0_1_i_reg_746               |   4|   0|    4|          0|
+    |p_013_0_2_i_reg_751               |   4|   0|    4|          0|
+    |p_013_0_3_i_reg_756               |   4|   0|    4|          0|
+    |p_013_0_4_i_reg_761               |   4|   0|    4|          0|
+    |p_013_0_5_i_reg_766               |   4|   0|    4|          0|
+    |p_013_0_6_i_reg_771               |   4|   0|    4|          0|
+    |p_013_0_7_i_reg_776               |   4|   0|    4|          0|
+    |p_013_0_8_i_reg_781               |   4|   0|    4|          0|
+    |p_013_0_9_i_reg_786               |   4|   0|    4|          0|
+    |p_013_0_i_92_reg_791              |   4|   0|    4|          0|
+    |p_013_0_i_reg_741                 |   4|   0|    4|          0|
+    |p_0_0_10_i_reg_716                |   4|   0|    4|          0|
+    |p_0_0_11_i_reg_721                |   4|   0|    4|          0|
+    |p_0_0_12_i_reg_726                |   4|   0|    4|          0|
+    |p_0_0_13_i_reg_731                |   4|   0|    4|          0|
+    |p_0_0_14_i_reg_736                |   4|   0|    4|          0|
+    |p_0_0_1_i_reg_661                 |   4|   0|    4|          0|
+    |p_0_0_2_i_reg_666                 |   4|   0|    4|          0|
+    |p_0_0_3_i_reg_671                 |   4|   0|    4|          0|
+    |p_0_0_4_i_reg_676                 |   4|   0|    4|          0|
+    |p_0_0_5_i_reg_681                 |   4|   0|    4|          0|
+    |p_0_0_6_i_reg_686                 |   4|   0|    4|          0|
+    |p_0_0_7_i_reg_691                 |   4|   0|    4|          0|
+    |p_0_0_8_i_reg_701                 |   4|   0|    4|          0|
+    |p_0_0_9_i_reg_706                 |   4|   0|    4|          0|
+    |p_0_0_i_91_reg_711                |   4|   0|    4|          0|
+    |p_0_0_i_reg_656                   |   4|   0|    4|          0|
+    |reg_454                           |  26|   0|   26|          0|
+    |reg_459                           |  26|   0|   26|          0|
+    |reg_464                           |  26|   0|   26|          0|
+    |reg_469                           |  26|   0|   26|          0|
+    |reg_474                           |  26|   0|   26|          0|
+    |reg_479                           |  26|   0|   26|          0|
+    |reg_484                           |  26|   0|   26|          0|
+    |reg_489                           |  26|   0|   26|          0|
+    |reg_494                           |  26|   0|   26|          0|
+    |reg_499                           |  26|   0|   26|          0|
+    |reg_504                           |  26|   0|   26|          0|
+    |reg_509                           |  26|   0|   26|          0|
+    |reg_514                           |  26|   0|   26|          0|
+    |reg_519                           |  26|   0|   26|          0|
+    |reg_524                           |  26|   0|   26|          0|
+    |rep_read_reg_631                  |  32|   0|   32|          0|
+    |trunc_ln647_3_reg_696             |  26|   0|   26|          0|
+    |trunc_ln647_reg_651               |  26|   0|   26|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 724|   0|  734|         10|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+-----------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++----------------+-----+-----+------------+-----------------+--------------+
+|ap_clk          |  in |    1| ap_ctrl_hs | streamBnRelu_l0 | return value |
+|ap_rst          |  in |    1| ap_ctrl_hs | streamBnRelu_l0 | return value |
+|ap_start        |  in |    1| ap_ctrl_hs | streamBnRelu_l0 | return value |
+|ap_done         | out |    1| ap_ctrl_hs | streamBnRelu_l0 | return value |
+|ap_continue     |  in |    1| ap_ctrl_hs | streamBnRelu_l0 | return value |
+|ap_idle         | out |    1| ap_ctrl_hs | streamBnRelu_l0 | return value |
+|ap_ready        | out |    1| ap_ctrl_hs | streamBnRelu_l0 | return value |
+|in_V_V_dout     |  in |  416|   ap_fifo  |      in_V_V     |    pointer   |
+|in_V_V_empty_n  |  in |    1|   ap_fifo  |      in_V_V     |    pointer   |
+|in_V_V_read     | out |    1|   ap_fifo  |      in_V_V     |    pointer   |
+|out_V_V_din     | out |  128|   ap_fifo  |     out_V_V     |    pointer   |
+|out_V_V_full_n  |  in |    1|   ap_fifo  |     out_V_V     |    pointer   |
+|out_V_V_write   | out |    1|   ap_fifo  |     out_V_V     |    pointer   |
+|rep_dout        |  in |   32|   ap_fifo  |       rep       |    pointer   |
+|rep_empty_n     |  in |    1|   ap_fifo  |       rep       |    pointer   |
+|rep_read        | out |    1|   ap_fifo  |       rep       |    pointer   |
++----------------+-----+-----+------------+-----------------+--------------+
+

@@ -1,0 +1,202 @@
+
+
+================================================================
+== Vivado HLS Report for 'pack_weight_data_1'
+================================================================
+* Date:           Tue May 10 21:15:14 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 2.135 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        0|        0|   0 ns   |   0 ns   |    1|    1| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.13>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%w0_V_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %w0_V)" [./src/conv2d_DSPopt.hpp:199]   --->   Operation 2 'read' 'w0_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%w1_V_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %w1_V)" [./src/conv2d_DSPopt.hpp:199]   --->   Operation 3 'read' 'w1_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%w2_V_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %w2_V)" [./src/conv2d_DSPopt.hpp:199]   --->   Operation 4 'read' 'w2_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%trunc_ln647 = trunc i32 %w2_V_read to i4" [./src/conv2d_DSPopt.hpp:199]   --->   Operation 5 'trunc' 'trunc_ln647' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%trunc_ln68 = trunc i32 %w0_V_read to i4" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 6 'trunc' 'trunc_ln68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%shl_ln = call i26 @_ssdm_op_BitConcatenate.i26.i4.i22(i4 %trunc_ln68, i22 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 7 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%trunc_ln68_3 = trunc i32 %w1_V_read to i4" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 8 'trunc' 'trunc_ln68_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%shl_ln68_27 = call i15 @_ssdm_op_BitConcatenate.i15.i4.i11(i4 %trunc_ln68_3, i11 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 9 'bitconcatenate' 'shl_ln68_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%sext_ln68 = sext i15 %shl_ln68_27 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 10 'sext' 'sext_ln68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%sext_ln68_34 = sext i4 %trunc_ln647 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 11 'sext' 'sext_ln68_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.00ns)   --->   "%add_ln68 = add i16 %sext_ln68, %sext_ln68_34" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 12 'add' 'add_ln68' <Predicate = true> <Delay = 1.00> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%sext_ln68_35 = sext i16 %add_ln68 to i26" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 13 'sext' 'sext_ln68_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (1.13ns)   --->   "%add_ln68_33 = add i26 %shl_ln, %sext_ln68_35" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 14 'add' 'add_ln68_33' <Predicate = true> <Delay = 1.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%p_Result_1 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w2_V_read, i32 4, i32 7)" [./src/conv2d_DSPopt.hpp:199]   --->   Operation 15 'partselect' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_s = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w0_V_read, i32 4, i32 7)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 16 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%shl_ln68_28 = call i26 @_ssdm_op_BitConcatenate.i26.i4.i22(i4 %tmp_s, i22 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 17 'bitconcatenate' 'shl_ln68_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_31 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w1_V_read, i32 4, i32 7)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 18 'partselect' 'tmp_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%shl_ln68_29 = call i15 @_ssdm_op_BitConcatenate.i15.i4.i11(i4 %tmp_31, i11 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 19 'bitconcatenate' 'shl_ln68_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%sext_ln68_36 = sext i15 %shl_ln68_29 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 20 'sext' 'sext_ln68_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%sext_ln68_37 = sext i4 %p_Result_1 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 21 'sext' 'sext_ln68_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (1.00ns)   --->   "%add_ln68_15 = add i16 %sext_ln68_36, %sext_ln68_37" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 22 'add' 'add_ln68_15' <Predicate = true> <Delay = 1.00> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%sext_ln68_38 = sext i16 %add_ln68_15 to i26" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 23 'sext' 'sext_ln68_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (1.13ns)   --->   "%add_ln68_34 = add i26 %shl_ln68_28, %sext_ln68_38" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 24 'add' 'add_ln68_34' <Predicate = true> <Delay = 1.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_Result_2 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w2_V_read, i32 8, i32 11)" [./src/conv2d_DSPopt.hpp:199]   --->   Operation 25 'partselect' 'p_Result_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_32 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w0_V_read, i32 8, i32 11)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 26 'partselect' 'tmp_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%shl_ln68_30 = call i26 @_ssdm_op_BitConcatenate.i26.i4.i22(i4 %tmp_32, i22 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 27 'bitconcatenate' 'shl_ln68_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_33 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w1_V_read, i32 8, i32 11)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 28 'partselect' 'tmp_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%shl_ln68_31 = call i15 @_ssdm_op_BitConcatenate.i15.i4.i11(i4 %tmp_33, i11 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 29 'bitconcatenate' 'shl_ln68_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%sext_ln68_39 = sext i15 %shl_ln68_31 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 30 'sext' 'sext_ln68_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%sext_ln68_40 = sext i4 %p_Result_2 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 31 'sext' 'sext_ln68_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (1.00ns)   --->   "%add_ln68_2 = add i16 %sext_ln68_39, %sext_ln68_40" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 32 'add' 'add_ln68_2' <Predicate = true> <Delay = 1.00> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%sext_ln68_41 = sext i16 %add_ln68_2 to i26" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 33 'sext' 'sext_ln68_41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (1.13ns)   --->   "%add_ln68_35 = add i26 %shl_ln68_30, %sext_ln68_41" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 34 'add' 'add_ln68_35' <Predicate = true> <Delay = 1.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%p_Result_3 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w2_V_read, i32 12, i32 15)" [./src/conv2d_DSPopt.hpp:199]   --->   Operation 35 'partselect' 'p_Result_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_34 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w0_V_read, i32 12, i32 15)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 36 'partselect' 'tmp_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%shl_ln68_s = call i26 @_ssdm_op_BitConcatenate.i26.i4.i22(i4 %tmp_34, i22 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 37 'bitconcatenate' 'shl_ln68_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_35 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w1_V_read, i32 12, i32 15)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 38 'partselect' 'tmp_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%shl_ln68_32 = call i15 @_ssdm_op_BitConcatenate.i15.i4.i11(i4 %tmp_35, i11 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 39 'bitconcatenate' 'shl_ln68_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%sext_ln68_42 = sext i15 %shl_ln68_32 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 40 'sext' 'sext_ln68_42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%sext_ln68_43 = sext i4 %p_Result_3 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 41 'sext' 'sext_ln68_43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (1.00ns)   --->   "%add_ln68_3 = add i16 %sext_ln68_42, %sext_ln68_43" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 42 'add' 'add_ln68_3' <Predicate = true> <Delay = 1.00> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%sext_ln68_44 = sext i16 %add_ln68_3 to i26" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 43 'sext' 'sext_ln68_44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (1.13ns)   --->   "%add_ln68_36 = add i26 %shl_ln68_s, %sext_ln68_44" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 44 'add' 'add_ln68_36' <Predicate = true> <Delay = 1.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%p_Result_4 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w2_V_read, i32 16, i32 19)" [./src/conv2d_DSPopt.hpp:199]   --->   Operation 45 'partselect' 'p_Result_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_36 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w0_V_read, i32 16, i32 19)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 46 'partselect' 'tmp_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%shl_ln68_33 = call i26 @_ssdm_op_BitConcatenate.i26.i4.i22(i4 %tmp_36, i22 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 47 'bitconcatenate' 'shl_ln68_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_37 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w1_V_read, i32 16, i32 19)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 48 'partselect' 'tmp_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%shl_ln68_34 = call i15 @_ssdm_op_BitConcatenate.i15.i4.i11(i4 %tmp_37, i11 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 49 'bitconcatenate' 'shl_ln68_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%sext_ln68_45 = sext i15 %shl_ln68_34 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 50 'sext' 'sext_ln68_45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%sext_ln68_46 = sext i4 %p_Result_4 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 51 'sext' 'sext_ln68_46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (1.00ns)   --->   "%add_ln68_4 = add i16 %sext_ln68_45, %sext_ln68_46" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 52 'add' 'add_ln68_4' <Predicate = true> <Delay = 1.00> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%sext_ln68_47 = sext i16 %add_ln68_4 to i26" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 53 'sext' 'sext_ln68_47' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (1.13ns)   --->   "%add_ln68_37 = add i26 %shl_ln68_33, %sext_ln68_47" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 54 'add' 'add_ln68_37' <Predicate = true> <Delay = 1.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%p_Result_5 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w2_V_read, i32 20, i32 23)" [./src/conv2d_DSPopt.hpp:199]   --->   Operation 55 'partselect' 'p_Result_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_38 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w0_V_read, i32 20, i32 23)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 56 'partselect' 'tmp_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%shl_ln68_35 = call i26 @_ssdm_op_BitConcatenate.i26.i4.i22(i4 %tmp_38, i22 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 57 'bitconcatenate' 'shl_ln68_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_39 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w1_V_read, i32 20, i32 23)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 58 'partselect' 'tmp_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%shl_ln68_36 = call i15 @_ssdm_op_BitConcatenate.i15.i4.i11(i4 %tmp_39, i11 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 59 'bitconcatenate' 'shl_ln68_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%sext_ln68_48 = sext i15 %shl_ln68_36 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 60 'sext' 'sext_ln68_48' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%sext_ln68_49 = sext i4 %p_Result_5 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 61 'sext' 'sext_ln68_49' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (1.00ns)   --->   "%add_ln68_5 = add i16 %sext_ln68_48, %sext_ln68_49" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 62 'add' 'add_ln68_5' <Predicate = true> <Delay = 1.00> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%sext_ln68_50 = sext i16 %add_ln68_5 to i26" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 63 'sext' 'sext_ln68_50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (1.13ns)   --->   "%add_ln68_38 = add i26 %shl_ln68_35, %sext_ln68_50" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 64 'add' 'add_ln68_38' <Predicate = true> <Delay = 1.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%p_Result_6 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w2_V_read, i32 24, i32 27)" [./src/conv2d_DSPopt.hpp:199]   --->   Operation 65 'partselect' 'p_Result_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_40 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w0_V_read, i32 24, i32 27)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 66 'partselect' 'tmp_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%shl_ln68_37 = call i26 @_ssdm_op_BitConcatenate.i26.i4.i22(i4 %tmp_40, i22 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 67 'bitconcatenate' 'shl_ln68_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_41 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w1_V_read, i32 24, i32 27)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 68 'partselect' 'tmp_41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%shl_ln68_38 = call i15 @_ssdm_op_BitConcatenate.i15.i4.i11(i4 %tmp_41, i11 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 69 'bitconcatenate' 'shl_ln68_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%sext_ln68_51 = sext i15 %shl_ln68_38 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 70 'sext' 'sext_ln68_51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%sext_ln68_52 = sext i4 %p_Result_6 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 71 'sext' 'sext_ln68_52' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (1.00ns)   --->   "%add_ln68_6 = add i16 %sext_ln68_51, %sext_ln68_52" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 72 'add' 'add_ln68_6' <Predicate = true> <Delay = 1.00> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%sext_ln68_53 = sext i16 %add_ln68_6 to i26" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 73 'sext' 'sext_ln68_53' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (1.13ns)   --->   "%add_ln68_39 = add i26 %shl_ln68_37, %sext_ln68_53" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 74 'add' 'add_ln68_39' <Predicate = true> <Delay = 1.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%p_Result_7 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w2_V_read, i32 28, i32 31)" [./src/conv2d_DSPopt.hpp:199]   --->   Operation 75 'partselect' 'p_Result_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%tmp_42 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w0_V_read, i32 28, i32 31)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 76 'partselect' 'tmp_42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%shl_ln68_39 = call i26 @_ssdm_op_BitConcatenate.i26.i4.i22(i4 %tmp_42, i22 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 77 'bitconcatenate' 'shl_ln68_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_43 = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %w1_V_read, i32 28, i32 31)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 78 'partselect' 'tmp_43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%shl_ln68_40 = call i15 @_ssdm_op_BitConcatenate.i15.i4.i11(i4 %tmp_43, i11 0)" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 79 'bitconcatenate' 'shl_ln68_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%sext_ln68_54 = sext i15 %shl_ln68_40 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 80 'sext' 'sext_ln68_54' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%sext_ln68_55 = sext i4 %p_Result_7 to i16" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 81 'sext' 'sext_ln68_55' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (1.00ns)   --->   "%add_ln68_7 = add i16 %sext_ln68_54, %sext_ln68_55" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 82 'add' 'add_ln68_7' <Predicate = true> <Delay = 1.00> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%sext_ln68_56 = sext i16 %add_ln68_7 to i26" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 83 'sext' 'sext_ln68_56' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (1.13ns)   --->   "%add_ln68_40 = add i26 %shl_ln68_39, %sext_ln68_56" [./src/conv2d_DSPopt.hpp:203]   --->   Operation 84 'add' 'add_ln68_40' <Predicate = true> <Delay = 1.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i26, i26, i26, i26, i26, i26, i26, i26 } undef, i26 %add_ln68_33, 0" [./src/conv2d_DSPopt.hpp:205]   --->   Operation 85 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i26, i26, i26, i26, i26, i26, i26, i26 } %mrv, i26 %add_ln68_34, 1" [./src/conv2d_DSPopt.hpp:205]   --->   Operation 86 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue { i26, i26, i26, i26, i26, i26, i26, i26 } %mrv_1, i26 %add_ln68_35, 2" [./src/conv2d_DSPopt.hpp:205]   --->   Operation 87 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue { i26, i26, i26, i26, i26, i26, i26, i26 } %mrv_2, i26 %add_ln68_36, 3" [./src/conv2d_DSPopt.hpp:205]   --->   Operation 88 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue { i26, i26, i26, i26, i26, i26, i26, i26 } %mrv_3, i26 %add_ln68_37, 4" [./src/conv2d_DSPopt.hpp:205]   --->   Operation 89 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue { i26, i26, i26, i26, i26, i26, i26, i26 } %mrv_4, i26 %add_ln68_38, 5" [./src/conv2d_DSPopt.hpp:205]   --->   Operation 90 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue { i26, i26, i26, i26, i26, i26, i26, i26 } %mrv_5, i26 %add_ln68_39, 6" [./src/conv2d_DSPopt.hpp:205]   --->   Operation 91 'insertvalue' 'mrv_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue { i26, i26, i26, i26, i26, i26, i26, i26 } %mrv_6, i26 %add_ln68_40, 7" [./src/conv2d_DSPopt.hpp:205]   --->   Operation 92 'insertvalue' 'mrv_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "ret { i26, i26, i26, i26, i26, i26, i26, i26 } %mrv_7" [./src/conv2d_DSPopt.hpp:205]   --->   Operation 93 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 2.14ns
+The critical path consists of the following:
+	wire read on port 'w1_V' (./src/conv2d_DSPopt.hpp:199) [5]  (0 ns)
+	'add' operation ('add_ln68', ./src/conv2d_DSPopt.hpp:203) [14]  (1 ns)
+	'add' operation ('wpack[0].V', ./src/conv2d_DSPopt.hpp:203) [16]  (1.13 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

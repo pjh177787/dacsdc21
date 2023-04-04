@@ -1,0 +1,1511 @@
+#-----------------------------------------------------------
+# Vivado v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:49:17 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Sun Sep  6 13:48:21 2020
+# Process ID: 164852
+# Current directory: C:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.runs/impl_1
+# Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: C:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.runs/impl_1/design_1_wrapper.vdi
+# Journal file: C:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Aperture/Git/SkyNet/FPGA_Final/HLS/project_1/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+Command: link_design -top design_1_wrapper -part xczu3eg-sbva484-1-e
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1569.074 ; gain = 13.129
+INFO: [Netlist 29-17] Analyzing 4119 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 7 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/design_1_zynq_ultra_ps_e_0_1.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0/inst'
+Finished Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/design_1_zynq_ultra_ps_e_0_1.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0/inst'
+Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_299M_0/design_1_rst_ps8_0_299M_0_board.xdc] for cell 'design_1_i/rst_ps8_0_299M/U0'
+Finished Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_299M_0/design_1_rst_ps8_0_299M_0_board.xdc] for cell 'design_1_i/rst_ps8_0_299M/U0'
+Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_299M_0/design_1_rst_ps8_0_299M_0.xdc] for cell 'design_1_i/rst_ps8_0_299M/U0'
+Finished Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_299M_0/design_1_rst_ps8_0_299M_0.xdc] for cell 'design_1_i/rst_ps8_0_299M/U0'
+Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_5/bd_0/ip/ip_1/bd_ac03_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_5/bd_0/ip/ip_1/bd_ac03_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_5/bd_0/ip/ip_1/bd_ac03_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_5/bd_0/ip/ip_1/bd_ac03_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/bd_0/ip/ip_1/bd_69f9_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/bd_0/ip/ip_1/bd_69f9_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/bd_0/ip/ip_1/bd_69f9_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/bd_0/ip/ip_1/bd_69f9_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2_2/bd_0/ip/ip_1/bd_6909_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc_2/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2_2/bd_0/ip/ip_1/bd_6909_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc_2/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2_2/bd_0/ip/ip_1/bd_6909_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc_2/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2_2/bd_0/ip/ip_1/bd_6909_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc_2/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3_2/bd_0/ip/ip_1/bd_a958_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc_3/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3_2/bd_0/ip/ip_1/bd_a958_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc_3/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3_2/bd_0/ip/ip_1/bd_a958_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc_3/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3_2/bd_0/ip/ip_1/bd_a958_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc_3/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2_clocks.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst'
+Finished Parsing XDC File [c:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2_clocks.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_3/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_3/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_2/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_2/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_2/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_2/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_3/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_3/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_3/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_3/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_2/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_2/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_3/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_3/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_3/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_3/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[3].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_1/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[3].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_2/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_2/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_2/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_2/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_2/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_2/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_2/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc_2/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1968.875 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1708 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 360 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 352 instances
+  RAM16X1S => RAM32X1S (RAMS32): 352 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 292 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 352 instances
+
+10 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 1968.875 ; gain = 1444.219
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu3eg'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1982.891 ; gain = 14.016
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 157411c36
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:23 . Memory (MB): peak = 2638.832 ; gain = 655.941
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 52 inverter(s) to 4967 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 904ccbea
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2850.984 ; gain = 0.652
+INFO: [Opt 31-389] Phase Retarget created 177 cells and removed 610 cells
+INFO: [Opt 31-1021] In phase Retarget, 85 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 13 inverter(s) to 52 load pin(s).
+Phase 2 Constant propagation | Checksum: 102610775
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:16 . Memory (MB): peak = 2850.984 ; gain = 0.652
+INFO: [Opt 31-389] Phase Constant propagation created 1569 cells and removed 4053 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 105 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: f3b3e166
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2850.984 ; gain = 0.652
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 2635 cells
+INFO: [Opt 31-1021] In phase Sweep, 197 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common MMCM/DPLL/XPLL driver.
+INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
+INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
+Phase 4 BUFG optimization | Checksum: f3b3e166
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 2850.984 ; gain = 0.652
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: f3b3e166
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:31 . Memory (MB): peak = 2850.984 ; gain = 0.652
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 11cc9474a
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:32 . Memory (MB): peak = 2850.984 ; gain = 0.652
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 1 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 94 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             177  |             610  |                                             85  |
+|  Constant propagation         |            1569  |            4053  |                                            105  |
+|  Sweep                        |               0  |            2635  |                                            197  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               1  |                                             94  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.283 . Memory (MB): peak = 2850.984 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 19c03ef4a
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:37 . Memory (MB): peak = 2850.984 ; gain = 0.652
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.420 | TNS=-11.342 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 243 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 32 newly gated: 1 Total Ports: 486
+Ending PowerOpt Patch Enables Task | Checksum: 13e3a7d5a
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 13e3a7d5a
+
+Time (s): cpu = 00:02:37 ; elapsed = 00:01:34 . Memory (MB): peak = 6014.734 ; gain = 3163.750
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 13e3a7d5a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.224 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 12d18e997
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.224 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+41 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:04:04 ; elapsed = 00:02:41 . Memory (MB): peak = 6014.734 ; gain = 4045.859
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu3eg'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 9554093d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: c8751c85
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:40 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: e221e4be
+
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:21 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: e221e4be
+
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:21 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: e221e4be
+
+Time (s): cpu = 00:01:46 ; elapsed = 00:01:22 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1f227cf75
+
+Time (s): cpu = 00:05:04 ; elapsed = 00:03:38 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1018] Found 2617 candidate LUT instances to create LUTNM shape
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1320 nets or cells. Created 633 new cells, deleted 687 existing cells and moved 0 existing cell
+INFO: [Physopt 32-1022] Very high fanout net 'design_1_i/SkyNet_0/inst/grp_load_weight_3x3_from_fu_4496/weight_buf_3x3_V_31_address0[0]' has -through timing constraint at pin '' or its immediate connected net. To preserve -through timing constraint its fanout number considered in optimization is changed from 2112 to 705 and it is not considered a very high fanout net anymore. Please consider modifying/removing the '-through' timing constraint on the net segment or hierarchy pin.
+INFO: [Physopt 32-1022] Very high fanout net 'design_1_i/SkyNet_0/inst/grp_load_weight_3x3_from_fu_4496/weight_buf_3x3_V_31_address0[1]' has -through timing constraint at pin '' or its immediate connected net. To preserve -through timing constraint its fanout number considered in optimization is changed from 2112 to 705 and it is not considered a very high fanout net anymore. Please consider modifying/removing the '-through' timing constraint on the net segment or hierarchy pin.
+INFO: [Physopt 32-1022] Very high fanout net 'design_1_i/SkyNet_0/inst/grp_load_weight_3x3_from_fu_4496/weight_buf_3x3_V_31_address0[2]' has -through timing constraint at pin '' or its immediate connected net. To preserve -through timing constraint its fanout number considered in optimization is changed from 2112 to 705 and it is not considered a very high fanout net anymore. Please consider modifying/removing the '-through' timing constraint on the net segment or hierarchy pin.
+INFO: [Physopt 32-1022] Very high fanout net 'design_1_i/SkyNet_0/inst/grp_load_weight_3x3_from_fu_4496/weight_buf_3x3_V_31_address0[3]' has -through timing constraint at pin '' or its immediate connected net. To preserve -through timing constraint its fanout number considered in optimization is changed from 2112 to 705 and it is not considered a very high fanout net anymore. Please consider modifying/removing the '-through' timing constraint on the net segment or hierarchy pin.
+INFO: [Physopt 32-1022] Very high fanout net 'design_1_i/SkyNet_0/inst/grp_load_weight_3x3_from_fu_4496/weight_buf_3x3_V_31_address0[4]' has -through timing constraint at pin '' or its immediate connected net. To preserve -through timing constraint its fanout number considered in optimization is changed from 1409 to 706 and it is not considered a very high fanout net anymore. Please consider modifying/removing the '-through' timing constraint on the net segment or hierarchy pin.
+WARNING: [Physopt 32-894] Found a constraint with the -through option on pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst/src_arst or the net immediately connecting to the pin. This constraint will block optimizations for this and all downstream leaf pins.
+INFO: [Physopt 32-76] Pass 1. Identified 11 candidate nets for fanout optimization.
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/ap_CS_fsm_pp0_stage1. Replicated 18 times.
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4584/E[0]. Replicated 10 times.
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_load_weights_fu_3638/p_0_in[1]. Replicated 6 times.
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_load_weights_fu_3638/ap_CS_fsm_pp0_stage0. Replicated 38 times.
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_load_weights_fu_3638/ap_enable_reg_pp0_iter1_reg_rep__2_n_8. Replicated 6 times.
+INFO: [Physopt 32-81] Processed net design_1_i/rst_ps8_0_299M/U0/peripheral_aresetn[0]. Replicated 34 times.
+WARNING: [Physopt 32-894] Found a constraint with the -through option on pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst/src_arst or the net immediately connecting to the pin. This constraint will block optimizations for this and all downstream leaf pins.
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_load_weights_fu_3638/ap_enable_reg_pp0_iter1_reg_rep__0_n_8. Replicated 6 times.
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_load_weights_fu_3638/ap_enable_reg_pp0_iter1_reg_rep_n_8. Replicated 6 times.
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_load_weights_fu_3638/p_0_in[0]. Replicated 38 times.
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6981/ap_ce_reg_reg_0[0]. Replicated 7 times.
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_load_weights_fu_3638/ap_enable_reg_pp0_iter1_reg_rep__1_n_8. Replicated 7 times.
+INFO: [Physopt 32-232] Optimized 11 nets. Created 176 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 11 nets or cells. Created 176 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Physopt 32-64] No nets found for fanout-optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/ce0 could not be optimized because driver design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/ram_reg_0_i_1__4 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_6_reg_23320[1] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/r_V_38_reg_1058_reg_i_8__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_reg_23200[5] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/r_V_32_reg_1043_reg_i_4__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_10_reg_23400[3] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/r_V_42_reg_1068_reg_i_6__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_10_reg_23400[6] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/r_V_42_reg_1068_reg_i_3__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_reg_23200[3] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/r_V_32_reg_1043_reg_i_6__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_reg_23200[6] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/r_V_32_reg_1043_reg_i_3__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_10_reg_23400[0] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/r_V_42_reg_1068_reg_i_9__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_6_reg_23320[0] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/r_V_38_reg_1058_reg_i_9__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_10_reg_23400[1] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/r_V_42_reg_1068_reg_i_8__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_10_reg_23400[7] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/r_V_42_reg_1068_reg_i_2__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_6_reg_23320[3] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/r_V_38_reg_1058_reg_i_6__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_10_reg_23400[5] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/r_V_42_reg_1068_reg_i_4__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_10_reg_23400[2] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/r_V_42_reg_1068_reg_i_7__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[4] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_12__80 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[3] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_13__76 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_reg_23200[2] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/r_V_32_reg_1043_reg_i_7__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[1] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_15__76 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[0] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_16__76 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[2] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_14__78 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_reg_23200[0] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/r_V_32_reg_1043_reg_i_9__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_6_reg_23320[6] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/r_V_38_reg_1058_reg_i_3__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_10_reg_23400[4] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_10_U/SkyNet_FM_buf1_V_0_ram_U/r_V_42_reg_1068_reg_i_5__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ce0 could not be optimized because driver design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ram_reg_0_i_2__6 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ap_CS_fsm_reg[211]_rep could not be optimized because driver design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ram_reg_0_i_1__10 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_6_reg_23320[7] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/r_V_38_reg_1058_reg_i_2__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_6_reg_23320[5] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/r_V_38_reg_1058_reg_i_4__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_reg_23200[4] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/r_V_32_reg_1043_reg_i_5__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_8_reg_23360[0] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/r_V_40_reg_1063_reg_i_11__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[7] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_9__105 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_6_reg_23320[4] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/r_V_38_reg_1058_reg_i_5__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/ap_CS_fsm_reg[198]_rep__7_0 could not be optimized because driver design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/ram_reg_0_i_1__6 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ap_CS_fsm_reg[211]_rep_1 could not be optimized because driver design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ram_reg_0_i_1__12 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_28_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_12_reg_23440[7] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_28_U/SkyNet_FM_buf1_V_0_ram_U/r_V_44_reg_1073_reg_i_2__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_2_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_2_reg_23240[1] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_2_U/SkyNet_FM_buf1_V_0_ram_U/r_V_34_reg_1048_reg_i_8__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_8_reg_23360[3] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/r_V_40_reg_1063_reg_i_8__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_8_reg_23360[5] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/r_V_40_reg_1063_reg_i_6__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[5] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_11__95 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_reg_23200[7] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/r_V_32_reg_1043_reg_i_2__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[5] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_11__91 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/ap_CS_fsm_reg[198]_rep__8[6] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/ram_reg_0_i_19__4 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_6_reg_23320[2] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_22_U/SkyNet_FM_buf1_V_0_ram_U/r_V_38_reg_1058_reg_i_7__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_8_reg_23360[6] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/r_V_40_reg_1063_reg_i_5__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/SkyNet_mac_muladdmb6_U973/SkyNet_mac_muladdmb6_DSP48_8_U/A[2] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/SkyNet_mac_muladdmb6_U973/SkyNet_mac_muladdmb6_DSP48_8_U/p_i_1__9 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ADDRBWRADDR[6] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ram_reg_bram_0_i_18__58 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_28_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_12_reg_23440[0] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_28_U/SkyNet_FM_buf1_V_0_ram_U/r_V_44_reg_1073_reg_i_9__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/ap_CS_fsm_reg[198]_rep__10_0 could not be optimized because driver design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/ram_reg_0_i_1__27 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[3] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_13__80 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_29_U/SkyNet_FM_buf1_V_0_ram_U/DINBDIN[1] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_29_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_7__121 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ap_CS_fsm_reg[63]_0 could not be optimized because driver design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ram_reg_0_i_1__29 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_8_reg_23360[1] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/r_V_40_reg_1063_reg_i_10__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[6] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_11_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_10__38 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_2_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_2_reg_23240[7] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_2_U/SkyNet_FM_buf1_V_0_ram_U/r_V_34_reg_1048_reg_i_2__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_30_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_14_reg_23480[3] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_30_U/SkyNet_FM_buf1_V_0_ram_U/r_V_46_reg_1078_reg_i_6__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_28_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_12_reg_23440[2] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_28_U/SkyNet_FM_buf1_V_0_ram_U/r_V_44_reg_1073_reg_i_7__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ap_CS_fsm_reg[211]_rep_0 could not be optimized because driver design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ram_reg_0_i_1__11 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_29_U/SkyNet_FM_buf1_V_0_ram_U/DINBDIN[3] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_29_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_5__121 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_28_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_12_reg_23440[1] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_28_U/SkyNet_FM_buf1_V_0_ram_U/r_V_44_reg_1073_reg_i_8__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_reg_23200[1] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_0_U/SkyNet_FM_buf1_V_0_ram_U/r_V_32_reg_1043_reg_i_8__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_2_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_2_reg_23240[4] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_2_U/SkyNet_FM_buf1_V_0_ram_U/r_V_34_reg_1048_reg_i_5__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_28_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_12_reg_23440[3] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_28_U/SkyNet_FM_buf1_V_0_ram_U/r_V_44_reg_1073_reg_i_6__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/ap_CS_fsm_reg[198]_rep__10_1 could not be optimized because driver design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/ram_reg_0_i_2__27 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_16_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[4] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_16_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_12__88 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_load_and_reorg_fu_3891/grp_load_and_reorg_part_fu_326/ap_CS_fsm_reg[198]_rep__10_0[11] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_load_and_reorg_fu_3891/grp_load_and_reorg_part_fu_326/ram_reg_0_i_2__10 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ap_CS_fsm_reg[63] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ram_reg_0_i_2__29 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_8_reg_23360[7] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/r_V_40_reg_1063_reg_i_4__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[4] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_12__84 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_8_reg_23360[4] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/r_V_40_reg_1063_reg_i_7__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/sext_ln203_reg_6970_pp0_iter3_reg_reg[10][0] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ram_reg_bram_0_i_1__5 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_reg[198]_rep__3_1[1] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ram_reg_bram_0_i_25__48 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_30_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_14_reg_23480[4] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_30_U/SkyNet_FM_buf1_V_0_ram_U/r_V_46_reg_1078_reg_i_5__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_30_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_14_reg_23480[5] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_30_U/SkyNet_FM_buf1_V_0_ram_U/r_V_46_reg_1078_reg_i_4__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_28_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_12_reg_23440[6] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_28_U/SkyNet_FM_buf1_V_0_ram_U/r_V_44_reg_1073_reg_i_3__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[1] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_15__80 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_20_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_4_reg_23280[3] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_20_U/SkyNet_FM_buf1_V_0_ram_U/r_V_36_reg_1053_reg_i_6__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_16_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[0] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_16_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_16__84 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_reg[198]_rep__3_1[8] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ram_reg_bram_0_i_18__7 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_reg[198]_rep__3_0[1] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ram_reg_bram_0_i_24__44 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/SkyNet_mac_muladdmb6_U973/SkyNet_mac_muladdmb6_DSP48_8_U/A[1] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/SkyNet_mac_muladdmb6_U973/SkyNet_mac_muladdmb6_DSP48_8_U/p_i_2__9 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_30_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_14_reg_23480[7] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_30_U/SkyNet_FM_buf1_V_0_ram_U/r_V_46_reg_1078_reg_i_2__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/SkyNet_mac_muladdmb6_U973/SkyNet_mac_muladdmb6_DSP48_8_U/A[0] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/SkyNet_mac_muladdmb6_U973/SkyNet_mac_muladdmb6_DSP48_8_U/p_i_3__9 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ADDRBWRADDR[0] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ram_reg_bram_0_i_26__66 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_relu_copy_buf_to_DDR_fu_3687/ADDRARDADDR[2] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_relu_copy_buf_to_DDR_fu_3687/ram_reg_bram_0_i_10__5 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_30_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_14_reg_23480[6] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_30_U/SkyNet_FM_buf1_V_0_ram_U/r_V_46_reg_1078_reg_i_3__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[0] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_16__80 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/ap_CS_fsm_reg[198]_rep__0_0 could not be optimized because driver design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/ram_reg_0_i_1__28 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_2_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_2_reg_23240[2] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_2_U/SkyNet_FM_buf1_V_0_ram_U/r_V_34_reg_1048_reg_i_7__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_reg[198]_rep__3[4] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ram_reg_bram_0_i_8__1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_16_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[5] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_16_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_11__99 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_8_reg_23360[2] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf1_V_8_U/SkyNet_FM_buf1_V_0_ram_U/r_V_40_reg_1063_reg_i_9__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_28_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_12_reg_23440[4] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_28_U/SkyNet_FM_buf1_V_0_ram_U/r_V_44_reg_1073_reg_i_5__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_30_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_14_reg_23480[2] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_30_U/SkyNet_FM_buf1_V_0_ram_U/r_V_46_reg_1078_reg_i_7__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_2_U/SkyNet_FM_buf1_V_0_ram_U/select_ln133_2_reg_23240[0] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_2_U/SkyNet_FM_buf1_V_0_ram_U/r_V_34_reg_1048_reg_i_9__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/ap_CS_fsm_reg[198]_rep__7 could not be optimized because driver design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/ram_reg_0_i_1__5 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_reg[198]_rep__8[3] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ram_reg_bram_0_i_2__14 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_13_U/SkyNet_FM_buf1_V_0_ram_U/DINBDIN[7] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_13_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_1__117 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_reg[198]_rep__3[5] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ram_reg_bram_0_i_7__1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_16_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[3] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_16_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_13__84 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/DINADIN[2] could not be optimized because driver design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_14__82 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_reg[198]_rep__3_0[2] could not be optimized because driver design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ram_reg_bram_0_i_16__7 could not be replicated
+INFO: [Common 17-14] Message 'Physopt 32-117' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-68] No nets found for critical-cell optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-457] Pass 1. Identified 50 candidate cells for DSP register optimization.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_12_reg_1118_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4440/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4656/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4260/add_ln1192_9_reg_1108_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_6_reg_1098_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4728/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4332/r_V_38_reg_1058_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4368/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/r_V_32_reg_1043_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_9_reg_1108_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4620/add_ln1192_9_reg_1108_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4188/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/r_V_38_reg_1058_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4332/add_ln1192_6_reg_1098_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4512/r_V_38_reg_1058_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4548/add_ln1192_6_reg_1098_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4728/add_ln1192_6_reg_1098_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4440/r_V_32_reg_1043_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4656/add_ln1192_3_reg_1088_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4332/r_V_32_reg_1043_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4296/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4548/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4260/r_V_40_reg_1063_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4224/r_V_32_reg_1043_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4692/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4368/r_V_40_reg_1063_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4260/add_ln1192_3_reg_1088_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4224/add_ln1192_3_reg_1088_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4188/r_V_44_reg_1073_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4332/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4692/r_V_34_reg_1048_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4224/r_V_38_reg_1058_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_6_reg_1098_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4512/r_V_40_reg_1063_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4440/add_ln1192_6_reg_1098_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4224/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4224/add_ln1192_6_reg_1098_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4692/add_ln1192_12_reg_1118_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4224/add_ln1192_9_reg_1108_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4656/add_ln1192_6_reg_1098_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4260/r_V_34_reg_1048_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4296/r_V_32_reg_1043_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/add_ln70_1_reg_30598_reg. 12 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4368/add_ln1192_9_reg_1108_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4728/r_V_40_reg_1063_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4260/add_ln1192_6_reg_1098_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4296/r_V_38_reg_1058_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4512/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-457] Pass 2. Identified 28 candidate cells for DSP register optimization.
+INFO: [Physopt 32-457] Pass 2. Identified 50 candidate cells for DSP register optimization.
+INFO: [Physopt 32-666] Processed cell design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/add_ln70_1_reg_30598_reg. No change.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/r_V_46_reg_1078_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4656/r_V_32_reg_1043_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4368/r_V_32_reg_1043_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_9_reg_1108_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4368/add_ln1192_12_reg_1118_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4512/r_V_36_reg_1053_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/add_ln339_1_reg_3027_reg. 12 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4548/r_V_32_reg_1043_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/add_ln71_reg_30614_reg. 12 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/r_V_36_reg_1053_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4224/r_V_34_reg_1048_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4440/add_ln1192_9_reg_1108_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4188/r_V_46_reg_1078_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4584/add_ln1192_6_reg_1098_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4620/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4620/r_V_36_reg_1053_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4548/r_V_36_reg_1053_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/r_V_32_reg_1043_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4728/r_V_46_reg_1078_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4656/r_V_38_reg_1058_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4188/add_ln1192_9_reg_1108_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4188/r_V_40_reg_1063_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4728/r_V_34_reg_1048_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_3_reg_1088_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4332/r_V_36_reg_1053_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/r_V_38_reg_1058_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4332/add_ln1192_12_reg_1118_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4296/r_V_44_reg_1073_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4656/r_V_40_reg_1063_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_local_buf_copy_fu_3759/add_ln339_reg_3012_reg. 12 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4440/r_V_38_reg_1058_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4620/r_V_32_reg_1043_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4548/r_V_38_reg_1058_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4692/r_V_32_reg_1043_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4296/add_ln1192_9_reg_1108_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4332/r_V_34_reg_1048_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4440/r_V_34_reg_1048_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4620/add_ln1192_12_reg_1118_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4692/add_ln1192_3_reg_1088_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4728/r_V_36_reg_1053_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4368/add_ln1192_6_reg_1098_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4584/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4620/r_V_38_reg_1058_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4620/add_ln1192_6_reg_1098_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4260/r_V_42_reg_1068_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4548/r_V_44_reg_1073_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4620/r_V_40_reg_1063_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4692/add_ln1192_6_reg_1098_reg. 21 registers were pushed out.
+INFO: [Common 17-14] Message 'Physopt 32-665' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 100 nets or cells. Created 1320 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.680 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |          633  |            687  |                  1320  |           0  |           1  |  00:00:03  |
+|  Very High Fanout                                 |          176  |              0  |                    11  |           0  |           1  |  00:00:11  |
+|  Fanout                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Cell                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |         1320  |              0  |                   100  |           0  |           1  |  00:00:32  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |         2129  |            687  |                  1431  |           0  |           9  |  00:00:47  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 17d0c939b
+
+Time (s): cpu = 00:10:46 ; elapsed = 00:07:45 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Phase 2.2 Global Placement Core | Checksum: 1d2629d38
+
+Time (s): cpu = 00:11:01 ; elapsed = 00:08:01 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1d2629d38
+
+Time (s): cpu = 00:11:01 ; elapsed = 00:08:01 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1d561cb6a
+
+Time (s): cpu = 00:11:17 ; elapsed = 00:08:12 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 19eee2df4
+
+Time (s): cpu = 00:11:45 ; elapsed = 00:08:33 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1d9d5503c
+
+Time (s): cpu = 00:11:47 ; elapsed = 00:08:35 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 3.4 IO Cut Optimizer
+Phase 3.4 IO Cut Optimizer | Checksum: 1ed70cb04
+
+Time (s): cpu = 00:11:49 ; elapsed = 00:08:37 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 134fc7318
+
+Time (s): cpu = 00:12:35 ; elapsed = 00:09:09 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 3.6 Small Shape DP
+
+Phase 3.6.1 Small Shape Clustering
+Phase 3.6.1 Small Shape Clustering | Checksum: 208ebb541
+
+Time (s): cpu = 00:12:55 ; elapsed = 00:09:31 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 3.6.2 Flow Legalize Slice Clusters
+Phase 3.6.2 Flow Legalize Slice Clusters | Checksum: 1d8f0ddca
+
+Time (s): cpu = 00:12:57 ; elapsed = 00:09:32 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 3.6.3 Slice Area Swap
+Phase 3.6.3 Slice Area Swap | Checksum: 1ce761e50
+
+Time (s): cpu = 00:13:34 ; elapsed = 00:10:06 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 3.6.4 Commit Slice Clusters
+Phase 3.6.4 Commit Slice Clusters | Checksum: 1ac2297db
+
+Time (s): cpu = 00:14:09 ; elapsed = 00:10:25 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Phase 3.6 Small Shape DP | Checksum: 1ac2297db
+
+Time (s): cpu = 00:14:11 ; elapsed = 00:10:26 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 22c73839e
+
+Time (s): cpu = 00:14:20 ; elapsed = 00:10:39 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 1c3317c2f
+
+Time (s): cpu = 00:14:21 ; elapsed = 00:10:40 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 1a759bd21
+
+Time (s): cpu = 00:16:26 ; elapsed = 00:12:12 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1a759bd21
+
+Time (s): cpu = 00:16:27 ; elapsed = 00:12:13 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 180ac994b
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-34] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_load_weights_fu_3638/weight_buf_V9_0_reg_4589, BUFG insertion was skipped due to possible timing degradation.
+INFO: [Place 46-34] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_load_weights_fu_3638/E[0], BUFG insertion was skipped due to possible timing degradation.
+INFO: [Place 46-56] BUFG insertion identified 2 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 2, Skipped due to Illegal Netlist: 0.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 180ac994b
+
+Time (s): cpu = 00:18:16 ; elapsed = 00:13:34 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-1.310. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 2594cd183
+
+Time (s): cpu = 00:19:16 ; elapsed = 00:14:24 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 2594cd183
+
+Time (s): cpu = 00:19:17 ; elapsed = 00:14:25 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 2594cd183
+
+Time (s): cpu = 00:19:34 ; elapsed = 00:14:38 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 29628de84
+
+Time (s): cpu = 00:19:38 ; elapsed = 00:14:42 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.040 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 2c435f340
+
+Time (s): cpu = 00:19:39 ; elapsed = 00:14:43 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2c435f340
+
+Time (s): cpu = 00:19:40 ; elapsed = 00:14:44 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Ending Placer Task | Checksum: 1e6d224f2
+
+Time (s): cpu = 00:19:40 ; elapsed = 00:14:44 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+303 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:19:48 ; elapsed = 00:14:49 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:25 ; elapsed = 00:00:08 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:40 ; elapsed = 00:00:24 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.367 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu3eg'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.268 | TNS=-3400.972 |
+Phase 1 Physical Synthesis Initialization | Checksum: 12be21a5c
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.268 | TNS=-3400.972 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-457] Pass 1. Identified 6 candidate cells for DSP register optimization.
+INFO: [Physopt 32-457] Pass 1. Identified 6 candidate cells for DSP register optimization.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4512/add_ln1192_3_reg_1088_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4368/add_ln1192_3_reg_1088_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4548/add_ln1192_3_reg_1088_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4332/add_ln1192_3_reg_1088_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4620/add_ln1192_3_reg_1088_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4440/add_ln1192_3_reg_1088_reg. 21 registers were pushed out.
+INFO: [Physopt 32-457] Pass 2. Identified 6 candidate cells for DSP register optimization.
+INFO: [Physopt 32-457] Pass 2. Identified 13 candidate cells for DSP register optimization.
+INFO: [Physopt 32-666] Processed cell design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/add_ln70_1_reg_30598_reg. No change.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4188/r_V_38_reg_1058_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4368/r_V_38_reg_1058_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4368/r_V_36_reg_1053_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4440/add_ln1192_12_reg_1118_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4584/r_V_38_reg_1058_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4224/r_V_36_reg_1053_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4260/r_V_38_reg_1058_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4296/r_V_46_reg_1078_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4656/add_ln1192_9_reg_1108_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4584/add_ln1192_3_reg_1088_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4296/r_V_40_reg_1063_reg. 9 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4548/add_ln1192_12_reg_1118_reg. 21 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4512/r_V_34_reg_1048_reg. 9 registers were pushed out.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 19 nets or cells. Created 291 new cells, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.114 | TNS=-3216.447 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.483 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Phase 2 DSP Register Optimization | Checksum: 1745daa52
+
+Time (s): cpu = 00:01:32 ; elapsed = 00:01:03 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.114 | TNS=-3216.447 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6837/r_V_51_reg_95_reg_n_8_[19]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter1. Replicated 10 times.
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.112 | TNS=-3206.048 |
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/icmp_ln47_reg_25795_reg[0]_rep__1_n_8.  Re-placed instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/icmp_ln47_reg_25795_reg[0]_rep__1
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/icmp_ln47_reg_25795_reg[0]_rep__1_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.099 | TNS=-3180.138 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/XOROUT[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter0_reg_rep__0_n_8. Replicated 3 times.
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter0_reg_rep__0_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.093 | TNS=-3176.376 |
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter0_reg_rep__0_n_8.  Re-placed instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter0_reg_rep__0
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter0_reg_rep__0_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.081 | TNS=-3171.619 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/p_Result_s_reg_1123. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_n_104.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_i_1__8_psdsp_11
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_n_104. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.077 | TNS=-3171.562 |
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_n_102.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_i_1__8_psdsp_9
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_n_102. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.073 | TNS=-3171.515 |
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/icmp_ln47_reg_25795_reg_n_8_[0].  Re-placed instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/icmp_ln47_reg_25795_reg[0]
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/icmp_ln47_reg_25795_reg_n_8_[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.070 | TNS=-3163.532 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/p_Result_98_reg_1136. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_113.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_i_1__6_psdsp_20
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_113. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.070 | TNS=-3163.351 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ddr_offfset_1_reg_21092[17]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/ap_CS_fsm_state118.  Re-placed instance design_1_i/SkyNet_0/inst/ap_CS_fsm_reg[117]
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/ap_CS_fsm_state118. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.067 | TNS=-3162.589 |
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_n_103.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_i_1__8_psdsp_10
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_n_103. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.065 | TNS=-3162.558 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/FM_buf_acc_V_1_U/SkyNet_FM_buf_accbSr_ram_U/q0[9]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/SkyNet_DDR256_m_axi_U/bus_write/fifo_resp_to_user/empty_n_reg_0.  Re-placed instance design_1_i/SkyNet_0/inst/SkyNet_DDR256_m_axi_U/bus_write/fifo_resp_to_user/empty_n_reg
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/SkyNet_DDR256_m_axi_U/bus_write/fifo_resp_to_user/empty_n_reg_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.061 | TNS=-3134.012 |
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_112.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_i_1__6_psdsp_19
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_112. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.054 | TNS=-3133.608 |
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_reg[5]_rep__0_n_8.  Re-placed instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_reg[5]_rep__0
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_reg[5]_rep__0_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.051 | TNS=-3131.244 |
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter0_reg_rep__0_n_8.  Did not re-place instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter0_reg_rep__0
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter0_reg_rep__0_n_8. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_ALU.ALU_OUT<10>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_M_DATA.U_DATA<10>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_MULTIPLIER.U<10>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_PREADD_DATA.A2A1<4>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_w1_V[4].  Re-placed instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_16__5
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_w1_V[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.048 | TNS=-3130.239 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6821/r_V_51_reg_95[19]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter1_repN.  Did not re-place instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter1_reg_replica
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter1_repN. Replicated 4 times.
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter1_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.048 | TNS=-3122.412 |
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/ap_CS_fsm_state64.  Re-placed instance design_1_i/SkyNet_0/inst/ap_CS_fsm_reg[63]
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/ap_CS_fsm_state64. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.044 | TNS=-3120.282 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6877/r_V_51_reg_95_reg_n_8_[19]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/icmp_ln47_reg_25795_pp0_iter1_reg_reg_n_8_[0]. Replicated 10 times.
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/icmp_ln47_reg_25795_pp0_iter1_reg_reg_n_8_[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.043 | TNS=-3118.477 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/p_Result_s_reg_1123. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_105.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_i_1__6_psdsp_12
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_105. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.042 | TNS=-3118.468 |
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_109.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_i_1__6_psdsp_16
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_109. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.041 | TNS=-3118.419 |
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_110.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_i_1__6_psdsp_17
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_110. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.040 | TNS=-3118.393 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/FM_buf3_V_7_U/SkyNet_FM_buf1_V_0_ram_U/FM_buf3_V_7_q0[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/FM_buf2_V_7_U/SkyNet_FM_buf2_V_0_ram_U/FM_buf2_V_7_q0[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/grp_DW_CONV_3x3_bias_fu_1650_top_7_V_q0[5].  Re-placed instance design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/ram_reg_bram_0_i_30__29
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/FM_buf4_V_7_U/SkyNet_FM_buf1_V_0_ram_U/grp_DW_CONV_3x3_bias_fu_1650_top_7_V_q0[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.040 | TNS=-3118.083 |
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_n_96.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_i_1__8_psdsp_3
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_n_96. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.039 | TNS=-3118.083 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/p_Result_s_reg_1123. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_12_reg_1118_reg_n_98.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_12_reg_1118_reg_i_1__8_psdsp_5
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_12_reg_1118_reg_n_98. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.039 | TNS=-3118.075 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ddr_offfset_reg_21087[19]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/ap_CS_fsm_state118.  Did not re-place instance design_1_i/SkyNet_0/inst/ap_CS_fsm_reg[117]
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/ap_CS_fsm_state118. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/SkyNet_mac_muladdlbW_U972/SkyNet_mac_muladdlbW_DSP48_7_U/ddr_offfset_reg_21087[9]_i_10_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.039 | TNS=-3117.885 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/p_Result_98_reg_1136. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_110.  Did not re-place instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_i_1__6_psdsp_17
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_110. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/p_Val2_21_fu_556_p2_carry__0_i_7__0_n_8. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_1_fu_520_p2_carry__0_n_23. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_1_fu_520_p2_carry_i_5__0_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.039 | TNS=-3117.885 |
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_112.  Did not re-place instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_i_1__6_psdsp_19
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_112. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_1_fu_520_p2_carry_i_7__0_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.038 | TNS=-3117.414 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ddr_offfset_1_reg_21092[17]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/SkyNet_mac_muladdmb6_U973/SkyNet_mac_muladdmb6_DSP48_8_U/ddr_offfset_1_reg_21092[9]_i_12_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.036 | TNS=-3117.396 |
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/SkyNet_mac_muladdmb6_U973/SkyNet_mac_muladdmb6_DSP48_8_U/ddr_offfset_1_reg_21092[9]_i_13_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.033 | TNS=-3117.351 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6877/r_V_51_reg_95_reg_n_8_[19]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_pp0_stage2.  Did not re-place instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_reg[3]
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_pp0_stage2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6877/SkyNet_mul_mul_9sfYi_U126/SkyNet_mul_mul_9sfYi_DSP48_2_U/p__94_i_9__6_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.032 | TNS=-3117.203 |
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_n_98.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_i_1__8_psdsp_5
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_n_98. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.031 | TNS=-3117.197 |
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/SkyNet_mac_muladdmb6_U973/SkyNet_mac_muladdmb6_DSP48_8_U/ddr_offfset_1_reg_21092[9]_i_14_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.029 | TNS=-3117.141 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/p_Result_98_reg_1136. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_6_reg_1098_reg_n_110.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_6_reg_1098_reg_i_1__8_psdsp_17
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_6_reg_1098_reg_n_110. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.028 | TNS=-3117.129 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.028 | TNS=-3117.129 |
+Phase 3 Critical Path Optimization | Checksum: 116768861
+
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:39 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.028 | TNS=-3117.129 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/XOROUT[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter0_reg_rep__0_n_8.  Did not re-place instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter0_reg_rep__0
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter0_reg_rep__0_n_8. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_ALU.ALU_OUT<10>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_M_DATA.U_DATA<10>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_MULTIPLIER.U<10>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_PREADD_DATA.A2A1<4>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_w1_V[4].  Did not re-place instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_16__5
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_w1_V[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_27__3_n_8.  Re-placed instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_27__3
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_27__3_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.028 | TNS=-3117.074 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/p_Result_98_reg_1136. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_6_reg_1098_reg_n_113.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_6_reg_1098_reg_i_1__8_psdsp_20
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_6_reg_1098_reg_n_113. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.027 | TNS=-3116.826 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_PREADD_DATA.A2A1<7>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_w1_V[7].  Re-placed instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_13__5
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_w1_V[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.026 | TNS=-3116.666 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/p_Result_s_reg_1123. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_n_100.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_i_1__8_psdsp_7
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_n_100. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.025 | TNS=-3116.650 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4260/p_Result_98_reg_1136. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4260/add_ln1192_9_reg_1108_reg_n_109.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4260/add_ln1192_9_reg_1108_reg_i_1__12_psdsp_16
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4260/add_ln1192_9_reg_1108_reg_n_109. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.024 | TNS=-3116.362 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ddr_offfset_1_reg_21092[17]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/ap_CS_fsm_state118.  Did not re-place instance design_1_i/SkyNet_0/inst/ap_CS_fsm_reg[117]
+INFO: [Physopt 32-81] Processed net design_1_i/SkyNet_0/inst/ap_CS_fsm_state118. Replicated 3 times.
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/ap_CS_fsm_state118. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.023 | TNS=-3111.935 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_PREADD_DATA.A2A1<1>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_w1_V[1].  Re-placed instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_19__5
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_w1_V[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.020 | TNS=-3111.752 |
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_w1_V[7].  Did not re-place instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_13__5
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_w1_V[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_24__3_n_8.  Did not re-place instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_24__3
+INFO: [Physopt 32-710] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_w1_V[7]. Critical path length was reduced through logic transformation on cell design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_13__5_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_24__3_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.020 | TNS=-3111.513 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/p_Result_98_reg_1136. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_111.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_i_1__6_psdsp_18
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_111. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.019 | TNS=-3111.469 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_Relu_Max_Pooling_fu_3272/ddr_offfset_reg_21087[19]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/zext_ln981_fu_5232_p1[3].  Re-placed instance design_1_i/SkyNet_0/inst/co6_0_reg_1472_reg[1]
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/zext_ln981_fu_5232_p1[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.017 | TNS=-3111.260 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/p_Result_98_reg_1136. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_6_reg_1098_reg_n_112.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_6_reg_1098_reg_i_1__8_psdsp_19
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_6_reg_1098_reg_n_112. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.017 | TNS=-3110.600 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/p_Result_98_reg_1136. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_111.  Did not re-place instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_i_1__6_psdsp_18
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_111. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/p_Val2_21_fu_556_p2_carry__0_i_7__0_n_8. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_1_fu_520_p2_carry__0_n_23. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_1_fu_520_p2_carry_i_6__0_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.014 | TNS=-3110.503 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/XOROUT[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_pp0_stage2.  Did not re-place instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_reg[3]
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_CS_fsm_pp0_stage2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_ALU.ALU_OUT<0>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_M_DATA.U_DATA<0>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_MULTIPLIER.U<0>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_PREADD_DATA.B2B1<1>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_b1_V[1].  Re-placed instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_8__1
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_b1_V[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.013 | TNS=-3110.342 |
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter0_reg_rep__0_n_8.  Did not re-place instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter0_reg_rep__0
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/ap_enable_reg_pp0_iter0_reg_rep__0_n_8. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_ALU.ALU_OUT<10>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_M_DATA.U_DATA<10>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_MULTIPLIER.U<10>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/DSP_PREADD_DATA.A2A1<1>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_w1_V[1].  Did not re-place instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_19__5
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/grp_MAC_16_16_fu_6965_w1_V[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_30__3_n_8.  Re-placed instance design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_30__3
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg_i_30__3_n_8. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.010 | TNS=-3107.754 |
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/p_Result_s_reg_1123. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_n_97.  Re-placed instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_i_1__8_psdsp_4
+INFO: [Physopt 32-735] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/add_ln1192_3_reg_1088_reg_n_97. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.009 | TNS=-3107.734 |
+INFO: [Physopt 32-662] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_112.  Did not re-place instance design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_i_1__6_psdsp_19
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_12_reg_1118_reg_n_112. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_1_fu_520_p2_carry_i_7__0_n_8. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/p_Val2_21_fu_556_p2_carry__1_n_16. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_13_fu_510_p2/P[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_13_fu_510_p2/DSP_ALU.ALU_OUT<1>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4476/add_ln1192_13_fu_510_p2/DSP_A_B_DATA.B_ALU<1>. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.009 | TNS=-3107.734 |
+Phase 4 Critical Path Optimization | Checksum: 12ed0bffb
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:01:48 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.464 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-1.009 | TNS=-3107.734 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.154  |        184.525  |          291  |              0  |                    19  |           0  |           1  |  00:00:49  |
+|  Critical Path  |          0.105  |        108.713  |           30  |              0  |                    47  |           0  |           2  |  00:00:44  |
+|  Total          |          0.259  |        293.238  |          321  |              0  |                    66  |           0  |           3  |  00:01:33  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 23c18307f
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:04 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+562 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:04:19 ; elapsed = 00:02:51 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:26 ; elapsed = 00:00:09 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.runs/impl_1/design_1_wrapper_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:40 ; elapsed = 00:00:24 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu3eg'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 2c7badbf ConstDB: 0 ShapeSum: de0eb7ac RouteDB: 47d8395b
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 5d29475b
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:33 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Post Restoration Checksum: NetGraph: bd5a681d NumContArr: 118d1acd Constraints: 218f4d3 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: d10077bd
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:35 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: d10077bd
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:36 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: d10077bd
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:36 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 2.4 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.4 Global Clock Net Routing | Checksum: 14fbb5f52
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:39 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 2.5 Update Timing
+Phase 2.5 Update Timing | Checksum: 16b779ad5
+
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:21 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.000 | TNS=-1838.271| WHS=-0.107 | THS=-14.666|
+
+Phase 2 Router Initialization | Checksum: 15e910c31
+
+Time (s): cpu = 00:03:20 ; elapsed = 00:01:58 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 117153
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 92972
+  Number of Partially Routed Nets     = 24181
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 15e910c31
+
+Time (s): cpu = 00:03:23 ; elapsed = 00:02:01 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 3.2 Update Timing
+Phase 3.2 Update Timing | Checksum: 2500f2e17
+
+Time (s): cpu = 00:05:16 ; elapsed = 00:03:12 . Memory (MB): peak = 6014.734 ; gain = 0.000
+WARNING: [Route 35-447] Congestion is preventing the router from routing all nets. The router will prioritize the successful completion of routing all nets over timing optimizations.
+Phase 3 Initial Routing | Checksum: 3167e419d
+
+Time (s): cpu = 00:05:59 ; elapsed = 00:03:37 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+INFO: [Route 35-449] Initial Estimated Congestion
+ ________________________________________________________________________
+|           | Global Congestion | Long Congestion   | Short Congestion  |
+|           |___________________|___________________|___________________|
+| Direction | Size   | % Tiles  | Size   | % Tiles  | Size   | % Tiles  |
+|___________|________|__________|________|__________|________|__________|
+|      NORTH|   32x32|     13.54|   64x64|     26.52|   16x16|      7.88|
+|___________|________|__________|________|__________|________|__________|
+|      SOUTH|   32x32|     16.01|   64x64|     30.69|   16x16|      7.26|
+|___________|________|__________|________|__________|________|__________|
+|       EAST|     8x8|      4.92|     8x8|      3.60|   32x32|     13.23|
+|___________|________|__________|________|__________|________|__________|
+|       WEST|     4x4|      1.77|     2x2|      1.03|   16x16|     11.14|
+|___________|________|__________|________|__________|________|__________|
+Congestion Report
+GLOBAL Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+NORTH
+	INT_X11Y44->INT_X26Y107 (CLEM_X11Y44->DSP_X26Y105)
+	INT_X6Y62->INT_X32Y93 (CLEM_X6Y62->RCLK_HPIO_R_X32Y89)
+	INT_X6Y61->INT_X32Y92 (CLEM_X6Y61->RCLK_HPIO_R_X32Y89)
+	INT_X6Y60->INT_X32Y91 (CLEM_X6Y60->RCLK_HPIO_R_X32Y89)
+	INT_X6Y59->INT_X32Y90 (CLEM_X6Y59->RCLK_HPIO_R_X32Y89)
+SOUTH
+	INT_X7Y84->INT_X22Y147 (CLEL_L_X7Y84->CLEL_R_X22Y147)
+	INT_X6Y101->INT_X32Y132 (CLEM_X6Y101->CMT_RIGHT_X32Y120)
+	INT_X6Y100->INT_X32Y131 (CLEM_X6Y100->CMT_RIGHT_X32Y120)
+	INT_X6Y99->INT_X32Y130 (CLEM_X6Y99->CMT_RIGHT_X32Y120)
+	INT_X6Y98->INT_X32Y129 (CLEM_X6Y98->CMT_RIGHT_X32Y120)
+LONG Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+NORTH
+	INT_X0Y45->INT_X31Y108 (PSS_ALTO_X0Y0->CLEL_R_X31Y108)
+	INT_X0Y52->INT_X31Y83 (PSS_ALTO_X0Y0->CLEL_R_X31Y83)
+	INT_X0Y51->INT_X31Y82 (PSS_ALTO_X0Y0->CLEL_R_X31Y82)
+	INT_X0Y50->INT_X31Y81 (PSS_ALTO_X0Y0->CLEL_R_X31Y81)
+	INT_X0Y49->INT_X31Y80 (PSS_ALTO_X0Y0->CLEL_R_X31Y80)
+SOUTH
+	INT_X0Y28->INT_X31Y139 (PSS_ALTO_X0Y0->CLEL_R_X31Y139)
+	INT_X0Y116->INT_X31Y147 (PSS_ALTO_X0Y0->CLEL_R_X31Y147)
+	INT_X0Y84->INT_X31Y115 (PSS_ALTO_X0Y0->CLEL_R_X31Y115)
+	INT_X0Y115->INT_X31Y146 (PSS_ALTO_X0Y0->CLEL_R_X31Y146)
+	INT_X0Y83->INT_X31Y114 (PSS_ALTO_X0Y0->CLEL_R_X31Y114)
+SHORT Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+NORTH
+	INT_X7Y68->INT_X22Y83 (CLEL_L_X7Y68->CLEL_R_X22Y83)
+	INT_X7Y72->INT_X22Y87 (CLEL_L_X7Y72->CLEL_R_X22Y87)
+	INT_X7Y71->INT_X22Y86 (CLEL_L_X7Y71->CLEL_R_X22Y86)
+SOUTH
+	INT_X13Y92->INT_X20Y123 (CLEM_X13Y92->CLEL_R_X20Y123)
+	INT_X16Y100->INT_X23Y107 (CLEM_X16Y100->CLEL_R_X23Y107)
+	INT_X16Y107->INT_X23Y114 (CLEM_X16Y107->CLEL_R_X23Y114)
+	INT_X16Y99->INT_X23Y106 (CLEM_X16Y99->CLEL_R_X23Y106)
+	INT_X16Y106->INT_X23Y113 (CLEM_X16Y106->CLEL_R_X23Y113)
+EAST
+	INT_X5Y61->INT_X20Y92 (CLEL_L_X5Y61->CLEL_R_X20Y92)
+	INT_X5Y77->INT_X20Y92 (CLEL_L_X5Y77->CLEL_R_X20Y92)
+	INT_X5Y76->INT_X20Y91 (CLEL_L_X5Y76->CLEL_R_X20Y91)
+	INT_X5Y75->INT_X20Y90 (CLEL_L_X5Y75->CLEL_R_X20Y90)
+	INT_X6Y84->INT_X21Y99 (CLEM_X6Y84->CLEL_R_X21Y99)
+WEST
+	INT_X14Y60->INT_X21Y99 (CLEM_X14Y60->CLEL_R_X21Y99)
+	INT_X16Y84->INT_X23Y91 (CLEM_X16Y84->CLEL_R_X23Y91)
+	INT_X16Y76->INT_X23Y83 (CLEM_X16Y76->CLEL_R_X23Y83)
+	INT_X16Y83->INT_X23Y90 (CLEM_X16Y83->CLEL_R_X23Y90)
+	INT_X16Y75->INT_X23Y82 (CLEM_X16Y75->CLEL_R_X23Y82)
+
+INFO: [Route 35-448] Estimated Global/Short routing congestion is level 5 (32x32). Congestion levels of 5 and greater can reduce routability and impact timing closure.
+
+INFO: [Route 35-581] Estimated Timing congestion is level 6 (64x64). Congestion levels of 5 and greater may impact timing closure.
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+Phase 4.1 Global Iteration 0 | Checksum: 3167e419d
+
+Time (s): cpu = 00:06:12 ; elapsed = 00:03:45 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 103270
+ Number of Nodes with overlaps = 36884
+ Number of Nodes with overlaps = 13358
+ Number of Nodes with overlaps = 5250
+ Number of Nodes with overlaps = 2084
+ Number of Nodes with overlaps = 940
+ Number of Nodes with overlaps = 454
+ Number of Nodes with overlaps = 224
+ Number of Nodes with overlaps = 118
+ Number of Nodes with overlaps = 64
+ Number of Nodes with overlaps = 34
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 2
+INFO: [Route 35-443] CLB routing congestion detected. Several CLBs have high routing utilization, which can impact timing closure. Top ten most congested CLBs are: CLEM_X16Y125 CLEL_R_X16Y125 CLEM_X16Y126 CLEL_R_X16Y126 
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.720 | TNS=-22991.622| WHS=-0.023 | THS=-0.070 |
+
+Phase 4.2 Global Iteration 1 | Checksum: 273dfe830
+
+Time (s): cpu = 00:22:33 ; elapsed = 00:14:28 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 41
+ Number of Nodes with overlaps = 86
+ Number of Nodes with overlaps = 64
+ Number of Nodes with overlaps = 56
+ Number of Nodes with overlaps = 33
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.511 | TNS=-22920.338| WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 270186134
+
+Time (s): cpu = 00:23:52 ; elapsed = 00:15:36 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 4.4 Global Iteration 3
+ Number of Nodes with overlaps = 135
+ Number of Nodes with overlaps = 105
+ Number of Nodes with overlaps = 124
+ Number of Nodes with overlaps = 60
+ Number of Nodes with overlaps = 51
+ Number of Nodes with overlaps = 33
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.489 | TNS=-22520.091| WHS=N/A    | THS=N/A    |
+
+Phase 4.4 Global Iteration 3 | Checksum: 208702d86
+
+Time (s): cpu = 00:25:13 ; elapsed = 00:16:48 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 4.5 Global Iteration 4
+ Number of Nodes with overlaps = 69
+ Number of Nodes with overlaps = 256
+ Number of Nodes with overlaps = 202
+ Number of Nodes with overlaps = 96
+ Number of Nodes with overlaps = 43
+ Number of Nodes with overlaps = 19
+ Number of Nodes with overlaps = 15
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.414 | TNS=-22182.079| WHS=N/A    | THS=N/A    |
+
+Phase 4.5 Global Iteration 4 | Checksum: 268b1f23e
+
+Time (s): cpu = 00:26:27 ; elapsed = 00:17:49 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Phase 4 Rip-up And Reroute | Checksum: 268b1f23e
+
+Time (s): cpu = 00:26:27 ; elapsed = 00:17:50 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1b39f1958
+
+Time (s): cpu = 00:27:02 ; elapsed = 00:18:11 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.414 | TNS=-22180.862| WHS=0.010  | THS=0.000  |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 17e9dba1a
+
+Time (s): cpu = 00:27:05 ; elapsed = 00:18:13 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 17e9dba1a
+
+Time (s): cpu = 00:27:05 ; elapsed = 00:18:13 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Phase 5 Delay and Skew Optimization | Checksum: 17e9dba1a
+
+Time (s): cpu = 00:27:06 ; elapsed = 00:18:14 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 15f094de6
+
+Time (s): cpu = 00:27:32 ; elapsed = 00:18:30 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.414 | TNS=-22180.060| WHS=0.010  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 22013d1e2
+
+Time (s): cpu = 00:27:32 ; elapsed = 00:18:30 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Phase 6 Post Hold Fix | Checksum: 22013d1e2
+
+Time (s): cpu = 00:27:33 ; elapsed = 00:18:31 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 51.7175 %
+  Global Horizontal Routing Utilization  = 45.4902 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 4x4 Area, Max Cong = 85.1819%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_X12Y72 -> INT_X15Y75
+South Dir 2x2 Area, Max Cong = 87.4408%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_X14Y122 -> INT_X15Y123
+   INT_X14Y114 -> INT_X15Y115
+   INT_X18Y110 -> INT_X19Y111
+   INT_X14Y108 -> INT_X15Y109
+   INT_X12Y80 -> INT_X13Y81
+East Dir 2x2 Area, Max Cong = 87.7404%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_X14Y98 -> INT_X15Y99
+   INT_X14Y96 -> INT_X15Y97
+   INT_X12Y86 -> INT_X13Y87
+   INT_X10Y76 -> INT_X11Y77
+   INT_X12Y68 -> INT_X13Y69
+West Dir 1x1 Area, Max Cong = 92.3077%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_X19Y140 -> INT_X19Y140
+   INT_X20Y140 -> INT_X20Y140
+   INT_X23Y140 -> INT_X23Y140
+   INT_X23Y138 -> INT_X23Y138
+   INT_X19Y131 -> INT_X19Y131
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 2
+Effective congestion level: 3 Aspect Ratio: 0.5 Sparse Ratio: 0.5
+Direction: South
+----------------
+Congested clusters found at Level 1
+Effective congestion level: 3 Aspect Ratio: 0.8 Sparse Ratio: 0.625
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 2 Aspect Ratio: 0.470588 Sparse Ratio: 3.375
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.666667 Sparse Ratio: 1
+
+Phase 7 Route finalize | Checksum: 221e67998
+
+Time (s): cpu = 00:27:34 ; elapsed = 00:18:32 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 221e67998
+
+Time (s): cpu = 00:27:34 ; elapsed = 00:18:32 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 221e67998
+
+Time (s): cpu = 00:27:46 ; elapsed = 00:18:47 . Memory (MB): peak = 6014.734 ; gain = 0.000
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-1.414 | TNS=-22180.060| WHS=0.010  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 221e67998
+
+Time (s): cpu = 00:27:47 ; elapsed = 00:18:48 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Time taken to check if laguna hold fix is required (in secs): 0
+
+Phase 11 Physical Synthesis in Router
+
+Phase 11.1 Physical Synthesis Initialization
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-1.413 | TNS=-21682.119 | WHS=0.010 | THS=0.000 |
+Phase 11.1 Physical Synthesis Initialization | Checksum: 221e67998
+
+Time (s): cpu = 00:28:54 ; elapsed = 00:19:25 . Memory (MB): peak = 6014.734 ; gain = 0.000
+WARNING: [Physopt 32-745] Physical Optimization has determined that the magnitude of the negative slack is too large and it is highly unlikely that slack will be improved. Post-Route Physical Optimization is most effective when WNS is above -0.5ns
+
+Phase 11.2 Critical Path Optimization
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-1.413 | TNS=-21682.119 | WHS=0.010 | THS=0.000 |
+INFO: [Physopt 32-952] Improved path group WNS = -1.395. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6837/r_V_51_reg_95_reg_n_8_[19].
+INFO: [Physopt 32-952] Improved path group WNS = -1.363. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6877/r_V_51_reg_95_reg_n_8_[19].
+INFO: [Physopt 32-952] Improved path group WNS = -1.358. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6821/r_V_51_reg_95[19].
+INFO: [Physopt 32-952] Improved path group WNS = -1.348. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6837/r_V_51_reg_95_reg_n_8_[19].
+INFO: [Physopt 32-952] Improved path group WNS = -1.345. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6877/r_V_51_reg_95_reg_n_8_[19].
+INFO: [Physopt 32-952] Improved path group WNS = -1.321. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6869/r_V_51_reg_95_reg_n_8_[19].
+INFO: [Physopt 32-952] Improved path group WNS = -1.320. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/p_Result_98_reg_1136.
+INFO: [Physopt 32-952] Improved path group WNS = -1.313. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_7037/r_V_51_reg_95_reg_n_8_[19].
+INFO: [Physopt 32-952] Improved path group WNS = -1.309. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6821/r_V_51_reg_95[19].
+INFO: [Physopt 32-952] Improved path group WNS = -1.302. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_7045/r_V_51_reg_95_reg_n_8_[19].
+INFO: [Physopt 32-952] Improved path group WNS = -1.295. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6973/r_V_51_reg_95_reg/XOROUT[0].
+INFO: [Physopt 32-952] Improved path group WNS = -1.294. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6965/r_V_51_reg_95_reg/XOROUT[0].
+INFO: [Physopt 32-952] Improved path group WNS = -1.294. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4260/p_Result_98_reg_1136.
+INFO: [Physopt 32-952] Improved path group WNS = -1.289. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_7029/r_V_51_reg_95_reg_n_8_[19].
+INFO: [Physopt 32-952] Improved path group WNS = -1.288. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/p_Val2_21_reg_1130_reg_n_8_[27].
+INFO: [Physopt 32-952] Improved path group WNS = -1.287. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_7021/r_V_51_reg_95_reg_n_8_[19].
+INFO: [Physopt 32-952] Improved path group WNS = -1.283. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6837/r_V_51_reg_95_reg_n_8_[19].
+INFO: [Physopt 32-952] Improved path group WNS = -1.283. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/FM_buf4_V_1_U/SkyNet_FM_buf1_V_0_ram_U/FM_buf4_V_1_q0[8].
+INFO: [Physopt 32-952] Improved path group WNS = -1.278. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4404/p_Result_s_reg_1123.
+INFO: [Physopt 32-952] Improved path group WNS = -1.277. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_CONV_1x1_bias_fu_2494/grp_compute_engine_16_fu_4692/p_Result_s_reg_1123.
+INFO: [Physopt 32-952] Improved path group WNS = -1.274. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/grp_DW_CONV_3x3_bias_fu_1650/grp_MAC_16_16_fu_6877/r_V_51_reg_95_reg_n_8_[19].
+INFO: [Physopt 32-952] Improved path group WNS = -1.273. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/FM_buf2_V_8_U/SkyNet_FM_buf2_V_0_ram_U/FM_buf2_V_8_q0[8].
+INFO: [Physopt 32-952] Improved path group WNS = -1.272. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/FM_buf1_V_3_U/SkyNet_FM_buf1_V_0_ram_U/FM_buf1_V_3_q0[8].
+INFO: [Physopt 32-952] Improved path group WNS = -1.272. Path group: clk_pl_0. Processed net: design_1_i/SkyNet_0/inst/FM_buf1_V_9_U/SkyNet_FM_buf1_V_0_ram_U/FM_buf1_V_9_q0[8].
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-1.272 | TNS=-21665.413 | WHS=0.010 | THS=0.000 |
+Phase 11.2 Critical Path Optimization | Checksum: 17a536171
+
+Time (s): cpu = 00:29:33 ; elapsed = 00:19:55 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Physopt 32-669] Post Physical Optimization Timing Summary | WNS=-1.272 | TNS=-21665.413 | WHS=0.010 | THS=0.000 |
+Phase 11 Physical Synthesis in Router | Checksum: 18d6e8f99
+
+Time (s): cpu = 00:29:36 ; elapsed = 00:19:57 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:29:36 ; elapsed = 00:19:57 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+614 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:29:54 ; elapsed = 00:20:09 . Memory (MB): peak = 6014.734 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:30 ; elapsed = 00:00:11 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:42 ; elapsed = 00:00:24 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.runs/impl_1/design_1_wrapper_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 6014.734 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/Aperture/Git/SkyNet/FPGA_Final/RTL/Skynet/Skynet.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:01:00 ; elapsed = 00:00:34 . Memory (MB): peak = 6241.945 ; gain = 227.211
+INFO: [runtcl-4] Executing : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+626 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:01:13 ; elapsed = 00:00:44 . Memory (MB): peak = 6241.945 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+report_timing_summary: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 6241.945 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_incremental_reuse -file design_1_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
+report_clock_utilization: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 6241.945 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file design_1_wrapper_bus_skew_routed.rpt -pb design_1_wrapper_bus_skew_routed.pb -rpx design_1_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  6 14:33:19 2020...

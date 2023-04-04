@@ -1,0 +1,271 @@
+
+
+================================================================
+== Vivado HLS Report for 'max_pool2x2'
+================================================================
+* Date:           Tue May 10 21:15:06 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.500 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        ?|        ?|         4|          1|          1|     ?|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 3 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 7 4 
+4 --> 5 
+5 --> 6 
+6 --> 3 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.50>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_Repl2_s = alloca i16"   --->   Operation 8 'alloca' 'p_Repl2_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_Repl2_14 = alloca i16"   --->   Operation 9 'alloca' 'p_Repl2_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%row_store_V = alloca [640 x i16], align 2" [./src/pool_reord.hpp:30->./src/ultranet.cpp:90]   --->   Operation 10 'alloca' 'row_store_V' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 640> <RAM>
+ST_1 : Operation 11 [1/1] (1.75ns)   --->   "%reps_read = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %reps)" [./src/pool_reord.hpp:28]   --->   Operation 11 'read' 'reps_read' <Predicate = true> <Delay = 1.75> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 12 [1/1] (1.75ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %reps_out, i32 %reps_read)" [./src/ultranet.cpp:90]   --->   Operation 12 'write' <Predicate = true> <Delay = 1.75> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 2.44>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 13 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %vec_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 14 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 15 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 16 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns) (grouped into LUT with out node add_ln35)   --->   "%shl_ln35 = shl i32 %reps_read, 6" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 17 'shl' 'shl_ln35' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns) (grouped into LUT with out node add_ln35)   --->   "%shl_ln35_4 = shl i32 %reps_read, 4" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 18 'shl' 'shl_ln35_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (1.20ns) (out node of the LUT)   --->   "%add_ln35 = add i32 %shl_ln35_4, %shl_ln35" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 19 'add' 'add_ln35' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_s = call i41 @_ssdm_op_BitConcatenate.i41.i32.i9(i32 %add_ln35, i9 0)" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 20 'bitconcatenate' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%p_shl = zext i41 %tmp_s to i42" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 21 'zext' 'p_shl' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_60 = call i39 @_ssdm_op_BitConcatenate.i39.i32.i7(i32 %add_ln35, i7 0)" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 22 'bitconcatenate' 'tmp_60' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%p_shl22 = zext i39 %tmp_60 to i42" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 23 'zext' 'p_shl22' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (1.23ns)   --->   "%bound4 = add i42 %p_shl22, %p_shl" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 24 'add' 'bound4' <Predicate = true> <Delay = 1.23> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.75ns)   --->   "br label %.preheader.i" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 25 'br' <Predicate = true> <Delay = 0.75>
+
+State 3 <SV = 2> <Delay = 2.62>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%indvar_flatten17 = phi i42 [ 0, %entry ], [ %add_ln35_7, %hls_label_32_end ]" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 26 'phi' 'indvar_flatten17' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%h_0_i = phi i32 [ 0, %entry ], [ %select_ln35_4, %hls_label_32_end ]" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 27 'phi' 'h_0_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i11 [ 0, %entry ], [ %select_ln36_6, %hls_label_32_end ]" [./src/pool_reord.hpp:36->./src/ultranet.cpp:90]   --->   Operation 28 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%peIdx_0_i = phi i4 [ 0, %entry ], [ %select_ln36_5, %hls_label_32_end ]" [./src/pool_reord.hpp:36->./src/ultranet.cpp:90]   --->   Operation 29 'phi' 'peIdx_0_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%w_0_i = phi i7 [ 0, %entry ], [ %w, %hls_label_32_end ]"   --->   Operation 30 'phi' 'w_0_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (1.28ns)   --->   "%icmp_ln35 = icmp eq i42 %indvar_flatten17, %bound4" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 31 'icmp' 'icmp_ln35' <Predicate = true> <Delay = 1.28> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 32 [1/1] (1.24ns)   --->   "%add_ln35_7 = add i42 %indvar_flatten17, 1" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 32 'add' 'add_ln35_7' <Predicate = true> <Delay = 1.24> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "br i1 %icmp_ln35, label %.exit, label %hls_label_32_begin" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 33 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (1.20ns)   --->   "%h = add i32 1, %h_0_i" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 34 'add' 'h' <Predicate = (!icmp_ln35)> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 35 [1/1] (0.85ns)   --->   "%icmp_ln36 = icmp eq i11 %indvar_flatten, 640" [./src/pool_reord.hpp:36->./src/ultranet.cpp:90]   --->   Operation 35 'icmp' 'icmp_ln36' <Predicate = (!icmp_ln35)> <Delay = 0.85> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [1/1] (0.45ns)   --->   "%select_ln35 = select i1 %icmp_ln36, i4 0, i4 %peIdx_0_i" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 36 'select' 'select_ln35' <Predicate = (!icmp_ln35)> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 37 [1/1] (0.52ns)   --->   "%select_ln35_4 = select i1 %icmp_ln36, i32 %h, i32 %h_0_i" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 37 'select' 'select_ln35_4' <Predicate = (!icmp_ln35)> <Delay = 0.52> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%trunc_ln35 = trunc i32 %select_ln35_4 to i1" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 38 'trunc' 'trunc_ln35' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns) (grouped into LUT with out node and_ln35)   --->   "%xor_ln35 = xor i1 %icmp_ln36, true" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 39 'xor' 'xor_ln35' <Predicate = (!icmp_ln35)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 40 [1/1] (0.86ns)   --->   "%icmp_ln37 = icmp eq i7 %w_0_i, -48" [./src/pool_reord.hpp:37->./src/ultranet.cpp:90]   --->   Operation 40 'icmp' 'icmp_ln37' <Predicate = (!icmp_ln35)> <Delay = 0.86> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 41 [1/1] (0.33ns) (out node of the LUT)   --->   "%and_ln35 = and i1 %icmp_ln37, %xor_ln35" [./src/pool_reord.hpp:35->./src/ultranet.cpp:90]   --->   Operation 41 'and' 'and_ln35' <Predicate = (!icmp_ln35)> <Delay = 0.33> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (0.86ns)   --->   "%peIdx = add i4 1, %select_ln35" [./src/pool_reord.hpp:36->./src/ultranet.cpp:90]   --->   Operation 42 'add' 'peIdx' <Predicate = (!icmp_ln35)> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node select_ln36)   --->   "%or_ln36 = or i1 %and_ln35, %icmp_ln36" [./src/pool_reord.hpp:36->./src/ultranet.cpp:90]   --->   Operation 43 'or' 'or_ln36' <Predicate = (!icmp_ln35)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (0.42ns) (out node of the LUT)   --->   "%select_ln36 = select i1 %or_ln36, i7 0, i7 %w_0_i" [./src/pool_reord.hpp:36->./src/ultranet.cpp:90]   --->   Operation 44 'select' 'select_ln36' <Predicate = (!icmp_ln35)> <Delay = 0.42> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.45ns)   --->   "%select_ln36_5 = select i1 %and_ln35, i4 %peIdx, i4 %select_ln35" [./src/pool_reord.hpp:36->./src/ultranet.cpp:90]   --->   Operation 45 'select' 'select_ln36_5' <Predicate = (!icmp_ln35)> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%trunc_ln37 = trunc i7 %select_ln36 to i1" [./src/pool_reord.hpp:37->./src/ultranet.cpp:90]   --->   Operation 46 'trunc' 'trunc_ln37' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "br i1 %trunc_ln35, label %0, label %1" [./src/pool_reord.hpp:44->./src/ultranet.cpp:90]   --->   Operation 47 'br' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.33ns)   --->   "%and_ln51 = and i1 %trunc_ln35, %trunc_ln37" [./src/pool_reord.hpp:51->./src/ultranet.cpp:90]   --->   Operation 48 'and' 'and_ln51' <Predicate = (!icmp_ln35)> <Delay = 0.33> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "br i1 %and_ln51, label %3, label %.hls_label_32_end_crit_edge" [./src/pool_reord.hpp:51->./src/ultranet.cpp:90]   --->   Operation 49 'br' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.89ns)   --->   "%w = add i7 %select_ln36, 1" [./src/pool_reord.hpp:37->./src/ultranet.cpp:90]   --->   Operation 50 'add' 'w' <Predicate = (!icmp_ln35)> <Delay = 0.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 51 [1/1] (0.94ns)   --->   "%add_ln36_3 = add i11 %indvar_flatten, 1" [./src/pool_reord.hpp:36->./src/ultranet.cpp:90]   --->   Operation 51 'add' 'add_ln36_3' <Predicate = (!icmp_ln35)> <Delay = 0.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [1/1] (0.45ns)   --->   "%select_ln36_6 = select i1 %icmp_ln36, i11 1, i11 %add_ln36_3" [./src/pool_reord.hpp:36->./src/ultranet.cpp:90]   --->   Operation 52 'select' 'select_ln36_6' <Predicate = (!icmp_ln35)> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 3.08>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%zext_ln36 = zext i4 %select_ln36_5 to i10" [./src/pool_reord.hpp:36->./src/ultranet.cpp:90]   --->   Operation 53 'zext' 'zext_ln36' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (1.75ns)   --->   "%tmp_V = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %vec_V_V)" [./src/pool_reord.hpp:41->./src/ultranet.cpp:90]   --->   Operation 54 'read' 'tmp_V' <Predicate = (!icmp_ln35)> <Delay = 1.75> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%trunc_ln647 = trunc i32 %tmp_V to i4" [./src/pool_reord.hpp:16->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 55 'trunc' 'trunc_ln647' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%p_Result_113_i_i = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %tmp_V, i32 16, i32 19)" [./src/pool_reord.hpp:17->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 56 'partselect' 'p_Result_113_i_i' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (0.88ns)   --->   "%icmp_ln895 = icmp ugt i4 %p_Result_113_i_i, %trunc_ln647" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 57 'icmp' 'icmp_ln895' <Predicate = (!icmp_ln35)> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 58 [1/1] (0.45ns)   --->   "%select_ln18 = select i1 %icmp_ln895, i4 %p_Result_113_i_i, i4 %trunc_ln647" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 58 'select' 'select_ln18' <Predicate = (!icmp_ln35)> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%p_Result_112_1_i_i = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %tmp_V, i32 4, i32 7)" [./src/pool_reord.hpp:16->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 59 'partselect' 'p_Result_112_1_i_i' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%p_Result_113_1_i_i = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %tmp_V, i32 20, i32 23)" [./src/pool_reord.hpp:17->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 60 'partselect' 'p_Result_113_1_i_i' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (0.88ns)   --->   "%icmp_ln895_1 = icmp ugt i4 %p_Result_113_1_i_i, %p_Result_112_1_i_i" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 61 'icmp' 'icmp_ln895_1' <Predicate = (!icmp_ln35)> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 62 [1/1] (0.45ns)   --->   "%select_ln18_1 = select i1 %icmp_ln895_1, i4 %p_Result_113_1_i_i, i4 %p_Result_112_1_i_i" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 62 'select' 'select_ln18_1' <Predicate = (!icmp_ln35)> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%p_Result_112_2_i_i = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %tmp_V, i32 8, i32 11)" [./src/pool_reord.hpp:16->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 63 'partselect' 'p_Result_112_2_i_i' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%p_Result_113_2_i_i = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %tmp_V, i32 24, i32 27)" [./src/pool_reord.hpp:17->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 64 'partselect' 'p_Result_113_2_i_i' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.88ns)   --->   "%icmp_ln895_2 = icmp ugt i4 %p_Result_113_2_i_i, %p_Result_112_2_i_i" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 65 'icmp' 'icmp_ln895_2' <Predicate = (!icmp_ln35)> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 66 [1/1] (0.45ns)   --->   "%select_ln18_2 = select i1 %icmp_ln895_2, i4 %p_Result_113_2_i_i, i4 %p_Result_112_2_i_i" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 66 'select' 'select_ln18_2' <Predicate = (!icmp_ln35)> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%p_Result_112_3_i_i = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %tmp_V, i32 12, i32 15)" [./src/pool_reord.hpp:16->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 67 'partselect' 'p_Result_112_3_i_i' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%p_Result_113_3_i_i = call i4 @_ssdm_op_PartSelect.i4.i32.i32.i32(i32 %tmp_V, i32 28, i32 31)" [./src/pool_reord.hpp:17->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 68 'partselect' 'p_Result_113_3_i_i' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.88ns)   --->   "%icmp_ln895_3 = icmp ugt i4 %p_Result_113_3_i_i, %p_Result_112_3_i_i" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 69 'icmp' 'icmp_ln895_3' <Predicate = (!icmp_ln35)> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 70 [1/1] (0.45ns)   --->   "%select_ln18_3 = select i1 %icmp_ln895_3, i4 %p_Result_113_3_i_i, i4 %p_Result_112_3_i_i" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 70 'select' 'select_ln18_3' <Predicate = (!icmp_ln35)> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%shl_ln3 = call i10 @_ssdm_op_BitConcatenate.i10.i7.i3(i7 %select_ln36, i3 0)" [./src/pool_reord.hpp:43->./src/ultranet.cpp:90]   --->   Operation 71 'bitconcatenate' 'shl_ln3' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_4 : Operation 72 [1/1] (0.93ns)   --->   "%addr = add i10 %zext_ln36, %shl_ln3" [./src/pool_reord.hpp:43->./src/ultranet.cpp:90]   --->   Operation 72 'add' 'addr' <Predicate = (!icmp_ln35)> <Delay = 0.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%zext_ln49 = zext i10 %addr to i64" [./src/pool_reord.hpp:49->./src/ultranet.cpp:90]   --->   Operation 73 'zext' 'zext_ln49' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%row_store_V_addr = getelementptr [640 x i16]* %row_store_V, i64 0, i64 %zext_ln49" [./src/pool_reord.hpp:49->./src/ultranet.cpp:90]   --->   Operation 74 'getelementptr' 'row_store_V_addr' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_4 : Operation 75 [2/2] (1.35ns)   --->   "%dataRes_V = load i16* %row_store_V_addr, align 2" [./src/pool_reord.hpp:45->./src/ultranet.cpp:90]   --->   Operation 75 'load' 'dataRes_V' <Predicate = (trunc_ln35)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 640> <RAM>
+
+State 5 <SV = 4> <Delay = 2.68>
+ST_5 : Operation 76 [1/1] (0.00ns)   --->   "%p_Val2_5 = call i16 @_ssdm_op_BitConcatenate.i16.i4.i4.i4.i4(i4 %select_ln18_3, i4 %select_ln18_2, i4 %select_ln18_1, i4 %select_ln18)" [./src/pool_reord.hpp:19->./src/pool_reord.hpp:42->./src/ultranet.cpp:90]   --->   Operation 76 'bitconcatenate' 'p_Val2_5' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_5 : Operation 77 [1/1] (1.35ns)   --->   "store i16 %p_Val2_5, i16* %row_store_V_addr, align 2" [./src/pool_reord.hpp:49->./src/ultranet.cpp:90]   --->   Operation 77 'store' <Predicate = (!trunc_ln35)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 640> <RAM>
+ST_5 : Operation 78 [1/2] (1.35ns)   --->   "%dataRes_V = load i16* %row_store_V_addr, align 2" [./src/pool_reord.hpp:45->./src/ultranet.cpp:90]   --->   Operation 78 'load' 'dataRes_V' <Predicate = (trunc_ln35)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 640> <RAM>
+ST_5 : Operation 79 [1/1] (0.00ns)   --->   "%trunc_ln647_11 = trunc i16 %dataRes_V to i4" [./src/pool_reord.hpp:17->./src/pool_reord.hpp:46->./src/ultranet.cpp:90]   --->   Operation 79 'trunc' 'trunc_ln647_11' <Predicate = (trunc_ln35)> <Delay = 0.00>
+ST_5 : Operation 80 [1/1] (0.88ns)   --->   "%icmp_ln895_4 = icmp ugt i4 %trunc_ln647_11, %select_ln18" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:46->./src/ultranet.cpp:90]   --->   Operation 80 'icmp' 'icmp_ln895_4' <Predicate = (trunc_ln35)> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 81 [1/1] (0.45ns)   --->   "%select_ln18_4 = select i1 %icmp_ln895_4, i4 %trunc_ln647_11, i4 %select_ln18" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:46->./src/ultranet.cpp:90]   --->   Operation 81 'select' 'select_ln18_4' <Predicate = (trunc_ln35)> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 82 [1/1] (0.00ns)   --->   "%p_Result_113_1_i = call i4 @_ssdm_op_PartSelect.i4.i16.i32.i32(i16 %dataRes_V, i32 4, i32 7)" [./src/pool_reord.hpp:17->./src/pool_reord.hpp:46->./src/ultranet.cpp:90]   --->   Operation 82 'partselect' 'p_Result_113_1_i' <Predicate = (trunc_ln35)> <Delay = 0.00>
+ST_5 : Operation 83 [1/1] (0.88ns)   --->   "%icmp_ln895_5 = icmp ugt i4 %p_Result_113_1_i, %select_ln18_1" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:46->./src/ultranet.cpp:90]   --->   Operation 83 'icmp' 'icmp_ln895_5' <Predicate = (trunc_ln35)> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 84 [1/1] (0.45ns)   --->   "%select_ln18_5 = select i1 %icmp_ln895_5, i4 %p_Result_113_1_i, i4 %select_ln18_1" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:46->./src/ultranet.cpp:90]   --->   Operation 84 'select' 'select_ln18_5' <Predicate = (trunc_ln35)> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 85 [1/1] (0.00ns)   --->   "%p_Result_113_2_i = call i4 @_ssdm_op_PartSelect.i4.i16.i32.i32(i16 %dataRes_V, i32 8, i32 11)" [./src/pool_reord.hpp:17->./src/pool_reord.hpp:46->./src/ultranet.cpp:90]   --->   Operation 85 'partselect' 'p_Result_113_2_i' <Predicate = (trunc_ln35)> <Delay = 0.00>
+ST_5 : Operation 86 [1/1] (0.88ns)   --->   "%icmp_ln895_6 = icmp ugt i4 %p_Result_113_2_i, %select_ln18_2" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:46->./src/ultranet.cpp:90]   --->   Operation 86 'icmp' 'icmp_ln895_6' <Predicate = (trunc_ln35)> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 87 [1/1] (0.45ns)   --->   "%select_ln18_6 = select i1 %icmp_ln895_6, i4 %p_Result_113_2_i, i4 %select_ln18_2" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:46->./src/ultranet.cpp:90]   --->   Operation 87 'select' 'select_ln18_6' <Predicate = (trunc_ln35)> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 88 [1/1] (0.00ns)   --->   "%p_Result_113_3_i = call i4 @_ssdm_op_PartSelect.i4.i16.i32.i32(i16 %dataRes_V, i32 12, i32 15)" [./src/pool_reord.hpp:17->./src/pool_reord.hpp:46->./src/ultranet.cpp:90]   --->   Operation 88 'partselect' 'p_Result_113_3_i' <Predicate = (trunc_ln35)> <Delay = 0.00>
+ST_5 : Operation 89 [1/1] (0.88ns)   --->   "%icmp_ln895_7 = icmp ugt i4 %p_Result_113_3_i, %select_ln18_3" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:46->./src/ultranet.cpp:90]   --->   Operation 89 'icmp' 'icmp_ln895_7' <Predicate = (trunc_ln35)> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 90 [1/1] (0.45ns)   --->   "%select_ln18_7 = select i1 %icmp_ln895_7, i4 %p_Result_113_3_i, i4 %select_ln18_3" [./src/pool_reord.hpp:18->./src/pool_reord.hpp:46->./src/ultranet.cpp:90]   --->   Operation 90 'select' 'select_ln18_7' <Predicate = (trunc_ln35)> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 91 [1/1] (0.00ns)   --->   "%dataOut0_V = call i16 @_ssdm_op_BitConcatenate.i16.i4.i4.i4.i4(i4 %select_ln18_7, i4 %select_ln18_6, i4 %select_ln18_5, i4 %select_ln18_4)" [./src/pool_reord.hpp:19->./src/pool_reord.hpp:46->./src/ultranet.cpp:90]   --->   Operation 91 'bitconcatenate' 'dataOut0_V' <Predicate = (trunc_ln35)> <Delay = 0.00>
+ST_5 : Operation 92 [1/1] (0.00ns)   --->   "store i16 %dataOut0_V, i16* %p_Repl2_s" [./src/pool_reord.hpp:48->./src/ultranet.cpp:90]   --->   Operation 92 'store' <Predicate = (trunc_ln35)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 1.75>
+ST_6 : Operation 93 [1/1] (0.00ns)   --->   "%tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str50011)" [./src/pool_reord.hpp:37->./src/ultranet.cpp:90]   --->   Operation 93 'specregionbegin' 'tmp_i' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_6 : Operation 94 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str49942) nounwind" [./src/pool_reord.hpp:38->./src/ultranet.cpp:90]   --->   Operation 94 'specpipeline' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_6 : Operation 95 [1/1] (0.00ns)   --->   "br label %2"   --->   Operation 95 'br' <Predicate = (!trunc_ln35)> <Delay = 0.00>
+ST_6 : Operation 96 [1/1] (0.00ns)   --->   "br label %2" [./src/pool_reord.hpp:48->./src/ultranet.cpp:90]   --->   Operation 96 'br' <Predicate = (trunc_ln35)> <Delay = 0.00>
+ST_6 : Operation 97 [1/1] (0.00ns)   --->   "%p_Repl2_load = load i16* %p_Repl2_s" [./src/pool_reord.hpp:52->./src/ultranet.cpp:90]   --->   Operation 97 'load' 'p_Repl2_load' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 98 [1/1] (0.00ns)   --->   "store i16 %p_Repl2_load, i16* %p_Repl2_14" [./src/pool_reord.hpp:51->./src/ultranet.cpp:90]   --->   Operation 98 'store' <Predicate = (!and_ln51)> <Delay = 0.00>
+ST_6 : Operation 99 [1/1] (0.00ns)   --->   "br label %hls_label_32_end" [./src/pool_reord.hpp:51->./src/ultranet.cpp:90]   --->   Operation 99 'br' <Predicate = (!and_ln51)> <Delay = 0.00>
+ST_6 : Operation 100 [1/1] (0.00ns)   --->   "%p_Repl2_14_load = load i16* %p_Repl2_14" [./src/pool_reord.hpp:52->./src/ultranet.cpp:90]   --->   Operation 100 'load' 'p_Repl2_14_load' <Predicate = (and_ln51)> <Delay = 0.00>
+ST_6 : Operation 101 [1/1] (0.00ns)   --->   "%p_Result_s = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 %p_Repl2_load, i16 %p_Repl2_14_load)" [./src/pool_reord.hpp:52->./src/ultranet.cpp:90]   --->   Operation 101 'bitconcatenate' 'p_Result_s' <Predicate = (and_ln51)> <Delay = 0.00>
+ST_6 : Operation 102 [1/1] (1.75ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_V_V, i32 %p_Result_s)" [./src/pool_reord.hpp:52->./src/ultranet.cpp:90]   --->   Operation 102 'write' <Predicate = (and_ln51)> <Delay = 1.75> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_6 : Operation 103 [1/1] (0.00ns)   --->   "br label %hls_label_32_end" [./src/pool_reord.hpp:54->./src/ultranet.cpp:90]   --->   Operation 103 'br' <Predicate = (and_ln51)> <Delay = 0.00>
+ST_6 : Operation 104 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str50011, i32 %tmp_i)" [./src/pool_reord.hpp:57->./src/ultranet.cpp:90]   --->   Operation 104 'specregionend' 'empty' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_6 : Operation 105 [1/1] (0.00ns)   --->   "br label %.preheader.i" [./src/pool_reord.hpp:37->./src/ultranet.cpp:90]   --->   Operation 105 'br' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+
+State 7 <SV = 3> <Delay = 0.00>
+ST_7 : Operation 106 [1/1] (0.00ns)   --->   "ret void" [./src/ultranet.cpp:90]   --->   Operation 106 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 3.5ns
+The critical path consists of the following:
+	fifo read on port 'reps' (./src/pool_reord.hpp:28) [11]  (1.75 ns)
+	fifo write on port 'reps_out' (./src/ultranet.cpp:90) [13]  (1.75 ns)
+
+ <State 2>: 2.44ns
+The critical path consists of the following:
+	'shl' operation ('shl_ln35', ./src/pool_reord.hpp:35->./src/ultranet.cpp:90) [14]  (0 ns)
+	'add' operation ('add_ln35', ./src/pool_reord.hpp:35->./src/ultranet.cpp:90) [16]  (1.2 ns)
+	'add' operation ('bound4', ./src/pool_reord.hpp:35->./src/ultranet.cpp:90) [21]  (1.24 ns)
+
+ <State 3>: 2.63ns
+The critical path consists of the following:
+	'phi' operation ('indvar_flatten', ./src/pool_reord.hpp:36->./src/ultranet.cpp:90) with incoming values : ('select_ln36_6', ./src/pool_reord.hpp:36->./src/ultranet.cpp:90) [26]  (0 ns)
+	'icmp' operation ('icmp_ln36', ./src/pool_reord.hpp:36->./src/ultranet.cpp:90) [34]  (0.86 ns)
+	'select' operation ('select_ln35', ./src/pool_reord.hpp:35->./src/ultranet.cpp:90) [35]  (0.45 ns)
+	'add' operation ('peIdx', ./src/pool_reord.hpp:36->./src/ultranet.cpp:90) [41]  (0.868 ns)
+	'select' operation ('select_ln36_5', ./src/pool_reord.hpp:36->./src/ultranet.cpp:90) [44]  (0.45 ns)
+
+ <State 4>: 3.08ns
+The critical path consists of the following:
+	fifo read on port 'vec_V_V' (./src/pool_reord.hpp:41->./src/ultranet.cpp:90) [49]  (1.75 ns)
+	'icmp' operation ('icmp_ln895', ./src/pool_reord.hpp:18->./src/pool_reord.hpp:42->./src/ultranet.cpp:90) [52]  (0.884 ns)
+	'select' operation ('select_ln18', ./src/pool_reord.hpp:18->./src/pool_reord.hpp:42->./src/ultranet.cpp:90) [53]  (0.45 ns)
+
+ <State 5>: 2.69ns
+The critical path consists of the following:
+	'load' operation ('dataRes.V', ./src/pool_reord.hpp:45->./src/ultranet.cpp:90) on array 'row_store.V', ./src/pool_reord.hpp:30->./src/ultranet.cpp:90 [76]  (1.35 ns)
+	'icmp' operation ('icmp_ln895_4', ./src/pool_reord.hpp:18->./src/pool_reord.hpp:46->./src/ultranet.cpp:90) [78]  (0.884 ns)
+	'select' operation ('select_ln18_4', ./src/pool_reord.hpp:18->./src/pool_reord.hpp:46->./src/ultranet.cpp:90) [79]  (0.45 ns)
+
+ <State 6>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('p_Repl2_load', ./src/pool_reord.hpp:52->./src/ultranet.cpp:90) on local variable '__Repl2__' [94]  (0 ns)
+	fifo write on port 'out_V_V' (./src/pool_reord.hpp:52->./src/ultranet.cpp:90) [102]  (1.75 ns)
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

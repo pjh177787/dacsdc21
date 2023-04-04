@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'resize'" level="0">
+<item name = "Date">Tue May 10 21:14:55 2022
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">ultra_core</item>
+<item name = "Solution">ultracore_125</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu3eg-sbva484-1-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">4.00 ns, 3.500 ns, 0.50 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">464118, 464118, 1.856 ms, 1.856 ms, 234362, 234362, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_Resize_opr_linear_fu_72">Resize_opr_linear, 234361, 234361, 0.937 ms, 0.937 ms, 234361, 234361, none</column>
+<column name="grp_stream_to_mat_fu_82">stream_to_mat, 230402, 230402, 0.922 ms, 0.922 ms, 230402, 230402, none</column>
+<column name="grp_mat_to_stream_fu_91">mat_to_stream, 51202, 51202, 0.205 ms, 0.205 ms, 51202, 51202, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

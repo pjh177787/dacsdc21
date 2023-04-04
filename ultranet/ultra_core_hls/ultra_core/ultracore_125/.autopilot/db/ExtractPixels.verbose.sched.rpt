@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vivado HLS Report for 'ExtractPixels'
+================================================================
+* Date:           Tue May 10 21:14:52 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        ultra_core
+* Solution:       ultracore_125
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 2.960 ns |   0.50 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        ?|        ?|         2|          1|          1|     ?|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 5 4 
+4 --> 3 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.96>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%reps_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %reps)"   --->   Operation 6 'read' 'reps_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (1.75ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %reps_out, i32 %reps_read)" [./src/ultranet.cpp:91]   --->   Operation 7 'write' <Predicate = true> <Delay = 1.75> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 8 [2/2] (2.96ns)   --->   "%mul_ln64 = mul i32 %reps_read, 86400" [./src/stream_tools.h:64->./src/ultranet.cpp:91]   --->   Operation 8 'mul' 'mul_ln64' <Predicate = true> <Delay = 2.96> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 1> <II = 1> <Delay = 2.96> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 2.96>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %in_V_data_V, i1* %in_V_last_V, i8* %in_V_keep_V, [5 x i8]* @p_str49961, i32 0, i32 0, [5 x i8]* @p_str49962, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942) nounwind"   --->   Operation 10 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %in_V_data_V, i1* %in_V_last_V, i8* %in_V_keep_V, [5 x i8]* @p_str49961, i32 0, i32 0, [5 x i8]* @p_str49962, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942) nounwind"   --->   Operation 11 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %in_V_data_V, i1* %in_V_last_V, i8* %in_V_keep_V, [5 x i8]* @p_str49961, i32 0, i32 0, [5 x i8]* @p_str49962, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942) nounwind"   --->   Operation 12 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %reps_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 13 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %in_V_data_V, i1* %in_V_last_V, i8* %in_V_keep_V, [5 x i8]* @p_str49961, i32 0, i32 0, [5 x i8]* @p_str49962, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str49942, [1 x i8]* @p_str49942) nounwind"   --->   Operation 14 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/2] (2.96ns)   --->   "%mul_ln64 = mul i32 %reps_read, 86400" [./src/stream_tools.h:64->./src/ultranet.cpp:91]   --->   Operation 15 'mul' 'mul_ln64' <Predicate = true> <Delay = 2.96> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 1> <II = 1> <Delay = 2.96> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.75ns)   --->   "br label %0" [./src/stream_tools.h:64->./src/ultranet.cpp:91]   --->   Operation 16 'br' <Predicate = true> <Delay = 0.75>
+
+State 3 <SV = 2> <Delay = 1.20>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%rep_0_i = phi i32 [ 0, %entry ], [ %rep, %hls_label_12 ]"   --->   Operation 17 'phi' 'rep_0_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (1.11ns)   --->   "%icmp_ln64 = icmp eq i32 %rep_0_i, %mul_ln64" [./src/stream_tools.h:64->./src/ultranet.cpp:91]   --->   Operation 18 'icmp' 'icmp_ln64' <Predicate = true> <Delay = 1.11> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 19 [1/1] (1.20ns)   --->   "%rep = add i32 %rep_0_i, 1" [./src/stream_tools.h:64->./src/ultranet.cpp:91]   --->   Operation 19 'add' 'rep' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "br i1 %icmp_ln64, label %.exit, label %hls_label_12" [./src/stream_tools.h:64->./src/ultranet.cpp:91]   --->   Operation 20 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%empty = call { i64, i1, i8 } @_ssdm_op_Read.axis.volatile.i64P.i1P.i8P(i64* %in_V_data_V, i1* %in_V_last_V, i8* %in_V_keep_V)" [./src/stream_tools.h:66->./src/ultranet.cpp:91]   --->   Operation 21 'read' 'empty' <Predicate = (!icmp_ln64)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_data_V = extractvalue { i64, i1, i8 } %empty, 0" [./src/stream_tools.h:66->./src/ultranet.cpp:91]   --->   Operation 22 'extractvalue' 'tmp_data_V' <Predicate = (!icmp_ln64)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.75>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str50029)" [./src/stream_tools.h:64->./src/ultranet.cpp:91]   --->   Operation 23 'specregionbegin' 'tmp_i' <Predicate = (!icmp_ln64)> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str49942) nounwind" [./src/stream_tools.h:65->./src/ultranet.cpp:91]   --->   Operation 24 'specpipeline' <Predicate = (!icmp_ln64)> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (1.75ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i64P(i64* %out_V_V, i64 %tmp_data_V)" [./src/stream_tools.h:67->./src/ultranet.cpp:91]   --->   Operation 25 'write' <Predicate = (!icmp_ln64)> <Delay = 1.75> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%empty_672 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str50029, i32 %tmp_i)" [./src/stream_tools.h:68->./src/ultranet.cpp:91]   --->   Operation 26 'specregionend' 'empty_672' <Predicate = (!icmp_ln64)> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "br label %0" [./src/stream_tools.h:64->./src/ultranet.cpp:91]   --->   Operation 27 'br' <Predicate = (!icmp_ln64)> <Delay = 0.00>
+
+State 5 <SV = 3> <Delay = 0.00>
+ST_5 : Operation 28 [1/1] (0.00ns)   --->   "ret void" [./src/ultranet.cpp:91]   --->   Operation 28 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 2.96ns
+The critical path consists of the following:
+	wire read on port 'reps' [8]  (0 ns)
+	'mul' operation ('mul_ln64', ./src/stream_tools.h:64->./src/ultranet.cpp:91) [15]  (2.96 ns)
+
+ <State 2>: 2.96ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln64', ./src/stream_tools.h:64->./src/ultranet.cpp:91) [15]  (2.96 ns)
+
+ <State 3>: 1.2ns
+The critical path consists of the following:
+	'phi' operation ('rep') with incoming values : ('rep', ./src/stream_tools.h:64->./src/ultranet.cpp:91) [18]  (0 ns)
+	'add' operation ('rep', ./src/stream_tools.h:64->./src/ultranet.cpp:91) [20]  (1.2 ns)
+
+ <State 4>: 1.75ns
+The critical path consists of the following:
+	fifo write on port 'out_V_V' (./src/stream_tools.h:67->./src/ultranet.cpp:91) [27]  (1.75 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
